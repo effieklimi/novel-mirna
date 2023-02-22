@@ -1,7 +1,7 @@
 library(tidyverse)
 
 ######## annotation file ########
-gencode_v26_gft_table <- read.url("https://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_26/gencode.v26.annotation.gtf.gz
+gencode_v26_gft_table <- read.csv("https://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_26/gencode.v26.annotation.gtf.gz
 ", header = FALSE, stringsAsFactors = FALSE)
 
 gencode_v26_gft_table <- read.delim("/Users/effieklimi/Documents/PhD/miRNA screening paper/HSVEC RNA sequencing/gencode_v26_gtf_table.txt", header = FALSE, stringsAsFactors = FALSE)
