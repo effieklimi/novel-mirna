@@ -1,19 +1,37 @@
 library(tidyverse)
 
-######## annotation file ########
-gencode_v26_gft_table <- read.csv("https://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_26/gencode.v26.annotation.gtf.gz
-", header = FALSE, stringsAsFactors = FALSE)
+setwd("/Users/effieklimi/Documents/novel-mirna/")
 
-gencode_v26_gft_table <- read.delim("/Users/effieklimi/Documents/PhD/miRNA screening paper/HSVEC RNA sequencing/gencode_v26_gtf_table.txt", header = FALSE, stringsAsFactors = FALSE)
+# GENCODE annotation:
+gencode_v26_gft_table <-
+  read.csv(
+    "https://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_26/gencode.v26.annotation.gtf.gz",
+    header = FALSE,
+    stringsAsFactors = FALSE
+  )
+
+gencode_v26_gft_table <- read.delim(
+  "/Users/effieklimi/Documents/PhD/miRNA screening paper/HSVEC RNA sequencing/gencode_v26_gtf_table.txt",
+  header = FALSE,
+  stringsAsFactors = FALSE
+)
 annotation <- gencode_v26_gft_table[, c(4, 7, 6, 1:3, 5)]
 colnames(annotation) <- c("ENSEMBL", "name", "type", "chr", "start", "end", "str")
 #################################
 
-
 ######## read RSEM files and extract count and FPKM #########
 #### CHANGE PATH to the RSEM folder you want to analyse ####
-# "//cmvm.datastore.ed.ac.uk/cmvm/scs/users/username/
-filenames <- list.files("/Users/effieklimi/Documents/PhD/miRNA screening paper/HSVEC RNA sequencing/RSEM HSVEC", pattern = "*genes.results", full.names = TRUE)
+# "//cmvm.datastore.ed.ac.uk/cmvm/scs/users/username/..."
+
+rsemVsmc <- list.files(
+  "rnaseq-data/rsem-vsms",
+  pattern = "*genes.results",
+  full.names = TRUE
+)
+
+rsemEndos <- list.files("rnaseq-data/rsem-endos", pattern = "*genes.results", full.names = TRUE)
+
+
 filenamesShort <- list.files("/Users/effieklimi/Documents/PhD/miRNA screening paper/HSVEC RNA sequencing/RSEM HSVEC", pattern = "*genes.results", full.names = FALSE)
 sampleNames <- gsub(
   "RSEM_", "",
