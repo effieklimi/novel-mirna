@@ -3,19 +3,19 @@ library(tidyverse)
 setwd("/Users/effieklimi/Documents/novel-mirna/")
 
 # GENCODE annotation:
-gencode_v26_gft_table <-
-  read.csv(
-    "https://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_26/gencode.v26.annotation.gtf.gz",
-    header = FALSE,
-    stringsAsFactors = FALSE
-  )
+gencodeV26 <- rtracklayer::import("gencode.v26.annotation.gtf")
 
-gencode_v26_gft_table <- read.delim(
-  "/Users/effieklimi/Documents/PhD/miRNA screening paper/HSVEC RNA sequencing/gencode_v26_gtf_table.txt",
-  header = FALSE,
-  stringsAsFactors = FALSE
+gencodeV26 <- read.delim("gencode_v26_gtf_table.txt", header = FALSE, stringsAsFactors = FALSE)
+annotation <- data.frame(
+  ensembl = gencodeV26$V4,
+  name = gencodeV26$V7,
+  type = gencodeV26$,
+  chr = gencodeV26$,
+  start = gencodeV26$,
+  end = gencodeV26$,
+  str = gencodeV26$ 
 )
-annotation <- gencode_v26_gft_table[, c(4, 7, 6, 1:3, 5)]
+annotation <- gencodeAnnot[ , c(4, 7, 6, 1:3, 5)]
 colnames(annotation) <- c("ENSEMBL", "name", "type", "chr", "start", "end", "str")
 #################################
 

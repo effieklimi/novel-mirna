@@ -5,6 +5,8 @@ library(fgsea)
 library(plyr)
 library(grid)
 
+setwd()
+
 ########## pathways ##########
 bp <- read.geneset(url("https://maayanlab.cloud/Enrichr/geneSetLibrary?mode=text&libraryName=GO_Biological_Process_2021"))
 ke <- read.geneset(url("https://maayanlab.cloud/Enrichr/geneSetLibrary?mode=text&libraryName=KEGG_2021_Human"))
