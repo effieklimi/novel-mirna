@@ -3,20 +3,18 @@ library(tidyverse)
 setwd("/Users/effieklimi/Documents/novel-mirna/")
 
 # GENCODE annotation:
-gencodeV26 <- rtracklayer::import("gencode.v26.annotation.gtf")
-
 gencodeV26 <- read.delim("gencode_v26_gtf_table.txt", header = FALSE, stringsAsFactors = FALSE)
 annotation <- data.frame(
   ensembl = gencodeV26$V4,
   name = gencodeV26$V7,
-  type = gencodeV26$,
-  chr = gencodeV26$,
-  start = gencodeV26$,
-  end = gencodeV26$,
-  str = gencodeV26$ 
+  type = gencodeV26$V6,
+  chr = gencodeV26$V1,
+  start = gencodeV26$V2,
+  end = gencodeV26$V3,
+  str = gencodeV26$V5
 )
-annotation <- gencodeAnnot[ , c(4, 7, 6, 1:3, 5)]
-colnames(annotation) <- c("ENSEMBL", "name", "type", "chr", "start", "end", "str")
+# can also use the following two lines: annotation <- gencodeAnnot[ , c(4, 7, 6, 1:3, 5)]
+#to do the same as with the data.frame function above: colnames(annotation) <- c("ENSEMBL", "name", "type", "chr", "start", "end", "str")
 #################################
 
 ######## read RSEM files and extract count and FPKM #########
@@ -24,15 +22,17 @@ colnames(annotation) <- c("ENSEMBL", "name", "type", "chr", "start", "end", "str
 # "//cmvm.datastore.ed.ac.uk/cmvm/scs/users/username/..."
 
 rsemVsmc <- list.files(
-  "rnaseq-data/rsem-vsms",
+  "rnaseq-data/rsem-vsmc",
   pattern = "*genes.results",
   full.names = TRUE
 )
 
-rsemEndos <- list.files("rnaseq-data/rsem-endos", pattern = "*genes.results", full.names = TRUE)
+rsemEndos <- list.files(
+  "rnaseq-data/rsem-endos",
+  pattern = "*genes.results",
+  full.names = TRUE
+  )
 
-
-filenamesShort <- list.files("/Users/effieklimi/Documents/PhD/miRNA screening paper/HSVEC RNA sequencing/RSEM HSVEC", pattern = "*genes.results", full.names = FALSE)
 sampleNames <- gsub(
   "RSEM_", "",
   gsub(
@@ -46,6 +46,7 @@ sampleNames <- gsub(
     )
   )
 )
+
 ENSEMBL <- read.table(filenames[1], header = TRUE, sep = "\t", stringsAsFactors = FALSE)[, 1] # access column 1 from file 1 - ENSEMBL IDs
 # Count Table
 readCount <- do.call(cbind, lapply(filenames, function(fn) read.table(fn, header = TRUE, sep = "\t", stringsAsFactors = FALSE)[, 5]))

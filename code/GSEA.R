@@ -5,7 +5,7 @@ library(fgsea)
 library(plyr)
 library(grid)
 
-setwd()
+setwd("/Users/effieklimi/Documents/novel-mirna/")
 
 ########## pathways ##########
 bp <- read.geneset(url("https://maayanlab.cloud/Enrichr/geneSetLibrary?mode=text&libraryName=GO_Biological_Process_2021"))
@@ -18,18 +18,18 @@ names(all_paths) <- tolower(names(all_paths))
 ############## files ##############
 # Open files containg gene and DE info per miRNA -> put them all inside a list:
 deseqFiles <-
-  list.files("/Users/effieklimi/Documents/PhD/miRNA screening paper/HSVSMC RNA sequencing/DESeq2_sig_noLFCthreshold/",
+  list.files("/deseqResults/diffExprTables",
     pattern = "*.csv", full.names = TRUE) %>%
   lapply(read_csv) %>%
   lapply(distinct, name, .keep_all = TRUE)
 
 # Name tibbles based on their filenames (miRNA name)
 names(deseqFiles) <-
-  list.files("/Users/effieklimi/Documents/PhD/miRNA screening paper/HSVSMC RNA sequencing/DESeq2_sig_noLFCthreshold",
+  list.files("/deseqResults/diffExprTables",
     pattern = "*.csv", full.names = FALSE) %>%
   lapply(gsub, pattern = "vsmiRCTRL_noLFCthreshold.csv", replacement = "")
 # Save list of dfs containing all DE genes (without duplicates):
-saveRDS(deseqFiles, file = "/Users/effieklimi/Documents/PhD/miRNA screening paper/HSVSMC RNA sequencing/GSEA/NoLFCthresh/deseqFiles.rds")
+saveRDS(deseqFiles, file = "/deseqResults/deseqResultsTibble.rds")
 ####################################
 
 # Create gene lists with LFC and gene symbols as names, ranked from high LFC to low
