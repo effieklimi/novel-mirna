@@ -5,27 +5,39 @@ library("DESeq2")
 ################################ miRCTRL VS miR323: ################################
 #----------------------------------------------------------------------------------#
 
-gencode_v26_gft_table <- read.delim(
-  "/Users/effieklimi/Documents/PhD/miRNA screening paper/HSVSMC RNA sequencing/gencode_v26_gtf_table.txt",
+gencodeV26 <- read.delim(
+  "/Users/effieklimi/Documents/novel-mirna/gencode_v26_gtf_table.txt",
   header = FALSE,
   stringsAsFactors = FALSE
 )
-annotation <- gencode_v26_gft_table[, c(4, 7, 6, 1:3, 5)]
+annotation <- gencodeV26[, c(4, 7, 6, 1:3, 5)]
 colnames(annotation) <- c("ENSEMBL", "name", "type", "chr", "start", "end", "str")
 
 #----------------------------------------------------------------------------------#
 #--------------------------- Metadata & running DESeq2: ---------------------------#
 #----------------------------------------------------------------------------------#
 
-type <- c(rep("paired-end", 6))
-patient <- rep(c("p1", "p2", "p3"), 2)
-condition <- c(rep("miRCTRL", 3), rep("miR323", 3))
+type <- c(rep("paired-end", 33))
+patient <- rep(c("p1", "p2", "p3"), 11)
+condition <- c(
+  rep("FBS02perc", 3), 
+  rep("il1a-pdgf", 3), 
+  rep("mock", 3), 
+  rep("mirctrl", 3), 
+  rep("mir323", 3), 
+  rep("mir449b", 3), 
+  rep("mir491", 3), 
+  rep("mir892b", 3), 
+  rep("1827", 3), 
+  rep("mir4774", 3), 
+  rep("mir5681b", 3)
+  )
 # Count data + meta data:
 countTable <- read.csv(
-  "/Users/effieklimi/Documents/PhD/miRNA screening paper/HSVSMC RNA sequencing/HSVSMC_miRNAOE_counts.csv",
+  "/Users/effieklimi/Documents/novel-mirna/results/tables/vsmcCounts.csv",
   header = TRUE
 )
-countTableDESeq <- sapply(countTable[, c(17, 28, 39, 11, 22, 33)], as.integer)
+countTableDESeq <- sapply(countTable[, c(8:40)], as.integer)
 row.names(countTableDESeq) <- countTable[, 1]
 metadata <- data.frame(
   row.names = colnames(countTableDESeq),
@@ -42,7 +54,7 @@ dds <- DESeqDataSetFromMatrix(
 )
 
 # Setting FBS02 as ref (can't use "contrast" due to running apeglm shrinkage):
-dds$condition <- relevel(dds$condition, ref = "miRCTRL")
+#dds$condition <- relevel(dds$condition, ref = "miRCTRL")
 # Running DESeq2 with a Wald test:
 dds <- DESeq(dds, test = "Wald")
 
@@ -64,7 +76,7 @@ res <- results(
 # Performing LFC shrinkage - WITHOUT LFC:
 ddsShrink <- lfcShrink(
   dds = dds,
-  coef = "condition_miR323_vs_miRCTRL",
+  coef = "condition_mir323_vs_mirctrl",
   res = res,
   type = "apeglm",
   svalue = FALSE,
