@@ -62,11 +62,7 @@ dds$condition <- relevel(dds$condition, ref = "mirctrl")
 # Running DESeq2 with a Wald test:
 dds <- DESeq(dds, test = "Wald")
 
-
-
 resParams <- lapply(resultsNames(dds)[c(4, 7:12)], list)
-
-
 deseqResults <-
   foreach(contrast = resParams) %do% {
 
@@ -79,9 +75,7 @@ deseqResults <-
         alpha = 0.01
       )
 
-
   }
-
 
   shrinkResults <-
   foreach(contrast = resParams, res = deseqResults) %do% {
@@ -105,3 +99,5 @@ deseqResults <-
   }
 
 names(shrinkResults) <- resultsNames(dds)[c(4, 7:12)]
+
+saveRDS(shrinkResults, "results/tables/vsmcDESeq2Results.rds")
