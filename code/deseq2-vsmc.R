@@ -99,6 +99,6 @@ deseqResults <-
 
   }
 
-names(shrinkResults) <- resultsNames(dds)[c(4, 7:12)]
+names(shrinkResults) <- resultsNames(dds)[c(6:12)]
 
 saveRDS(shrinkResults, "results/tables/vsmc-deseq2-results.rds")
