@@ -21,8 +21,8 @@ colnames(annotation) <- c("ENSEMBL", "name", "type", "chr", "start", "end", "str
 #----------------------------------------------------------------------------------#
 
 type <- c(rep("paired-end", 33))
-patient <- rep(c("p1", "p2", "p3"), 11)
-condition <- c(
+patient <- factor(rep(c("p1", "p2", "p3"), 11))
+condition <- factor(c(
   rep("FBS02perc", 3),
   rep("il1a-pdgf", 3),
   rep("mock", 3),
@@ -34,13 +34,14 @@ condition <- c(
   rep("mir1827", 3),
   rep("mir4774", 3),
   rep("mir5681b", 3)
-  )
+  ))
 
 # Count data + meta data:
 countTable <- read.csv(
   "results/tables/vsmcCounts.csv",
   header = TRUE
 )
+
 countTableDESeq <- sapply(countTable[, c(8:40)], as.integer)
 row.names(countTableDESeq) <- countTable[, 1]
 metadata <- data.frame(
@@ -62,7 +63,7 @@ dds$condition <- relevel(dds$condition, ref = "mirctrl")
 # Running DESeq2 with a Wald test:
 dds <- DESeq(dds, test = "Wald")
 
-resParams <- lapply(resultsNames(dds)[c(4, 7:12)], list)
+resParams <- lapply(resultsNames(dds)[c(6:12)], list)
 deseqResults <-
   foreach(contrast = resParams) %do% {
 
@@ -100,4 +101,4 @@ deseqResults <-
 
 names(shrinkResults) <- resultsNames(dds)[c(4, 7:12)]
 
-saveRDS(shrinkResults, "results/tables/vsmcDESeq2Results.rds")
+saveRDS(shrinkResults, "results/tables/vsmc-deseq2-results.rds")
