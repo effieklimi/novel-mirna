@@ -2,11 +2,14 @@ library(tidyverse)
 library(dplyr)
 library(multiMiR)
 
+options(warn = 1)
+setwd("/Users/effieklimi/Documents/novel-mirna/")
+
 ensIdSplit <- function(x) { strsplit(x, split = ".", fixed = TRUE)[[1]][1] }
 miRNAnames <- c("hsa-miR-1827", "hsa-miR-323a-3p", "hsa-miR-449b-5p", "hsa-miR-4774-3p", "hsa-miR-491-3p", "hsa-miR-5681b", "hsa-miR-892b")
-deseqFiles <- readRDS("/Users/effieklimi/Documents/PhD/miRNA screening paper/HSVSMC RNA sequencing/GSEA/NoLFCthresh/deseqFiles.rds")
+deseqFiles <- readRDS("results/tables/vsmc-deseq2-results.rds")
 deGenesList <- 
-  lapply(deseqFiles, "[", , c(2, 8, 4)) %>%
+  lapply(deseqFiles, "[", , c(1, 3, 7)) %>%
   map(~ mutate(.x, EnsID = ensIdSplit(EnsID)))
 
 
@@ -45,6 +48,8 @@ multimirPredicted50 <- map(
   ) %>% 
   lapply(function(x) x@data) %>%
   lapply("[", , c(6, 4)) 
+
+
 
 
 # MultimiR for all 7 miRNAs without using prediction score cutoffs
