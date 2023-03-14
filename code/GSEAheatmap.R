@@ -1,1 +1,41 @@
-##############################library(pheatmap)##############################draw_colnames_45 <- function(coln, gaps, ...) {  coord <- pheatmap:::find_coordinates(length(coln), gaps)  x <- coord$coord - 0.5 * coord$size  res <- textGrob(coln, x = x, y = unit(1, "npc") - unit(3, "bigpts"), vjust = 0.5, hjust = 1, rot = 90, gp = gpar(...))  return(res)}fgseaResultsSig <- read.csv(  "/Users/effieklimi/Documents/PhD/miRNA screening paper/HSVSMC RNA sequencing/GSEA/NoLFCthresh/fgseaResultsSigNES.csv",   header = TRUE,   row.names = 1  )# Rank results based on decreasing number of NAs per row and format for heatmap:fgseaResultsSig <- as.matrix(fgseaResultsSig[order(rowSums(is.na(fgseaResultsSig))), c(2, 3, 5, 7, 1, 4, 6)])assignInNamespace(x = "draw_colnames", value = "draw_colnames_45", ns = asNamespace("pheatmap"))anot <- data.frame(row.names = rownames(fgseaResultsSig), Database = fgseaResultsSig$Database)ann_colors <- list(Database = c("KEGG" = "#636362", "Reactome" = "#babab8", "Gene Ontology BP" = "white"))pheatmap(fgseaResultsSig,         border_color = "black",         cluster_cols = FALSE,         cluster_rows = FALSE,         fontsize_row = 13,         fontsize_col = 5,         show_rownames = TRUE,         show_colnames = TRUE,         na_col = "black",         annotation_row = anot,         annotation_colors = ann_colors,         main = "Gene Set Enrichment Analysis",         colorRampPalette(c("#005dc7", "white", "#d60047"))(300))
+##############################
+library(pheatmap)
+##############################
+
+options(warn = 1)
+setwd("/Users/effieklimi/Documents/novel-mirna/")
+
+draw_colnames_45 <- function(coln, gaps, ...) {
+  coord <- pheatmap:::find_coordinates(length(coln), gaps)
+  x <- coord$coord - 0.5 * coord$size
+  res <- textGrob(coln, x = x, y = unit(1, "npc") - unit(3, "bigpts"), vjust = 0.5, hjust = 1, rot = 90, gp = gpar(...))
+  return(res)
+}
+
+fgseaResultsSig <- read.csv(
+  "results/tables/fgsea-results-sigNES.csv",
+  header = TRUE, 
+  row.names = 1
+  )
+
+# Rank results based on decreasing number of NAs per row and format for heatmap:
+fgseaMatrix <- as.matrix(fgseaResultsSig[order(rowSums(is.na(fgseaResultsSig))), c(2, 3, 5, 7, 1, 4, 6)])
+
+assignInNamespace(x = "draw_colnames", value = "draw_colnames_45", ns = asNamespace("pheatmap"))
+anot <- data.frame(row.names = rownames(fgseaResultsSig), Database = fgseaResultsSig$Database)
+ann_colors <- list(Database = c("KEGG" = "#636362", "Reactome" = "#babab8", "Gene Ontology BP" = "white"))
+
+pheatmap(fgseaMatrix,
+         border_color = "black",
+         cluster_cols = FALSE,
+         cluster_rows = FALSE,
+         fontsize_row = 7,
+         fontsize_col = 5,
+         show_rownames = TRUE,
+         show_colnames = TRUE,
+         na_col = "grey",
+         annotation_row = anot,
+         annotation_colors = ann_colors,
+         main = "Gene Set Enrichment Analysis",
+         colorRampPalette(c("#005dc7", "white", "#d60047"))(300)
+)
