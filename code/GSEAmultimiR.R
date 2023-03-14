@@ -6,6 +6,8 @@ library(plyr)
 library(grid)
 
 
+options(warn = 1)
+setwd("/Users/effieklimi/Documents/novel-mirna/")
 
 read.geneset = function(path_to_gset){
   bp = GSA.read.gmt(path_to_gset)
@@ -16,34 +18,40 @@ read.geneset = function(path_to_gset){
 } 
 
 
-bp <- read.geneset(url("https://maayanlab.cloud/Enrichr/geneSetLibrary?mode=text&libraryName=GO_Biological_Process_2021"))
-ke <- read.geneset(url("https://maayanlab.cloud/Enrichr/geneSetLibrary?mode=text&libraryName=KEGG_2021_Human"))
-re <- read.geneset(url("https://maayanlab.cloud/Enrichr/geneSetLibrary?mode=text&libraryName=Reactome_2022"))
+bp <- read.geneset("databases/GO_Biological_Process_2021.txt")
+ke <- read.geneset("databases/KEGG_2021_Human.txt")
+re <- read.geneset("databases/Reactome_2022.txt")
 all_paths <- c(bp, ke, re)
 names(all_paths) <- tolower(names(all_paths))
 
 
 
 
-targets50Top2 <- readRDS("/Users/effieklimi/Documents/PhD/miRNA screening paper/HSVSMC RNA sequencing/multimiR/targets50Top2.rds")
-targets50 <- readRDS("/Users/effieklimi/Documents/PhD/miRNA screening paper/HSVSMC RNA sequencing/multimiR/targets50.rds")
-targets100 <- readRDS("/Users/effieklimi/Documents/PhD/miRNA screening paper/HSVSMC RNA sequencing/multimiR/targets100.rds")
+targets50Top2 <- 
+readRDS("/Users/effieklimi/Documents/novel-mirna/results/tables/targets50Top2.rds") %>%
+  lapply(distinct, name, .keep_all = TRUE)
+targets50 <- 
+readRDS("/Users/effieklimi/Documents/novel-mirna/results/tables/targets50.rds")  %>%
+  lapply(distinct, name, .keep_all = TRUE)
+targets100 <- 
+readRDS("/Users/effieklimi/Documents/novel-mirna/results/tables/targets100.rds")  %>%
+  lapply(distinct, name, .keep_all = TRUE)
 
 
 
 
 geneLists50Top2 <-
-  lapply(targets50Top2, "[", , c(2, 3)) %>%
+  lapply(targets50Top2, "[", , c(3, 2)) %>%
   lapply(tibble::deframe) %>%
   lapply(sort, decreasing = TRUE)
 
 geneLists50 <-
-  lapply(targets50, "[", , c(2, 3)) %>%
+  lapply(targets50, "[", , c(3, 2)) %>%
   lapply(tibble::deframe) %>%
   lapply(sort, decreasing = TRUE)
 
 geneLists100 <-
-  lapply(targets100, "[", , c(2, 3)) %>%
+  lapply(targets100, "[", , c(3, 2)) %>%
   lapply(tibble::deframe) %>%
   lapply(sort, decreasing = TRUE)
 
@@ -100,9 +108,9 @@ fgseaResultsSig100 <-
   column_to_rownames(var = "pathway") 
 
 
-write.csv(fgseaResultsSig50Top2, file = "/Users/effieklimi/Documents/PhD/miRNA screening paper/HSVSMC RNA sequencing/multimiR/GSEA multimiR/fgseaResultsSig50Top2NES.csv")
-write.csv(fgseaResultsSig50, file = "/Users/effieklimi/Documents/PhD/miRNA screening paper/HSVSMC RNA sequencing/multimiR/GSEA multimiR/fgseaResultsSig50NES.csv")
-write.csv(fgseaResultsSig100, file = "/Users/effieklimi/Documents/PhD/miRNA screening paper/HSVSMC RNA sequencing/multimiR/GSEA multimiR/fgseaResultsSig100NES.csv")
+write.csv(fgseaResultsSig50Top2, file = "/Users/effieklimi/Documents/novel-mirna/results/tables/fgseaResultsSig50Top2NES.csv")
+write.csv(fgseaResultsSig50, file = "/Users/effieklimi/Documents/novel-mirna/results/tables/ffgseaResultsSig50NES.csv")
+write.csv(fgseaResultsSig100, file = "/Users/effieklimi/Documents/novel-mirna/results/tables/ffgseaResultsSig100NES.csv")
 
 
 

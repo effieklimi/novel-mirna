@@ -1,6 +1,6 @@
-targets50Top2 <- readRDS("/Users/effieklimi/Documents/PhD/miRNA screening paper/HSVSMC RNA sequencing/multimiR/targets50Top2.rds")
+targets50Top2 <- readRDS("/Users/effieklimi/Documents/novel-mirna/results/tables/targets50Top2.rds")
 
-FPKM <- read.csv("/Users/effieklimi/Documents/PhD/miRNA screening paper/HSVSMC RNA sequencing/HSVSMC_miRNAOE_FPKM.csv", header = TRUE)
+FPKM <- read.csv("/Users/effieklimi/Documents/novel-mirna/results/tables/vsmcFpkm.csv", header = TRUE)
 FPKM <- distinct(FPKM, name, .keep_all = TRUE)
 FPKMrownmeans <- rowMeans(FPKM[,c(8:40)], na.rm = TRUE)
 FPKM$rowMeans <- FPKMrownmeans

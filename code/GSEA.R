@@ -9,10 +9,10 @@ options(warn = 1)
 setwd("/Users/effieklimi/Documents/novel-mirna/")
 
 ########## pathways ##########
-read.geneset <- function(path_to_gset){
+read.geneset <- function(path_to_gset)  {
   bp = GSA.read.gmt(path_to_gset)
   out = bp$genesets
-  out = lapply(1:length(out), function(x) out[[x]][out[[x]] != ''])
+  out = lapply(1:length(out), function(x) out[[x]][out[[x]] != ""])
   names(out) = bp$geneset.names
   return(out)
 }
@@ -41,7 +41,7 @@ saveRDS(fgseaResults, file = "results/tables/vsmc-fgsea.rds")
 
 # Filter for p value, keep the Normalised Enrichment Scores and format table for the heatmap:
 fgseaResultsSig <-
-  lapply(fgseaResults, filter, padj < 0.01) %>%
+  lapply(fgseaResults, filter, padj < 0.001) %>%
   lapply("[", , c("pathway", "NES")) %>%
   join_all(by = "pathway", type = "left") %>%
   mutate(Database = case_when(

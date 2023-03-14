@@ -85,9 +85,9 @@ names(targets50Top2) <- names(deseqFiles)
 names(targets50) <- names(deseqFiles)
 names(targets100) <- names(deseqFiles)
 
-saveRDS(targets50Top2, file = "/Users/effieklimi/Documents/PhD/miRNA screening paper/HSVSMC RNA sequencing/multimiR/targets50Top2.rds")
-saveRDS(targets50, file = "/Users/effieklimi/Documents/PhD/miRNA screening paper/HSVSMC RNA sequencing/multimiR/targets50.rds")
-saveRDS(targets100, file = "/Users/effieklimi/Documents/PhD/miRNA screening paper/HSVSMC RNA sequencing/multimiR/targets100.rds")
+saveRDS(targets50Top2, file = "/Users/effieklimi/Documents/novel-mirna/results/tables/targets50Top2.rds")
+saveRDS(targets50, file = "/Users/effieklimi/Documents/novel-mirna/results/tables/targets50.rds")
+saveRDS(targets100, file = "/Users/effieklimi/Documents/novel-mirna/results/tables/targets100.rds")
 
 
 
