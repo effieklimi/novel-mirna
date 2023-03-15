@@ -1,3 +1,8 @@
+library("clusterProfiler")
+library("tidyverse")
+library("org.Hs.eg.db")
+
+
 targets50Top2 <- readRDS("/Users/effieklimi/Documents/novel-mirna/results/tables/targets50Top2.rds")
 
 FPKM <- read.csv("/Users/effieklimi/Documents/novel-mirna/results/tables/vsmcFpkm.csv", header = TRUE)
@@ -14,9 +19,9 @@ nrowfun   <- function(vector, threshold){
   return(score)
 }
 
-
+# For the pathway analysis we took the uppermost quartile wrt logfoldchange
 geneLists50Top2BP <-
-  lapply(targets50Top2, "[", , c(2, 3)) %>%
+  lapply(targets50Top2, "[", , c(3, 2)) %>%
   lapply(tibble::deframe) %>%
   lapply(sort, decreasing = FALSE) %>%
   lapply(tibble::enframe) %>%
@@ -27,13 +32,13 @@ geneLists50Top2BP <-
       universe      = FPKM$name,
       keyType       = "SYMBOL",
       OrgDb         = org.Hs.eg.db,
-      ont           = "BP",    
+      ont           = "BP",
       pAdjustMethod = "BH",
       pvalueCutoff  = 1) %>%
   lapply(function(x) x@result)
 
 geneLists50Top2MF <-
-  lapply(targets50Top2, "[", , c(2, 3)) %>%
+  lapply(targets50Top2, "[", , c(3, 2)) %>%
   lapply(tibble::deframe) %>%
   lapply(sort, decreasing = FALSE) %>%
   lapply(tibble::enframe) %>%
@@ -44,7 +49,7 @@ geneLists50Top2MF <-
       universe      = FPKM$name,
       keyType       = "SYMBOL",
       OrgDb         = org.Hs.eg.db,
-      ont           = "MF",    
+      ont           = "MF",
       pAdjustMethod = "BH",
       pvalueCutoff  = 1) %>%
   lapply(function(x) x@result)
@@ -55,130 +60,134 @@ geneLists50Top2MF <-
 
 
 #BP
-geneLists50Top2BP$miR1827[c(1:20),] %>%
+geneLists50Top2BP$condition_mir1827_vs_mirctrl[c(1:20),] %>%
   arrange(-pvalue) %>%    # First sort by val. This sort the dataframe but NOT the factor levels
   mutate(Description=factor(Description, levels=Description)) %>%   # This trick update the factor levels
   ggplot(aes(x=Description, y=-log(pvalue))) +
-  geom_bar(stat="identity", fill="#f68060", alpha=.6, width=.4) + 
+  geom_bar(stat="identity", fill="#f68060", alpha=.6, width=.7) + 
   coord_flip() +
   theme_minimal() +
   ggtitle("miR-1827 Biological Process")
 
-geneLists50Top2BP$miR323[c(1:20),] %>%
+geneLists50Top2BP$condition_mir323_vs_mirctrl[c(1:20), ] %>%
   arrange(-pvalue) %>%    # First sort by val. This sort the dataframe but NOT the factor levels
-  mutate(Description=factor(Description, levels=Description)) %>%   # This trick update the factor levels
-  ggplot(aes(x=Description, y=-log(pvalue))) +
-  geom_bar(stat="identity", fill="#f68060", alpha=.6, width=.4) + 
+  mutate(Description = factor(Description, levels = Description)) %>%   # This trick update the factor levels
+  ggplot(aes(x = Description, y = -log(pvalue))) +
+  geom_bar(stat = "identity", fill = "#f68060", alpha = .6, width = .7) +
   coord_flip() +
   theme_minimal() +
   ggtitle("miR-323-3p Biological Process")
 
-geneLists50Top2BP$miR449[c(1:20),] %>%
+geneLists50Top2BP$condition_mir449b_vs_mirctrl[c(1:20),] %>%
   arrange(-pvalue) %>%    # First sort by val. This sort the dataframe but NOT the factor levels
   mutate(Description=factor(Description, levels=Description)) %>%   # This trick update the factor levels
   ggplot(aes(x=Description, y=-log(pvalue))) +
-  geom_bar(stat="identity", fill="#f68060", alpha=.6, width=.4) + 
+  geom_bar(stat="identity", fill="#f68060", alpha=.6, width=.7) + 
   coord_flip() +
   theme_minimal() +
   ggtitle("miR-449b-5p Biological Process")
 
-geneLists50Top2BP$miR4774[c(1:20),] %>%
+geneLists50Top2BP$condition_mir4774_vs_mirctrl[c(1:20),] %>%
   arrange(-pvalue) %>%    # First sort by val. This sort the dataframe but NOT the factor levels
   mutate(Description=factor(Description, levels=Description)) %>%   # This trick update the factor levels
   ggplot(aes(x=Description, y=-log(pvalue))) +
-  geom_bar(stat="identity", fill="#f68060", alpha=.6, width=.4) + 
+  geom_bar(stat="identity", fill="#f68060", alpha=.6, width=.7) + 
   coord_flip() +
   theme_minimal() +
   ggtitle("miR-4774-3p Biological Process")
 
-geneLists50Top2BP$miR491[c(1:20),] %>%
+geneLists50Top2BP$condition_mir491_vs_mirctrl[c(1:20),] %>%
   arrange(-pvalue) %>%    # First sort by val. This sort the dataframe but NOT the factor levels
   mutate(Description=factor(Description, levels=Description)) %>%   # This trick update the factor levels
   ggplot(aes(x=Description, y=-log(pvalue))) +
-  geom_bar(stat="identity", fill="#f68060", alpha=.6, width=.4) + 
+  geom_bar(stat="identity", fill="#f68060", alpha=.6, width=.7) + 
   coord_flip() +
   theme_minimal()+
   ggtitle("miR-R491-3p Biological Process")
 
-geneLists50Top2BP$miR5681[c(1:20),] %>%
+geneLists50Top2BP$condition_mir5681b_vs_mirctrl[c(1:20),] %>%
   arrange(-pvalue) %>%    # First sort by pvalue This sort the dataframe but NOT the factor levels
   mutate(Description=factor(Description, levels=Description)) %>%   # This trick update the factor levels
   ggplot(aes(x=Description, y=-log(pvalue))) +
-  geom_bar(stat="identity", fill="#f68060", alpha=.6, width=.4) + 
+  geom_bar(stat="identity", fill="#f68060", alpha=.6, width=.7) + 
   coord_flip() +
   theme_minimal()+
   ggtitle("miR-5681b Biological Process")
 
-geneLists50Top2BP$miR892b[c(1:20),] %>%
+geneLists50Top2BP$condition_mir892b_vs_mirctrl[c(1:20),] %>%
   arrange(-pvalue) %>%    # First sort by val. This sort the dataframe but NOT the factor levels
   mutate(Description=factor(Description, levels=Description)) %>%   # This trick update the factor levels
   ggplot(aes(x=Description, y=-log(pvalue))) +
-  geom_bar(stat="identity", fill="#f68060", alpha=.6, width=.4) + 
+  geom_bar(stat="identity", fill="#f68060", alpha=.6, width=.7) + 
   coord_flip() +
   theme_minimal()+
   ggtitle("miR-892b Biological Process")
 
 
+
+
+
+
 #MP
-geneLists50Top2MF$miR1827[c(1:20),] %>%
+geneLists50Top2MF$condition_mir1827_vs_mirctrl[c(1:20),] %>%
   arrange(-pvalue) %>%    # First sort by val. This sort the dataframe but NOT the factor levels
   mutate(Description=factor(Description, levels=Description)) %>%   # This trick update the factor levels
   ggplot(aes(x=Description, y=-log(pvalue))) +
-  geom_bar(stat="identity", fill="#f68060", alpha=.6, width=.4) + 
+  geom_bar(stat="identity", fill="#f68060", alpha=.6, width=.7) + 
   coord_flip() +
   theme_minimal() +
   ggtitle("miR-1827 Molecular Function")
 
-geneLists50Top2MF$miR323[c(1:20),] %>%
+geneLists50Top2MF$condition_mir323_vs_mirctrl[c(1:20),] %>%
   arrange(-pvalue) %>%    # First sort by val. This sort the dataframe but NOT the factor levels
   mutate(Description=factor(Description, levels=Description)) %>%   # This trick update the factor levels
   ggplot(aes(x=Description, y=-log(pvalue))) +
-  geom_bar(stat="identity", fill="#f68060", alpha=.6, width=.4) + 
+  geom_bar(stat="identity", fill="#f68060", alpha=.6, width=.7) + 
   coord_flip() +
   theme_minimal() +
   ggtitle("miR-323-3p Molecular Function")
 
-geneLists50Top2MF$miR449[c(1:20),] %>%
+geneLists50Top2MF$condition_mir449b_vs_mirctrl[c(1:20),] %>%
   arrange(-pvalue) %>%    # First sort by val. This sort the dataframe but NOT the factor levels
   mutate(Description=factor(Description, levels=Description)) %>%   # This trick update the factor levels
   ggplot(aes(x=Description, y=-log(pvalue))) +
-  geom_bar(stat="identity", fill="#f68060", alpha=.6, width=.4) + 
+  geom_bar(stat="identity", fill="#f68060", alpha=.6, width=.7) + 
   coord_flip() +
   theme_minimal() +
   ggtitle("miR-449b-5p Molecular Function")
 
-geneLists50Top2MF$miR4774[c(1:20),] %>%
+geneLists50Top2MF$condition_mir4774_vs_mirctrl[c(1:20),] %>%
   arrange(-pvalue) %>%    # First sort by val. This sort the dataframe but NOT the factor levels
   mutate(Description=factor(Description, levels=Description)) %>%   # This trick update the factor levels
   ggplot(aes(x=Description, y=-log(pvalue))) +
-  geom_bar(stat="identity", fill="#f68060", alpha=.6, width=.4) + 
+  geom_bar(stat="identity", fill="#f68060", alpha=.6, width=.7) + 
   coord_flip() +
   theme_minimal() +
   ggtitle("miR-4774-3p Molecular Function")
 
-geneLists50Top2MF$miR491[c(1:20),] %>%
+geneLists50Top2MF$condition_mir491_vs_mirctrl[c(1:20),] %>%
   arrange(-pvalue) %>%    # First sort by val. This sort the dataframe but NOT the factor levels
   mutate(Description=factor(Description, levels=Description)) %>%   # This trick update the factor levels
   ggplot(aes(x=Description, y=-log(pvalue))) +
-  geom_bar(stat="identity", fill="#f68060", alpha=.6, width=.4) + 
+  geom_bar(stat="identity", fill="#f68060", alpha=.6, width=.7) + 
   coord_flip() +
   theme_minimal()+
   ggtitle("miR-R491-3p Molecular Function")
 
-geneLists50Top2MF$miR5681[c(1:20),] %>%
+geneLists50Top2MF$condition_mir5681b_vs_mirctrl[c(1:20),] %>%
   arrange(-pvalue) %>%    # First sort by pvalue This sort the dataframe but NOT the factor levels
   mutate(Description=factor(Description, levels=Description)) %>%   # This trick update the factor levels
   ggplot(aes(x=Description, y=-log(pvalue))) +
-  geom_bar(stat="identity", fill="#f68060", alpha=.6, width=.4) + 
+  geom_bar(stat="identity", fill="#f68060", alpha=.6, width=.7) + 
   coord_flip() +
   theme_minimal()+
   ggtitle("miR-5681b Molecular Function")
 
-geneLists50Top2MF$miR892b[c(1:20),] %>%
+geneLists50Top2MF$condition_mir892b_vs_mirctrl[c(1:20),] %>%
   arrange(-pvalue) %>%    # First sort by val. This sort the dataframe but NOT the factor levels
   mutate(Description=factor(Description, levels=Description)) %>%   # This trick update the factor levels
   ggplot(aes(x=Description, y=-log(pvalue))) +
-  geom_bar(stat="identity", fill="#f68060", alpha=.6, width=.4) + 
+  geom_bar(stat="identity", fill="#f68060", alpha=.6, width=.7) + 
   coord_flip() +
   theme_minimal()+
   ggtitle("miR-892b Molecular Function")

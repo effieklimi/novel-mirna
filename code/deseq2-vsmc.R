@@ -2,11 +2,10 @@ library("DESeq2")
 library("dplyr")
 library("tibble")
 library("purrr")
+library(foreach)
 
 
-#----------------------------------------------------------------------------------#
-################################ miRCTRL VS miR323: ################################
-#----------------------------------------------------------------------------------#
+
 setwd("/Users/effieklimi/Documents/novel-mirna/")
 gencodeV26 <- read.delim(
   "gencode_v26_gtf_table.txt",
@@ -16,16 +15,10 @@ gencodeV26 <- read.delim(
 annotation <- gencodeV26[, c(4, 7, 6, 1:3, 5)]
 colnames(annotation) <- c("ENSEMBL", "name", "type", "chr", "start", "end", "str")
 
-#----------------------------------------------------------------------------------#
-#--------------------------- Metadata & running DESeq2: ---------------------------#
-#----------------------------------------------------------------------------------#
 
-type <- c(rep("paired-end", 33))
-patient <- factor(rep(c("p1", "p2", "p3"), 11))
+type <- c(rep("paired-end", 24))
+patient <- factor(rep(c("p1", "p2", "p3"), 8))
 condition <- factor(c(
-  rep("FBS02perc", 3),
-  rep("il1a-pdgf", 3),
-  rep("mock", 3),
   rep("mirctrl", 3),
   rep("mir323", 3),
   rep("mir449b", 3),
@@ -42,7 +35,7 @@ countTable <- read.csv(
   header = TRUE
 )
 
-countTableDESeq <- sapply(countTable[, c(8:40)], as.integer)
+countTableDESeq <- sapply(countTable[, c(17:40)], as.integer)
 row.names(countTableDESeq) <- countTable[, 1]
 metadata <- data.frame(
   row.names = colnames(countTableDESeq),
@@ -63,7 +56,7 @@ dds$condition <- relevel(dds$condition, ref = "mirctrl")
 # Running DESeq2 with a Wald test:
 dds <- DESeq(dds, test = "Wald")
 
-resParams <- lapply(resultsNames(dds)[c(6:12)], list)
+resParams <- lapply(resultsNames(dds)[c(4:10)], list)
 deseqResults <-
   foreach(contrast = resParams) %do% {
 
@@ -73,7 +66,7 @@ deseqResults <-
         contrast = contrast,
         independentFiltering = TRUE,
         pAdjustMethod = "BH", # default
-        alpha = 0.01
+        alpha = 0.05
       )
 
   }
@@ -94,11 +87,11 @@ deseqResults <-
         data.frame() %>%
         rownames_to_column(var = "EnsID") %>%
         as_tibble() %>%
-        filter(padj < 0.01) %>%
+        filter(padj < 0.05) %>%
         merge(annotation, by = 1, all.x = FALSE)
 
   }
 
-names(shrinkResults) <- resultsNames(dds)[c(6:12)]
+names(shrinkResults) <- resultsNames(dds)[c(4:10)]
 
-saveRDS(shrinkResults, "results/tables/vsmc-deseq2-results.rds")
+saveRDS(shrinkResults, "results/rds/vsmc-deseq2-p05.rds")

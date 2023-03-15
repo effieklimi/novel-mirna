@@ -1,6 +1,6 @@
 library(tidyverse)
 library(dplyr)
-library('GSA')
+library(GSA)
 library(fgsea)
 library(plyr)
 library(grid)
@@ -9,13 +9,13 @@ library(grid)
 options(warn = 1)
 setwd("/Users/effieklimi/Documents/novel-mirna/")
 
-read.geneset = function(path_to_gset){
-  bp = GSA.read.gmt(path_to_gset)
-  out = bp$genesets
-  out = lapply(1:length(out), function(x) out[[x]][out[[x]]!=''])
-  names(out) = bp$geneset.names
+read.geneset <- function(path_to_gset) {
+  bp <- GSA.read.gmt(path_to_gset)
+  out <- bp$genesets
+  out <- lapply(1:length(out), function(x) out[[x]][out[[x]] != ""])
+  names(out) <- bp$geneset.names
   return(out)
-} 
+}
 
 
 bp <- read.geneset("databases/GO_Biological_Process_2021.txt")
@@ -27,13 +27,13 @@ names(all_paths) <- tolower(names(all_paths))
 
 
 
-targets50Top2 <- 
+targets50Top2 <-
 readRDS("/Users/effieklimi/Documents/novel-mirna/results/tables/targets50Top2.rds") %>%
   lapply(distinct, name, .keep_all = TRUE)
-targets50 <- 
+targets50 <-
 readRDS("/Users/effieklimi/Documents/novel-mirna/results/tables/targets50.rds")  %>%
   lapply(distinct, name, .keep_all = TRUE)
-targets100 <- 
+targets100 <-
 readRDS("/Users/effieklimi/Documents/novel-mirna/results/tables/targets100.rds")  %>%
   lapply(distinct, name, .keep_all = TRUE)
 
@@ -58,15 +58,15 @@ geneLists100 <-
 
 
 
-fgseaResults50Top2 <- 
+fgseaResults50Top2 <-
   map(geneLists50Top2, fgsea, pathways = all_paths, minSize = 20, maxSize = 1000, eps = 0)
 saveRDS(fgseaResults50Top2, file = "/Users/effieklimi/Documents/PhD/miRNA screening paper/HSVSMC RNA sequencing/multimiR/GSEA multimiR/fgseaResults50Top2.rds")
 
-fgseaResults50 <- 
+fgseaResults50 <-
   map(geneLists50, fgsea, pathways = all_paths, minSize = 20, maxSize = 1000, eps = 0)
 saveRDS(fgseaResults50, file = "/Users/effieklimi/Documents/PhD/miRNA screening paper/HSVSMC RNA sequencing/multimiR/GSEA multimiR/fgseaResults50.rds")
 
-fgseaResults100 <- 
+fgseaResults100 <-
   map(geneLists100, fgsea, pathways = all_paths, minSize = 20, maxSize = 1000, eps = 0)
 saveRDS(fgseaResults100, file = "/Users/effieklimi/Documents/PhD/miRNA screening paper/HSVSMC RNA sequencing/multimiR/GSEA multimiR/fgseaResults100.rds")
 
@@ -81,7 +81,7 @@ fgseaResultsSig50Top2 <-
     as.character(pathway) %in% tolower(names(re)) ~ "Reactome",
     as.character(pathway) %in% tolower(names(bp)) ~ "Gene Ontology BP"
   )) %>%
-  column_to_rownames(var = "pathway") 
+  column_to_rownames(var = "pathway")
 
 fgseaResultsSig50 <-
   lapply(fgseaResults50, filter, padj < 0.01) %>%
@@ -93,7 +93,7 @@ fgseaResultsSig50 <-
     as.character(pathway) %in% tolower(names(re)) ~ "Reactome",
     as.character(pathway) %in% tolower(names(bp)) ~ "Gene Ontology BP"
   )) %>%
-  column_to_rownames(var = "pathway") 
+  column_to_rownames(var = "pathway")
 
 fgseaResultsSig100 <-
   lapply(fgseaResults100, filter, padj < 0.01) %>%
@@ -105,12 +105,9 @@ fgseaResultsSig100 <-
     as.character(pathway) %in% tolower(names(re)) ~ "Reactome",
     as.character(pathway) %in% tolower(names(bp)) ~ "Gene Ontology BP"
   )) %>%
-  column_to_rownames(var = "pathway") 
+  column_to_rownames(var = "pathway")
 
 
 write.csv(fgseaResultsSig50Top2, file = "/Users/effieklimi/Documents/novel-mirna/results/tables/fgseaResultsSig50Top2NES.csv")
 write.csv(fgseaResultsSig50, file = "/Users/effieklimi/Documents/novel-mirna/results/tables/ffgseaResultsSig50NES.csv")
 write.csv(fgseaResultsSig100, file = "/Users/effieklimi/Documents/novel-mirna/results/tables/ffgseaResultsSig100NES.csv")
-
-
-

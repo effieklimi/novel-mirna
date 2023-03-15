@@ -8,8 +8,8 @@ library(RColorBrewer)
 
 
 ######### FPKM files #########
-fpkmEC <- read.csv("/Users/effieklimi/Documents/PhD/miRNA screening paper/HSVEC RNA sequencing/HSVEC_miRNAOE_FPKM.csv", header = TRUE)
-fpkmSMC <- read.csv("/Users/effieklimi/Documents/PhD/miRNA screening paper/HSVSMC RNA sequencing/HSVSMC_miRNAOE_FPKM.csv", header = TRUE)
+fpkmEC <- read.csv("/Users/effieklimi/Documents/novel-mirna/results/tables/endosFpkm.csv", header = TRUE)
+fpkmSMC <- read.csv("/Users/effieklimi/Documents/novel-mirna/results/tables/vsmcFpkm.csv", header = TRUE)
 
 fpkmEC <- distinct(fpkmEC, name, .keep_all = TRUE)
 fpkmECrownmeans <- rowMeans(fpkmEC[,c(8:37)], na.rm = TRUE)
@@ -21,6 +21,7 @@ fpkmSMCrownmeans <- rowMeans(fpkmSMC[,c(8:40)], na.rm = TRUE)
 fpkmSMC$rowMeans <- fpkmSMCrownmeans
 fpkmSMC <- filter(fpkmSMC, rowMeans > 2)
 
+# Overlap of the total transcriptomes:
 cols <- brewer.pal(2, "Pastel2")
 venn.diagram(
   x = list(fpkmSMC$ENSEMBL, fpkmEC$ENSEMBL),
@@ -50,8 +51,21 @@ venn.diagram(
 
 ############# DE files #############
 # Open files containg gene and DE info per miRNA -> put them all inside a list:
+
+deseqFilesEC <- 
+  readRDS("results/tables/endos-deseq2-results.rds") %>%
+  lapply(distinct, name, .keep_all = TRUE) # remove duplicates
+
+geneLists <-
+  lapply(deseqFilesEC, "[", , c(7, 3)) %>%
+  lapply(tibble::deframe) %>%
+  lapply(sort, decreasing = TRUE)
+# Save list of DE genes per miRNA with LFC (it's ranked):
+saveRDS(geneLists, file = "results/tables/geneLists.rds")
+
+
 deseqFilesEC <-
-  list.files("/Users/effieklimi/Documents/PhD/miRNA screening paper/HSVEC RNA sequencing/DESeq2_sig_noLFCthreshold/",
+  list.files("/Users/effieklimi/Documents/novel-mirna/results/tables/",
     pattern = "*.csv", full.names = TRUE
   ) %>%
   lapply(read_csv) %>%
@@ -64,7 +78,7 @@ geneListsEC <-
 
 # Name tibbles based on their filenames (miRNA name)
 names(deseqFilesEC) <-
-  list.files("/Users/effieklimi/Documents/PhD/miRNA screening paper/HSVEC RNA sequencing/DESeq2_sig_noLFCthreshold",
+  list.files("/Users/effieklimi/Documents/novel-mirna/results/tables/",
     pattern = "*.csv", full.names = FALSE
   ) %>%
   lapply(gsub, pattern = "vsmiRCTRL_noLFCthreshold.csv", replacement = "") %>%
