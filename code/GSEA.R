@@ -25,7 +25,7 @@ names(all_paths) <- tolower(names(all_paths))
 ##############################
 
 shrinkResults <- 
-  readRDS("results/tables/vsmc-deseq2-results.rds") %>%
+  readRDS("results/rds/p01/vsmc-deseq2-p01.rds") %>%
   lapply(distinct, name, .keep_all = TRUE) # remove duplicates
 
 geneLists <-
@@ -33,11 +33,11 @@ geneLists <-
   lapply(tibble::deframe) %>%
   lapply(sort, decreasing = TRUE)
 # Save list of DE genes per miRNA with LFC (it's ranked):
-saveRDS(geneLists, file = "results/tables/geneLists.rds")
+saveRDS(geneLists, file = "results/rds/p01/genelists-vsmc-p01.rds")
 
 fgseaResults <-
   map(geneLists, fgsea, pathways = all_paths, minSize = 20, maxSize = 1000, eps = 0)
-saveRDS(fgseaResults, file = "results/tables/vsmc-fgsea.rds")
+saveRDS(fgseaResults, file = "results/rds/p01/vsmc-fgsea-p01.rds")
 
 # Filter for p value, keep the Normalised Enrichment Scores and format table for the heatmap:
 fgseaResultsSig <-
@@ -53,5 +53,5 @@ fgseaResultsSig <-
   `colnames<-`(c(names(geneLists), "Database"))
 
 #### Save table of results for heatmap: ####
-write.csv(fgseaResultsSig, file = "results/tables/fgsea-results-sigNES.csv")
+write.csv(fgseaResultsSig, file = "results/tables/fgsea-vsmc-sigNES-p01.csv")
 ############################################

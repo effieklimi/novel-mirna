@@ -3,6 +3,7 @@ library(viridis)
 library(ReactomePA)
 library(VennDiagram)
 library(RColorBrewer)
+library(tidyverse)
 
 
 
@@ -52,86 +53,44 @@ venn.diagram(
 ############# DE files #############
 # Open files containg gene and DE info per miRNA -> put them all inside a list:
 
-deseqFilesEC <- 
-  readRDS("results/tables/endos-deseq2-results.rds") %>%
+endosDeseq <-
+  readRDS("results/rds/p01/endos-deseq2-p01.rds") %>%
   lapply(distinct, name, .keep_all = TRUE) # remove duplicates
 
-geneLists <-
-  lapply(deseqFilesEC, "[", , c(7, 3)) %>%
+vsmcDeseq <-
+  readRDS("results/rds/p01/vsmc-deseq2-p01.rds") %>%
+  lapply(distinct, name, .keep_all = TRUE) # remove duplicates
+
+endosGenes <-
+  lapply(endosDeseq, "[", , c(7, 3)) %>%
   lapply(tibble::deframe) %>%
-  lapply(sort, decreasing = TRUE)
-# Save list of DE genes per miRNA with LFC (it's ranked):
-saveRDS(geneLists, file = "results/tables/geneLists.rds")
+  lapply(sort, decreasing = TRUE) %>%
+  lapply(tibble::enframe)
 
-
-deseqFilesEC <-
-  list.files("/Users/effieklimi/Documents/novel-mirna/results/tables/",
-    pattern = "*.csv", full.names = TRUE
-  ) %>%
-  lapply(read_csv) %>%
-  lapply(distinct, name, .keep_all = TRUE)
-
-geneListsEC <-
-  lapply(deseqFilesEC, "[", , c(8, 4)) %>%
+vsmcGenes <-
+  lapply(vsmcDeseq, "[", , c(7, 3)) %>%
   lapply(tibble::deframe) %>%
-  lapply(sort, decreasing = TRUE)
+  lapply(sort, decreasing = TRUE) %>%
+  lapply(tibble::enframe)
 
-# Name tibbles based on their filenames (miRNA name)
-names(deseqFilesEC) <-
-  list.files("/Users/effieklimi/Documents/novel-mirna/results/tables/",
-    pattern = "*.csv", full.names = FALSE
-  ) %>%
-  lapply(gsub, pattern = "vsmiRCTRL_noLFCthreshold.csv", replacement = "") %>%
-  lapply(gsub, pattern = "_noLFCthreshold.csv", replacement = "")
-
-# Save list of dfs containing all DE genes (without duplicates):
-saveRDS(deseqFilesEC, file = "/Users/effieklimi/Documents/PhD/miRNA screening paper/HSVEC RNA sequencing/deseqFilesEC.rds")
-####################################
-
-############## files ##############
-# Open files containg gene and DE info per miRNA -> put them all inside a list:
-deseqFilesSMC <-
-  list.files("/Users/effieklimi/Documents/PhD/miRNA screening paper/HSVSMC RNA sequencing/DESeq2_sig_noLFCthreshold/",
-    pattern = "*.csv", full.names = TRUE
-  ) %>%
-  lapply(read_csv) %>%
-  lapply(distinct, name, .keep_all = TRUE)
-
-# Name tibbles based on their filenames (miRNA name)
-names(deseqFilesSMC) <-
-  list.files("/Users/effieklimi/Documents/PhD/miRNA screening paper/HSVSMC RNA sequencing/DESeq2_sig_noLFCthreshold",
-    pattern = "*.csv", full.names = FALSE
-  ) %>%
-  lapply(gsub, pattern = "vsmiRCTRL_noLFCthreshold.csv", replacement = "") %>%
-  lapply(gsub, pattern = "_noLFCthreshold.csv", replacement = "")
-
-geneListsSMC <-
-  lapply(deseqFilesSMC, "[", , c(8, 4)) %>%
-  lapply(tibble::deframe) %>%
-  lapply(sort, decreasing = TRUE)
-# Save list of dfs containing all DE genes (without duplicates):
-# saveRDS(deseqFiles, file = "/Users/effieklimi/Documents/PhD/miRNA screening paper/HSVEC RNA sequencing/GSEA/NoLFCthresh/deseqFiles.rds")
-####################################
-####################################
 
 #### Data frames for stakced bar plots of DE genes (up and down)
 ###### 
 deGenesSMC <-
   data.frame(
-    upreg = unlist(lapply(deseqFilesSMC, subset, log2FoldChange > 0) %>% lapply(nrow)),
-    downreg = -unlist(lapply(deseqFilesSMC, subset, log2FoldChange < 0) %>% lapply(nrow))
+    upreg = unlist(lapply(vsmcGenes, subset, value > 0) %>% lapply(nrow)),
+    downreg = -unlist(lapply(vsmcGenes, subset, value < 0) %>% lapply(nrow))
   )
 
 
 deGenesEC <-
   data.frame(
-    upreg = unlist(lapply(deseqFilesEC, subset, log2FoldChange > 0) %>% lapply(nrow)),
-    downreg = -unlist(lapply(deseqFilesEC, subset, log2FoldChange < 0) %>% lapply(nrow))
+    upreg = unlist(lapply(endosGenes, subset, value > 0) %>% lapply(nrow)),
+    downreg = -unlist(lapply(endosGenes, subset, value < 0) %>% lapply(nrow))
   )
 
 
 rownames(deGenesEC) <- c(
-  "Quiescence vs 10% FBS",
   "miR-1827",
   "miR-323a-3p",
   "miR-449b-5p",
@@ -142,7 +101,6 @@ rownames(deGenesEC) <- c(
 )
 
 rownames(deGenesSMC) <- c(
-  "Quiescence VS IL-1A/PDGF-BB",
   "miR-1827",
   "miR-323a-3p",
   "miR-449b-5p",
@@ -161,8 +119,7 @@ EC <- t(deGenesEC)[, c(
   "miR-892b",
   "miR-491-3p",
   "miR-449b-5p",
-  "miR-323a-3p",
-  "Quiescence vs 10% FBS"
+  "miR-323a-3p"
 )] %>%
   t() %>%
   as.data.frame() %>%
@@ -170,7 +127,7 @@ EC <- t(deGenesEC)[, c(
   mutate(sample = factor(sample, levels = sample)) %>% # This trick update the factor levels
   melt()
 # with control
-ggplot(EC[c(8,16),], aes(y = value, x = sample, fill = variable)) +
+ggplot(EC, aes(y = value, x = sample, fill = variable)) +
   geom_bar(position = "stack", stat = "identity") +
   scale_fill_manual(values = c("#eaa072", "#72bcea")) +
   theme_minimal() +
@@ -178,7 +135,7 @@ ggplot(EC[c(8,16),], aes(y = value, x = sample, fill = variable)) +
   ylab("Number of Genes") +
   coord_flip()
 # without control
-ggplot(EC[c(1:7, 9:15),], aes(y = value, x = sample, fill = variable)) +
+ggplot(EC, aes(y = value, x = sample, fill = variable)) +
   geom_bar(stat = "identity") +
   scale_fill_manual(values = c("#eaa072", "#72bcea")) +
   theme_minimal() +
@@ -197,9 +154,8 @@ SMC <-
     "miR-892b",
     "miR-491-3p",
     "miR-449b-5p",
-    "miR-323a-3p",
-    "Quiescence VS IL-1A/PDGF-BB"
-  )] %>%
+    "miR-323a-3p"
+)] %>%
   t() %>%
   as.data.frame() %>%
   rownames_to_column("sample") %>%
@@ -214,7 +170,7 @@ ggplot(SMC, aes(y = value, x = sample, fill = variable)) +
   ylab("Number of Genes") +
   coord_flip()
 # perc barplot
-ggplot(SMC[c(1:7, 9:15),], aes(y = value, x = sample, fill = variable)) +
+ggplot(SMC, aes(y = value, x = sample, fill = variable)) +
   geom_bar(stat = "identity") +
   scale_fill_manual(values = c("#eaa072", "#72bcea")) +
   theme_minimal() +
