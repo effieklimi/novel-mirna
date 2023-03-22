@@ -41,16 +41,12 @@ saveRDS(fgseaResults, file = "results/rds/p01/vsmc-fgsea-p01.rds")
 
 # Filter for p value, keep the Normalised Enrichment Scores and format table for the heatmap:
 fgseaResultsSig <-
+  lapply(arrange, -pvalue)
   lapply(fgseaResults, filter, padj < 0.001) %>%
   lapply("[", , c("pathway", "NES")) %>%
-  join_all(by = "pathway", type = "left") %>%
-  mutate(Database = case_when(
-    as.character(pathway) %in% tolower(names(ke)) ~ "KEGG",
-    as.character(pathway) %in% tolower(names(re)) ~ "Reactome",
-    as.character(pathway) %in% tolower(names(bp)) ~ "Gene Ontology BP"
-  )) %>%
+  join_all(by = "pathway", type = "left") %>% 
   column_to_rownames(var = "pathway") %>%
-  `colnames<-`(c(names(geneLists), "Database"))
+  `colnames<-`(c(names(geneLists)))
 
 #### Save table of results for heatmap: ####
 write.csv(fgseaResultsSig, file = "results/tables/fgsea-vsmc-sigNES-p01.csv")
