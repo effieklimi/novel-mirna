@@ -127,6 +127,7 @@ EC <- t(deGenesEC)[, c(
   mutate(sample = factor(sample, levels = sample)) %>% # This trick update the factor levels
   melt()
 # with control
+pdf(file = "results/figures/fgsea-vsmc-heatmap-p01.pdf", width = 11, height = 10)
 ggplot(EC, aes(y = value, x = sample, fill = variable)) +
   geom_bar(position = "stack", stat = "identity") +
   scale_fill_manual(values = c("#eaa072", "#72bcea")) +
@@ -134,6 +135,7 @@ ggplot(EC, aes(y = value, x = sample, fill = variable)) +
   xlab("Conditions") +
   ylab("Number of Genes") +
   coord_flip()
+dev.off()
 # without control
 ggplot(EC, aes(y = value, x = sample, fill = variable)) +
   geom_bar(stat = "identity") +
@@ -162,13 +164,18 @@ SMC <-
   mutate(sample = factor(sample, levels = sample)) %>%
   melt()
 # stacked barplot
+pdf(file = "results/figures/fgsea-vsmc-heatmap-p01.pdf", width = 11, height = 10)
 ggplot(SMC, aes(y = value, x = sample, fill = variable)) +
-  geom_bar(position = "stack", stat = "identity") +
-  scale_fill_manual(values = c("#eaa072", "#72bcea")) +
+  geom_bar(position = "stack", stat = "identity", width = .7) +
+  scale_fill_manual(labels = c("Up-regulated", "Down-regulated"), values = c("#4892c0", "#d165a9")) +
   theme_minimal() +
   xlab("Conditions") +
   ylab("Number of Genes") +
-  coord_flip()
+  labs(fill = " ") +
+  theme(axis.text = element_text(size = 8),
+        axis.title = element_text(size = 8, face = "bold"))
+dev.off()
+
 # perc barplot
 ggplot(SMC, aes(y = value, x = sample, fill = variable)) +
   geom_bar(stat = "identity") +
