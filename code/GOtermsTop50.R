@@ -2,7 +2,7 @@ library("clusterProfiler")
 library("tidyverse")
 library("org.Hs.eg.db")
 
-targets50 <- readRDS("/Users/effieklimi/Documents/novel-mirna/results/tables/targets50.rds")
+targets50 <- readRDS("/Users/effieklimi/Documents/novel-mirna/results/rds/p01/targets50.rds")
 
 FPKM <- read.csv("/Users/effieklimi/Documents/novel-mirna/results/tables/vsmcFpkm.csv", header = TRUE)
 FPKM <- distinct(FPKM, name, .keep_all = TRUE)

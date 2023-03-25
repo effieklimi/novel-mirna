@@ -113,13 +113,13 @@ rownames(deGenesSMC) <- c(
 
 
 EC <- t(deGenesEC)[, c(
-  "miR-5681b",
-  "miR-4774-3p",
-  "miR-1827",
-  "miR-892b",
-  "miR-491-3p",
-  "miR-449b-5p",
-  "miR-323a-3p"
+    "miR-323a-3p",
+    "miR-449b-5p",
+    "miR-491-3p",
+    "miR-892b",
+    "miR-1827",
+    "miR-4774-3p",
+    "miR-5681b"
 )] %>%
   t() %>%
   as.data.frame() %>%
@@ -127,36 +127,29 @@ EC <- t(deGenesEC)[, c(
   mutate(sample = factor(sample, levels = sample)) %>% # This trick update the factor levels
   melt()
 # with control
-pdf(file = "results/figures/fgsea-vsmc-heatmap-p01.pdf", width = 11, height = 10)
+pdf(file = "results/figures/endos-updown-bar.pdf", width = 8, height = 4.5)
 ggplot(EC, aes(y = value, x = sample, fill = variable)) +
-  geom_bar(position = "stack", stat = "identity") +
-  scale_fill_manual(values = c("#eaa072", "#72bcea")) +
-  theme_minimal() +
-  xlab("Conditions") +
-  ylab("Number of Genes") +
-  coord_flip()
-dev.off()
-# without control
-ggplot(EC, aes(y = value, x = sample, fill = variable)) +
-  geom_bar(stat = "identity") +
-  scale_fill_manual(values = c("#eaa072", "#72bcea")) +
+  geom_bar(position = "stack", stat = "identity", width = .8) +
+  scale_fill_manual(labels = c("Up-regulated", "Down-regulated"), values = c("#f071a4", "#72bcea")) +
   theme_minimal() +
   xlab(" ") +
-  ylab("Number of DE Genes") +
-  coord_flip()
-
+  ylab("Number of Genes") +
+  labs(fill = " ") +
+  theme(axis.text = element_text(size = 8),
+        axis.title = element_text(size = 8, face = "bold"))
+dev.off()
 
 # xxxxxxxxxxxxxxxxxxxx #
 
 SMC <-
   t(deGenesSMC)[, c(
-    "miR-5681b",
-    "miR-4774-3p",
-    "miR-1827",
-    "miR-892b",
-    "miR-491-3p",
+    "miR-323a-3p",
     "miR-449b-5p",
-    "miR-323a-3p"
+    "miR-491-3p",
+    "miR-892b",
+    "miR-1827",
+    "miR-4774-3p",
+    "miR-5681b"
 )] %>%
   t() %>%
   as.data.frame() %>%
@@ -164,26 +157,44 @@ SMC <-
   mutate(sample = factor(sample, levels = sample)) %>%
   melt()
 # stacked barplot
-pdf(file = "results/figures/fgsea-vsmc-heatmap-p01.pdf", width = 11, height = 10)
+pdf(file = "results/figures/vsmc-updown-bar.pdf", width = 8, height = 4.5)
 ggplot(SMC, aes(y = value, x = sample, fill = variable)) +
-  geom_bar(position = "stack", stat = "identity", width = .7) +
-  scale_fill_manual(labels = c("Up-regulated", "Down-regulated"), values = c("#4892c0", "#d165a9")) +
+  geom_bar(position = "stack", stat = "identity", width = .8) +
+  scale_fill_manual(labels = c("Up-regulated", "Down-regulated"), values = c("#f071a4", "#72bcea")) +
   theme_minimal() +
-  xlab("Conditions") +
+  xlab(" ") +
   ylab("Number of Genes") +
   labs(fill = " ") +
   theme(axis.text = element_text(size = 8),
         axis.title = element_text(size = 8, face = "bold"))
 dev.off()
 
-# perc barplot
-ggplot(SMC, aes(y = value, x = sample, fill = variable)) +
-  geom_bar(stat = "identity") +
-  scale_fill_manual(values = c("#eaa072", "#72bcea")) +
-  theme_minimal() +
-  xlab("Conditions") +
-  ylab("Number of Genes") +
-  coord_flip()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

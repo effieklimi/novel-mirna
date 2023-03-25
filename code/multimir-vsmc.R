@@ -7,7 +7,7 @@ setwd("/Users/effieklimi/Documents/novel-mirna/")
 
 ensIdSplit <- function(x) { strsplit(x, split = ".", fixed = TRUE)[[1]][1] }
 miRNAnames <- c("hsa-miR-1827", "hsa-miR-323a-3p", "hsa-miR-449b-5p", "hsa-miR-4774-3p", "hsa-miR-491-3p", "hsa-miR-5681b", "hsa-miR-892b")
-deseqFiles <- readRDS("results/rds/vsmc-deseq2-p01.rds")
+deseqFiles <- readRDS("results/rds/vsmc-deseq2-p05.rds")
 deGenesList <- 
   lapply(deseqFiles, "[", , c(1, 3, 7)) %>%
   map(~ mutate(.x, EnsID = ensIdSplit(EnsID)))
@@ -85,6 +85,6 @@ names(targets50Top2) <- names(deseqFiles)
 names(targets50) <- names(deseqFiles)
 names(targets100) <- names(deseqFiles)
 
-saveRDS(targets50Top2, file = "/Users/effieklimi/Documents/novel-mirna/results/rds/targets50Top2-vsmc.rds")
-saveRDS(targets50, file = "/Users/effieklimi/Documents/novel-mirna/results/rds/targets50-vsmc.rds")
-saveRDS(targets100, file = "/Users/effieklimi/Documents/novel-mirna/results/rds/targets100-vsmc.rds")
+saveRDS(targets50Top2, file = "/Users/effieklimi/Documents/novel-mirna/results/rds/targets50Top2-vsmc-p05.rds")
+saveRDS(targets50, file = "/Users/effieklimi/Documents/novel-mirna/results/rds/targets50-vsmc-p05.rds")
+saveRDS(targets100, file = "/Users/effieklimi/Documents/novel-mirna/results/rds/targets100-vsmc-p05.rds")

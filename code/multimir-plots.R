@@ -31,7 +31,7 @@ vsmcPlot <- ggplot(vmscMelt, aes(y = value, x = sample, fill = variable)) +
 
 endosPlot <- ggplot(endosMelt, aes(y = value, x = sample, fill = variable)) +
   geom_bar(stat = "identity") +
-  scale_fill_manual(values = c("#8a2d62", "#72bcea", "#2d518a")) +
+  scale_fill_manual(values = c("#ea66b1", "#72bcea")) +
   theme_minimal() +
   xlab(" ") +
   ylab("Number of DE Genes")
