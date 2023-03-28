@@ -59,7 +59,6 @@ dds <- DESeq(dds, test = "Wald")
 resParams <- lapply(resultsNames(dds)[c(4:10)], list)
 deseqResults <-
   foreach(contrast = resParams) %do% {
-
     res <- 
       results(
         dds,
@@ -68,7 +67,6 @@ deseqResults <-
         pAdjustMethod = "BH", # default
         alpha = 0.05
       )
-
   }
 
   shrinkResults <-
