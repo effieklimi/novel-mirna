@@ -136,7 +136,7 @@ ggplot(EC, aes(y = value, x = sample, fill = variable)) +
   ylab("Number of Genes") +
   labs(fill = " ") +
   theme(axis.text = element_text(size = 8),
-        axis.title = element_text(size = 8, face = "bold"))
+        axis.title = element_text(size = 15, face = "bold"))
 dev.off()
 
 # xxxxxxxxxxxxxxxxxxxx #
@@ -166,7 +166,7 @@ ggplot(SMC, aes(y = value, x = sample, fill = variable)) +
   ylab("Number of Genes") +
   labs(fill = " ") +
   theme(axis.text = element_text(size = 8),
-        axis.title = element_text(size = 8, face = "bold"))
+        axis.title = element_text(size = 15, face = "bold"))
 dev.off()
 
 

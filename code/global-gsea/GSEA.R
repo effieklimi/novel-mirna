@@ -7,6 +7,7 @@ library(grid)
 
 options(warn = 1)
 setwd("/Users/effieklimi/Documents/novel-mirna/")
+miRNAnames <- c("hsa-miR-1827", "hsa-miR-323a-3p", "hsa-miR-449b-5p", "hsa-miR-4774-3p", "hsa-miR-491-3p", "hsa-miR-5681b", "hsa-miR-892b")
 
 ########## pathways ##########
 read.geneset <- function(path_to_gset)  {
@@ -40,13 +41,13 @@ fgseaResults <-
 saveRDS(fgseaResults, file = "results/rds/p01/vsmc-fgsea-p01.rds")
 
 # Filter for p value, keep the Normalised Enrichment Scores and format table for the heatmap:
-fgseaResultsSig <-
-  lapply(arrange, -pvalue)
+fgseaResultsSig <- 
+  #lapply(fgseaResults, arrange, -pval) %>%
   lapply(fgseaResults, filter, padj < 0.001) %>%
   lapply("[", , c("pathway", "NES")) %>%
   join_all(by = "pathway", type = "left") %>% 
   column_to_rownames(var = "pathway") %>%
-  `colnames<-`(c(names(geneLists)))
+  `colnames<-`(c(miRNAnames))
 
 #### Save table of results for heatmap: ####
 write.csv(fgseaResultsSig, file = "results/tables/fgsea-vsmc-sigNES-p01.csv")

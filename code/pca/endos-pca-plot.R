@@ -1,10 +1,8 @@
 library("DESeq2")
-library("tidyverse")
+library("dplyr")
 library("tibble")
 library("purrr")
-library("foreach")
-library("RColorBrewer")
-library("pheatmap")
+library(foreach)
 
 setwd("/Users/effieklimi/Documents/novel-mirna/")
 
@@ -18,12 +16,11 @@ annotation <- gencodeV26[, c(4, 7, 6, 1:3, 5)];
 colnames(annotation) <- c("ENSEMBL", "name", "type", "chr", "start", "end", "str");
 
 
-type <- c(rep("paired-end", 33));
-patient <- factor(rep(c("p1", "p2", "p3"), 11));
+type <- c(rep("paired-end", 30));
+patient <- factor(rep(c("p1", "p2", "p3"), 10));
 condition <- factor(c(
     rep("Quiesced", 3),
-    rep("IL-1A/PDGF-BB", 3),
-    rep("Mock", 3),
+    rep("10%FBS", 3),
     rep("miR-CTRL", 3),
     rep("miR-323", 3),
     rep("miR-449b", 3),
@@ -36,11 +33,11 @@ condition <- factor(c(
 
 # Count data + meta data:
 countTable <- read.csv(
-  "results/tables/vsmcCounts.csv",
+  "results/tables/endosCounts.csv",
   header = TRUE
 );
 
-countTableDESeq <- sapply(countTable[, c(8:40)], as.integer);
+countTableDESeq <- sapply(countTable[, c(8:37)], as.integer);
 row.names(countTableDESeq) <- countTable[, 1];
 metadata <- data.frame(
   row.names = colnames(countTableDESeq),
@@ -56,8 +53,7 @@ dds <- DESeqDataSetFromMatrix(
   design = ~ patient + condition
 );
 
-# Setting FBS02 as ref (can't use "contrast" due to running apeglm shrinkage):
-#dds$condition <- relevel(dds$condition);
+dds$condition <- relevel(dds$condition);
 # Running DESeq2 with a Wald test:
 dds <- DESeq(dds, test = "Wald");
 rld <- rlog(dds);
@@ -70,8 +66,7 @@ pcaData$condition <- factor(
     metadata$condition, 
     levels=c(
         "Quiesced",
-        "IL-1A/PDGF-BB",
-        "Mock",
+        "10%FBS",
         "miR-CTRL",
         "miR-323",
         "miR-449b",
@@ -83,34 +78,33 @@ pcaData$condition <- factor(
     )
 );
 
-pdf(file = "results/figures/vsmc-pca.pdf")
+pdf(file = "results/figures/endos-pca.pdf")
 ggplot(pcaData, aes(PC1, PC2, color = condition, shape = patient)) +
   geom_point(size=4) +
   xlab(paste0("PC1: ",percentVar[1],"% variance")) +
   ylab(paste0("PC2: ",percentVar[2],"% variance")) +
-  scale_color_manual(values=c("#000000", "#B81059","#F03084", "#EA70A6","#224F9F","#426BB6","#678DD1","#81A8EF","#A4C3FB","#C7DAFC","#E0E8F8"))+
-  ylim(-25,25)+ xlim(-35,15)+
-  coord_fixed()+
+  scale_color_manual(values = c("grey", "#B81059", "#EA70A6","#224F9F","#426BB6","#678DD1","#81A8EF","#A4C3FB","#C7DAFC","#E0E8F8"))+
+  ylim(-43,39) +
+  coord_fixed() +
   theme_1()
 dev.off()
 
-sampleDists<-dist(t(assay(rld)));
-sampleDistMatrix<-as.matrix(sampleDists)
-rownames(sampleDistMatrix)<-paste(rld$condition)
-colnames(sampleDistMatrix)<-NULL
-colors <- colorRampPalette( rev(brewer.pal(8, "BuPu")) )(255)
-pdf(file = "results/figures/vsmc-sample-distances.pdf", width = 7, height = 6)
-pheatmap(
-    sampleDistMatrix,
-    clustering_distance_rows=sampleDists,
-    clustering_distance_cols=sampleDists,
-    col=colors,
-    fontsize_row = 9,
-    show_rownames = TRUE,
-    show_colnames = TRUE
+sampleDists <- dist(t(assay(rld))) #
+sampleDistMatrix <- as.matrix(sampleDists) #
+rownames(sampleDistMatrix) <- paste(rld$condition) #
+colnames(sampleDistMatrix) <- paste(rld$condition) #
+#
+colors <- colorRampPalette(rev(brewer.pal(9, "BuPu")))(255) #
+#
+pdf(file = "results/figures/endos-sample-distances.pdf", width = 6.5, height = 6)
+distPheatmap <- pheatmap(sampleDistMatrix, #
+  clustering_distance_rows = sampleDists, #
+  clustering_distance_cols = sampleDists, #
+  col                      = colors, #
+  fontsize_row             = 9, #
+  fontsize_col             = 9
 )
 dev.off()
-
 
 theme_1 <- function(){
     theme_bw() +

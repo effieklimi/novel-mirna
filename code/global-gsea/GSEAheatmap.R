@@ -17,7 +17,6 @@ read.geneset <- function(path_to_gset)  {
   return(out)
 }
 
-
 bp <- read.geneset(url("https://maayanlab.cloud/Enrichr/geneSetLibrary?mode=text&libraryName=GO_Biological_Process_2021"))
 ke <- read.geneset(url("https://maayanlab.cloud/Enrichr/geneSetLibrary?mode=text&libraryName=KEGG_2021_Human"))
 re <- read.geneset(url("https://maayanlab.cloud/Enrichr/geneSetLibrary?mode=text&libraryName=Reactome_2022"))
@@ -59,7 +58,7 @@ anot <- data.frame(row.names = rownames(fgseaResultsSig), Database = fgseaMatrix
 ann_colors <- list(Database = c("KEGG" = "#636362", "Reactome" = "grey70", "Gene Ontology BP" = "grey90"))
 ha <- rowAnnotation(foo = anno_mark(at = matches, labels = rownames(fgseaMatrix)[matches]))
 
-pdf(file = "results/figures/fgsea-vsmc-heatmap-p01.pdf", width = 11, height = 10)
+pdf(file = "results/figures/fgsea-vsmc-heatmap-p01.pdf", width = 10, height = 10)
 ComplexHeatmap::pheatmap(fgseaMatrix[,c(2,3,5,7,1,4,6)],
     border_color = FALSE,
     cluster_cols = FALSE,
