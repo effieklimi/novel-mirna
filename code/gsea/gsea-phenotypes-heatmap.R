@@ -43,8 +43,8 @@ fgseaMatrixCellCycle <- fgseaMatrixCellCycle %>%
 assignInNamespace(x = "draw_colnames", value = "draw_colnames_45", ns = asNamespace("pheatmap"))
 anot <- data.frame(row.names = rownames(fgseaResCellCycle), Database = fgseaMatrixCellCycle[,8])
 ann_colors <- list(Database = c("KEGG" = "#636362", "Reactome" = "grey70", "Gene Ontology BP" = "grey90"))
-#ha <- rowAnnotation(foo = anno_mark(at = matchesCellCycle, labels = rownames(fgseaMatrixCellCycle)[matches]))
-pdf(file = "results/figures/fgsea-vsmc-heatmap-cellcycle.pdf")
+ha <- rowAnnotation(foo = anno_mark(at = matchesCellCycle, labels = rownames(fgseaMatrixCellCycle)[matches]))
+pdf(file = "results/figures/fgsea-vsmc-heatmap-cellcycle.pdf", width = 10, height = 10)
 ComplexHeatmap::pheatmap(fgseaMatrixCellCycle[,c(2,3,5,7,1,4,6)],
     border_color = FALSE,
     cluster_cols = FALSE,
@@ -56,11 +56,12 @@ ComplexHeatmap::pheatmap(fgseaMatrixCellCycle[,c(2,3,5,7,1,4,6)],
     na_col = "grey",
     annotation_row = anot,
     annotation_colors = ann_colors,
+    row_names_max_width = unit(10, "cm"),
     #main = "Gene Set Enrichment Analysis",
     colorRampPalette(c("#005dc7", "white", "#d60047"))(300),
-    #right_annotation = ha,
+    right_annotation = ha,
     border_gp = gpar(col = "black", lwd = 2),
-    #display_numbers = matrix(ifelse(fgseaMatrixCellCycle[,c(2,3,5,7,1,4,6)] == 0, "\\", ""), nrow(fgseaMatrixCellCycle[,c(2,3,5,7,1,4,6)]))
+    display_numbers = matrix(ifelse(fgseaMatrixCellCycle[,c(2,3,5,7,1,4,6)] == 0, "\\", ""), nrow(fgseaMatrixCellCycle[,c(2,3,5,7,1,4,6)]))
   )
   dev.off()
 
