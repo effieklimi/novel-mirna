@@ -21,8 +21,9 @@ read.geneset <- function(path_to_gset)  {
 bp <- read.geneset(url("https://maayanlab.cloud/Enrichr/geneSetLibrary?mode=text&libraryName=GO_Biological_Process_2021"))
 ke <- read.geneset(url("https://maayanlab.cloud/Enrichr/geneSetLibrary?mode=text&libraryName=KEGG_2021_Human"))
 re <- read.geneset(url("https://maayanlab.cloud/Enrichr/geneSetLibrary?mode=text&libraryName=Reactome_2022"))
-all_paths <- c(bp, ke, re)
-names(all_paths) <- tolower(names(all_paths))
+paths <- c(bp, ke, re)
+names(paths) <- tolower(names(paths))
+pathsExpressed <- lapply(paths, function(x) x[x %in% FPKM$name])
 ##############################
 
 shrinkResults <- 
@@ -37,7 +38,7 @@ geneLists <-
 saveRDS(geneLists, file = "results/rds/p01/genelists-vsmc-p01.rds")
 
 fgseaResults <-
-  map(geneLists, fgsea, pathways = all_paths, minSize = 20, maxSize = 1000, eps = 0)
+  map(geneLists, fgsea, pathways = paths, minSize = 20, maxSize = 1000, eps = 0)
 saveRDS(fgseaResults, file = "results/rds/p01/vsmc-fgsea-p01.rds")
 
 # Filter for p value, keep the Normalised Enrichment Scores and format table for the heatmap:

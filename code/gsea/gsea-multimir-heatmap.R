@@ -70,7 +70,7 @@ ComplexHeatmap::pheatmap(fgseaMatrix[,c(2,3,5,7,1,4,6)],
     colorRampPalette(c("#005dc7", "white", "#d60047"))(300),
     right_annotation = ha,
     border_gp = gpar(col = "black", lwd = 2),
-    display_numbers = matrix(ifelse(fgseaMatrix[,c(2,3,5,7,1,4,6)] == 0, "*", ""), nrow(fgseaMatrix[,c(2,3,5,7,1,4,6)]))
+    display_numbers = matrix(ifelse(fgseaMatrix[,c(2,3,5,7,1,4,6)] == 0, "\\", ""), nrow(fgseaMatrix[,c(2,3,5,7,1,4,6)]))
   )
   dev.off()
 
