@@ -12,6 +12,7 @@ draw_colnames_45 <- function(coln, gaps, ...) {
 }
 
 # -------------------------------------- 
+miRNAnames <- c("hsa-miR-1827", "hsa-miR-323a-3p", "hsa-miR-449b-5p", "hsa-miR-4774-3p", "hsa-miR-491-3p", "hsa-miR-5681b", "hsa-miR-892b")
 
 bp <- readRDS("results/rds/pathways/pathways-all-bioprocess.rds")
 ke <- readRDS("results/rds/pathways/pathways-all-kegg.rds")
@@ -23,6 +24,9 @@ fgseaResCellCycle <- read.csv(
   header = TRUE,
   row.names = 1
 )
+
+fgseaResCellCycle <- fgseaResCellCycle[order(rowSums(is.na(fgseaResCellCycle))), ]
+
 fgseaResCellCycle[is.na(fgseaResCellCycle)] <- 0
 fgseaRankedCellCycle <- as.matrix(fgseaResCellCycle[order(rowSums(fgseaResCellCycle), decreasing = FALSE),])
 #matchesCellCycle <- which(rownames(fgseaResCellCycle) %in% rownames(fgseaRankedCellCycle[1:10,]))
