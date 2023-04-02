@@ -51,7 +51,7 @@ matchesGroupC <- which(rownames(fgseaHeatmap) %in% rownames(fgseaRankedGroupC[1:
 
 matchesAll <- c(matchesGroupA, matchesGroupB, matchesGroupC)
 
-colnames(fgseaHeatmap) <- c(miRNAnames, "Database")
+colnames(fgseaHeatmap) <- miRNAnames
 
 fgseaHeatmap <- fgseaHeatmap %>%
   as.data.frame() %>%

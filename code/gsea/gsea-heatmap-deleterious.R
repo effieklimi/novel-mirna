@@ -46,22 +46,23 @@ anot <- data.frame(row.names = rownames(fgseaMatrixDelet), Database = fgseaMatri
 ann_colors <- list(Database = c("KEGG" = "#636362", "Reactome" = "grey70", "Gene Ontology BP" = "grey90"))
 #ha <- rowAnnotation(foo = anno_mark(at = matches, labels = rownames(fgseaMatrix)[matches]))
 
-pdf(file = "results/figures/fgsea-vsmc-heatmap-p01-multimir.pdf", width = 11, height = 10)
+pdf(file = "results/figures/fgsea-vsmc-heatmap-deleterious.pdf", width = 9, height = 2)
 ComplexHeatmap::pheatmap(fgseaMatrixDelet[,c(2,3,5,7,1,4,6)],
     border_color = FALSE,
     cluster_cols = FALSE,
     cluster_rows = FALSE,
-    fontsize_row = 7,
-    fontsize_col = 7,
-    show_rownames = FALSE,
+    fontsize_row = 12,
+    fontsize_col = 12,
+    show_rownames = TRUE,
     show_colnames = TRUE,
-    na_col = "grey",
+    legend = TRUE,
+    annotation_legend = TRUE,
     annotation_row = anot,
+    row_names_max_width = unit(20, "cm"),
     annotation_colors = ann_colors,
-    main = "Gene Set Enrichment Analysis",
-    colorRampPalette(c("#005dc7", "white", "#d60047"))(300),
+    colorRampPalette(c("white", "#87003f"))(300),
     #right_annotation = ha,
     border_gp = gpar(col = "black", lwd = 2),
-    display_numbers = matrix(ifelse(fgseaMatrixDelet[,c(2,3,5,7,1,4,6)] == 0, "\\", ""), nrow(fgseaMatrixDelet[,c(2,3,5,7,1,4,6)]))
+    display_numbers = matrix(ifelse(fgseaMatrixDelet[,c(2,3,5,7,1,4,6)] == 0, "·", ""), nrow(fgseaMatrixDelet[,c(2,3,5,7,1,4,6)]))
   )
   dev.off()

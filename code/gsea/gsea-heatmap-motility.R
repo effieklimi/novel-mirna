@@ -56,22 +56,22 @@ assignInNamespace(x = "draw_colnames", value = "draw_colnames_45", ns = asNamesp
 anot <- data.frame(row.names = rownames(fgseaMatrixMotility), Database = fgseaMatrixMotility[,8])
 ann_colors <- list(Database = c("KEGG" = "#636362", "Reactome" = "grey70", "Gene Ontology BP" = "grey90"))
 #ha <- rowAnnotation(foo = anno_mark(at = matchesCellCycle, labels = rownames(fgseaMatrixCellCycle)[matches]))
-pdf(file = "results/figures/fgsea-vsmc-heatmap-motility.pdf")
+pdf(file = "results/figures/fgsea-vsmc-heatmap-motility.pdf", width = 10, height = 2)
 ComplexHeatmap::pheatmap(fgseaMatrixMotility[,c(2,3,5,7,1,4,6)],
     border_color = FALSE,
     cluster_cols = FALSE,
-    cluster_rows = TRUE,
-    fontsize_row = 9,
-    fontsize_col = 9,
+    cluster_rows = FALSE,
+    fontsize_row = 12,
+    fontsize_col = 12,
     show_rownames = TRUE,
     show_colnames = TRUE,
-    na_col = "grey",
+    legend = TRUE,
+    annotation_legend = TRUE,
     annotation_row = anot,
+    row_names_max_width = unit(18, "cm"),
     annotation_colors = ann_colors,
-    #main = "Gene Set Enrichment Analysis",
-    colorRampPalette(c("#005dc7", "white", "#d60047"))(300),
-    #right_annotation = ha,
+    colorRampPalette(c("#002f80", "white"))(300),
     border_gp = gpar(col = "black", lwd = 2),
-    display_numbers = matrix(ifelse(fgseaMatrixMotility[,c(2,3,5,7,1,4,6)] == 0, "\\", ""), nrow(fgseaMatrixMotility[,c(2,3,5,7,1,4,6)]))
+    display_numbers = matrix(ifelse(fgseaMatrixMotility[,c(2,3,5,7,1,4,6)] == 0, "·", ""), nrow(fgseaMatrixMotility[,c(2,3,5,7,1,4,6)]))
   )
   dev.off()
