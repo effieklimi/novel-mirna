@@ -69,7 +69,7 @@ deseqResults <-
         altHypothesis = "greaterAbs",
         independentFiltering = TRUE,
         pAdjustMethod = "BH", # default
-        alpha = 0.05
+        alpha = 0.01
       )
 
   }
@@ -90,11 +90,11 @@ deseqResults <-
         data.frame() %>%
         rownames_to_column(var = "EnsID") %>%
         as_tibble() %>%
-        filter(padj < 0.05) %>%
+        filter(padj < 0.01) %>%
         merge(annotation, by = 1, all.x = FALSE)
 
   }
 
 names(shrinkResults) <- resultsNames(dds)[c(4:10)]
 
-saveRDS(shrinkResults, "results/rds/endos-deseq2-threshold-p05.rds")
+saveRDS(shrinkResults, "results/rds/endos-deseq2-threshold.rds")

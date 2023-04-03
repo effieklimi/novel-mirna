@@ -53,7 +53,6 @@ dds <- DESeqDataSetFromMatrix(
   design = ~ patient + condition
 );
 
-dds$condition <- relevel(dds$condition);
 # Running DESeq2 with a Wald test:
 dds <- DESeq(dds, test = "Wald");
 rld <- rlog(dds);

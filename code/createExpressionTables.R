@@ -54,8 +54,22 @@ colnames(vsmcFpkmTable) <- c("ENSEMBL", vsmcNames)
 vsmcFpkmTable <- vsmcFpkmTable[, c(1, 2, 13, 24, 3, 14, 25, 12, 23, 34, 11, 22, 33, 5, 16, 27, 6, 17, 28, 8, 19, 30, 10, 21, 32, 4, 15, 26, 7, 18, 29, 9, 20, 31)]
 vsmcFpkmTable <- merge(annotation, vsmcFpkmTable, by = 1)
 
+meansVsmc <- data.frame(
+  quiesmean = rowMeans(vsmcFpkmTable[, 8:10]),
+  ipmean = rowMeans(vsmcFpkmTable[, 11:13]),
+  mockmean = rowMeans(vsmcFpkmTable[, 14:16]),
+  mirctrlmean = rowMeans(vsmcFpkmTable[, 17:19]),
+  mir323amean = rowMeans(vsmcFpkmTable[, 20:22]),
+  mir449bmean = rowMeans(vsmcFpkmTable[, 23:25]),
+  mir491mean = rowMeans(vsmcFpkmTable[, 26:28]),
+  mir892mean = rowMeans(vsmcFpkmTable[, 29:31]),
+  mir1827mean = rowMeans(vsmcFpkmTable[, 32:34]),
+  mir4774mean = rowMeans(vsmcFpkmTable[, 35:37]),
+  mir5681bmean = rowMeans(vsmcFpkmTable[, 38:40])
+)
+
 write.csv(vsmcCountTable, file = "/Users/effieklimi/Documents/novel-mirna/results/tables/vsmcCounts.csv", row.names = FALSE)
-write.csv(vsmcFpkmTable, file = "/Users/effieklimi/Documents/novel-mirna/results/tables/vsmcFpkm.csv", row.names = FALSE)
+write.csv(cbind(vsmcFpkmTable, meansVsmc), file = "/Users/effieklimi/Documents/novel-mirna/results/tables/vsmcFpkm.csv", row.names = FALSE)
 
 
 endosENSEMBL <- read.table(endosRsem[1], header = TRUE, sep = "\t", stringsAsFactors = FALSE)[, 1] # access column 1 from file 1 - ENSEMBL IDs
@@ -72,5 +86,18 @@ colnames(endosFpkmTable) <- c("ENSEMBL", endosNames)
 endosFpkmTable <- endosFpkmTable[, c(1, 2, 12, 22, 3, 13, 23, 11, 21, 31, 5, 15, 25, 6, 16, 26, 8, 18, 28, 10, 20, 30, 4, 14, 24, 7, 17, 27, 9, 19, 29)]
 endosFpkmTable <- merge(annotation, endosFpkmTable, by = 1)
 
+meansEndos <- data.frame(
+  quiesmean = rowMeans(endosFpkmTable[, 8:10]),
+  fbsmean = rowMeans(endosFpkmTable[, 11:13]),
+  mirctrlmean = rowMeans(endosFpkmTable[, 14:16]),
+  mir323amean = rowMeans(endosFpkmTable[, 17:19]),
+  mir449bmean = rowMeans(endosFpkmTable[, 20:22]),
+  mir491mean = rowMeans(endosFpkmTable[, 23:25]),
+  mir892mean = rowMeans(endosFpkmTable[, 26:28]),
+  mir1827mean = rowMeans(endosFpkmTable[, 29:31]),
+  mir4774mean = rowMeans(endosFpkmTable[, 32:34]),
+  mir5681bmean = rowMeans(endosFpkmTable[, 35:37])
+  )
+
 write.csv(endosCountTable, file = "/Users/effieklimi/Documents/novel-mirna/results/tables/endosCounts.csv", row.names = FALSE)
-write.csv(endosFpkmTable, file = "/Users/effieklimi/Documents/novel-mirna/results/tables/endosFpkm.csv", row.names = FALSE)
+write.csv(cbind(endosFpkmTable, meansEndos), file = "/Users/effieklimi/Documents/novel-mirna/results/tables/endosFpkm.csv", row.names = FALSE)

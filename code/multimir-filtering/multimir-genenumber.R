@@ -4,10 +4,20 @@ library("reshape2")
 
 setwd("/Users/effieklimi/Documents/novel-mirna/")
 miRNAnames <- c("hsa-miR-1827", "hsa-miR-323a-3p", "hsa-miR-449b-5p", "hsa-miR-4774-3p", "hsa-miR-491-3p", "hsa-miR-5681b", "hsa-miR-892b")
+expressed <- read.csv("/Users/effieklimi/Documents/novel-mirna/results/tables/vsmcExpressed.csv")
 
 # get all DE genes 
-vsmcDe <- readRDS("results/rds/p01/vsmc-deseq2-p01.rds") %>% lapply(as_tibble)
-endosDe <- readRDS("results/rds/p01/endos-deseq2-p01.rds") %>% lapply(as_tibble)
+vsmcDe <- 
+  readRDS("results/rds/vsmc-deseq2.rds") %>% 
+  lapply(as_tibble) %>%
+  lapply(distinct, name, .keep_all = TRUE) %>% # remove duplicates
+  lapply(filter, name %in% expressed$name)
+
+endosDe <- 
+  readRDS("results/rds/endos-deseq2.rds") %>% 
+  lapply(as_tibble) %>%
+  lapply(distinct, name, .keep_all = TRUE) %>% # remove duplicates
+  lapply(filter, name %in% expressed$name)
 
 # get all DR genes
 vsmcDr <-
@@ -35,13 +45,13 @@ endosUr <-
 
 # Get all mltimir candidates
 vsmc50Top2 <-
-  readRDS("results/rds/p01/targets50top2-vsmc-p01.rds") %>%
+  readRDS("results/rds/vsmc-multimir.rds") %>%
   lapply( "[", , c(3, 2)) %>%
   lapply(as_tibble)
 
 
 endos50Top2 <-
-  readRDS("results/rds/p01/targets50top2-endos-p01.rds") %>%
+  readRDS("results/rds/endos-multimir.rds") %>%
   lapply("[", , c(3, 2)) %>%
   lapply(as_tibble)
 
@@ -126,10 +136,11 @@ rownames_to_column("sample") %>%
 mutate(sample = factor(sample, levels = sample)) %>% # This trick update the factor levels
 melt()
 
-pdf(file = "results/figures/vsmc-down-multimir-bar.pdf", width = 8, height = 4.5)
+pdf(file = "results/figures/vsmc-down-multimir-bar-complete.pdf", width = 8, height = 4.5)
 ggplot(vsmcMelt, aes(y = value, x = sample, fill = variable)) +
   geom_bar(position = "stack", stat = "identity", width = .8) +
-  scale_fill_manual(labels = c("Predicted as targets", "Non-predicted as targets"), values = c("#325791", "#7797d1")) +
+  scale_fill_manual(labels = c("Up-regulated Genes", "Down-regulated, Predicted as targets", "Down-regulated, Not predicted as targets"), 
+                    values = c( "#b03280","#325791", "#7797d1")) +
   theme_minimal() +
   xlab(" ") +
   ylab("Number of Genes") +
@@ -153,7 +164,7 @@ rownames_to_column("sample") %>%
 mutate(sample = factor(sample, levels = sample)) %>% # This trick update the factor levels
 melt()
 
-pdf(file = "results/figures/endos-down-multimir-bar.pdf", width = 8, height = 4.5)
+pdf(file = "results/figures/endos-down-multimir-bar-complete.pdf", width = 8, height = 4.5)
 ggplot(endosMelt, aes(y = value, x = sample, fill = variable)) +
   geom_bar(position = "stack", stat = "identity", width = .8) +
   scale_fill_manual(labels = c("Up-regulated Genes", "Down-regulated, Predicted as targets", "Down-regulated, Not predicted as targets"), values = c("#c63886", "#325791", "#7797d1")) +
