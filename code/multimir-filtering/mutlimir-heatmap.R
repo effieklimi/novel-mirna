@@ -11,8 +11,7 @@ multimir <-
   lapply("as_tibble") %>%
   lapply(tibble::deframe) %>%
   lapply(sort, decreasing = FALSE) %>%
-  lapply(tibble::enframe)
-
+  lapply(tibble::enframe) 
 names(multimir) <- miRnames
 multimir <- multimir[c(2, 3, 5, 7, 1, 4, 6)]
 
@@ -23,7 +22,7 @@ countFpkm <- read.csv(
   header = TRUE
 ) %>% as_tibble()
 
-genes <- join(targets[,1], countFpkm[, c(2,17:40)], by = "name") %>% as_tibble() %>% na.omit
+genes <- join(targets[,1], countFpkm[, c(2,17:40)], by = "name") %>% na.omit
 genesDuplicates <- 
     split(genes, duplicated(genes$name) | duplicated(genes$name, fromLast = TRUE)) %>%
     lapply(distinct, name, .keep_all = TRUE) %>% # remove duplicates
@@ -43,7 +42,6 @@ colnames(matrixUnique) <- c( "miR-Control", "miR-Control", "miR-Control",
 "miR-4774-3p", "miR-4774-3p", "miR-4774-3p",
 "miR-5681b", "miR-5681b", "miR-5681b")
 
-
 matrixDuplicate <- genesDuplicates$`TRUE` %>% as.matrix() %>% +1 %>% log2()
 mean <- rowMeans(matrixDuplicate)
 sd <- apply(matrixDuplicate, 1, sd)
@@ -57,7 +55,10 @@ colnames(matrixDuplicate) <- c( "miR-Control", "miR-Control", "miR-Control",
 "miR-4774-3p", "miR-4774-3p", "miR-4774-3p",
 "miR-5681b", "miR-5681b", "miR-5681b")
 
-matrix <- distinct(genes, name, .keep_all = TRUE) %>% column_to_rownames(var = "name") %>% as.matrix() %>% +1 %>% log2()
+matrix <- genes[,2:25] 
+rownames(matrix) <- make.names(genes$name, unique = TRUE)
+matrix <- as.matrix(matrix) %>% +1 %>% log2()
+
 mean <- rowMeans(matrix)
 sd <- apply(matrix, 1, sd)
 matrix <- (matrix-mean)/sd
@@ -80,7 +81,7 @@ colnames(matrix) <- c( "miR-Control", "miR-Control", "miR-Control",
 myBreaks <- c(seq(min(matrix), 0, length.out=ceiling(500/2) + 1), 
               seq(max(matrix)/500, max(matrix), length.out = floor(500/2)))
 
-pdf("results/figures/multimir-heatmap-all.pdf", width = 6, height = 10)
+pdf("results/figures/multimir-heatmap-all.pdf", width = 7, height = 10)
 ComplexHeatmap::pheatmap(as.matrix(matrix),
     border_color = FALSE,
     cluster_cols = FALSE,
@@ -90,6 +91,14 @@ ComplexHeatmap::pheatmap(as.matrix(matrix),
     show_rownames = FALSE,
     show_colnames = TRUE,
     legend = TRUE,
+    row_split = rep(c(
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7"), c(492, 1066, 570, 960, 1271, 273, 246)),
     annotation_legend = TRUE,
     colorRampPalette(c("#002f80", "white", "#87003f"))(500),
     breaks=myBreaks
@@ -116,6 +125,14 @@ ComplexHeatmap::pheatmap(as.matrix(matrixUnique),
     show_rownames = FALSE,
     show_colnames = TRUE,
     legend = TRUE,
+    row_split = rep(c(
+    "miR-323a-3p",
+    "miR-449b-5p",
+    "miR-491-3p",
+    "miR-892b",
+    "miR-1827",
+    "miR-4774-3p",
+    "miR-5681b"), c(482, 1056, 560, 950, 1261, 263, 228)),
     annotation_legend = TRUE,
     colorRampPalette(c("#002f80", "white", "#87003f"))(500),
     breaks=myBreaks
@@ -138,6 +155,14 @@ ComplexHeatmap::pheatmap(as.matrix(matrixDuplicate),
     show_rownames = FALSE,
     show_colnames = TRUE,
     legend = TRUE,
+    row_split = rep(c(
+    "miR-323a-3p",
+    "miR-449b-5p",
+    "miR-491-3p",
+    "miR-892b",
+    "miR-1827",
+    "miR-4774-3p",
+    "miR-5681b"), c(482, 1056, 560, 950, 1261, 263, 228)),
     annotation_legend = TRUE,
     colorRampPalette(c("#002f80", "white", "#87003f"))(500),
     breaks=myBreaks

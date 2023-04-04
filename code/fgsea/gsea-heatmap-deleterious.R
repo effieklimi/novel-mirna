@@ -46,13 +46,13 @@ anot <- data.frame(row.names = rownames(fgseaMatrixDelet), Database = fgseaMatri
 ann_colors <- list(Database = c("KEGG" = "#636362", "Reactome" = "grey70", "Gene Ontology BP" = "grey90"))
 #ha <- rowAnnotation(foo = anno_mark(at = matches, labels = rownames(fgseaMatrix)[matches]))
 
-pdf(file = "results/figures/fgsea-vsmc-heatmap-deleterious.pdf", width = 5, height = 1.5)
+pdf(file = "results/figures/fgsea-vsmc-heatmap-deleterious.pdf", width = 6, height = 1.5)
 ComplexHeatmap::pheatmap(fgseaMatrixDelet[,c(2,3,5,7,1,4,6)],
     border_color = FALSE,
     cluster_cols = FALSE,
     cluster_rows = FALSE,
-    fontsize_row = 13,
-    fontsize_col = 12,
+    fontsize_row = 12,
+    fontsize_col = 11,
     show_rownames = TRUE,
     show_colnames = TRUE,
     legend = TRUE,
