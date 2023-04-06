@@ -2,9 +2,12 @@ library("clusterProfiler")
 library("tidyverse")
 library("purrr")
 library("org.Hs.eg.db")
+
 library("scales")
 library("reshape2")
 library("ggbreak")
+library("enrichR")
+library("enrichplot")
 
 options(warn = 1)
 setwd("/Users/effieklimi/Documents/novel-mirna/")
@@ -14,6 +17,12 @@ targets <- readRDS("results/rds/vsmc-multimir.rds")
 
 bpOrder <- c(targets[2], targets[3], targets[5], targets[7], targets[1], targets[4], targets[6])
 
+multimir <-
+  readRDS("results/rds/vsmc-multimir.rds") %>%
+  lapply( "[", , c(3, 2)) %>%
+  lapply("as_tibble") %>%
+  lapply(tibble::deframe) %>%
+  lapply(sort, decreasing = FALSE)
 
 fpkm <- read.csv(
   "results/tables/vsmcExpressed.csv",
@@ -34,9 +43,12 @@ bpEnrichment <-
       keyType       = "SYMBOL",
       OrgDb         = org.Hs.eg.db,
       ont           = "BP",
-      pAdjustMethod = "BY",
-      pvalueCutoff  = 1) %>%
-  lapply(function(x) x@result)
+      pAdjustMethod = "none",
+      pvalueCutoff  = 1,
+      qvalueCutoff = 1,
+      minGSSize = 10)
+
+bpEnrichTable <- lapply(bpEnrichment, function(x) x@result)
 
 saveRDS(bpEnrichment, file = "results/rds/vsmc-multimir-gobp.rds")
 
@@ -70,12 +82,6 @@ names <- gsub(".", " ", names, fixed=TRUE)
 
 results$names <- names
 colnames(results) <- c("miR-323a-3p", "miR-449b-5p", "miR-491-3p", "miR-892b", "miR-1827", "miR-4774-3p", "miR-5681b", "name")
-
-
-
-
-
-
 write.csv(results, file = "results/tables/vsmc-multimir-gobp.csv")
 
 resultsMelt <- melt(results, id.vars = "name")
@@ -88,6 +94,139 @@ ggplot(data=resultsMelt) +
   theme_light() 
 dev.off()
 
+#------ HEATPLOTS OF GENES TO GO -------imp to check for each miR: which genes that contribute to the top go terms (rownames on graph) are also among the top upregulated post mir overexpression?
+
+length(bpEnrichment$Description) #101
+length(fpkm$name) #331 upregulated genes
+
+heatplot(kkU_582_up, showCategory=10)+ 
+theme_2()
+
+
+
+hm.palette <- colorRampPalette(rev(brewer.pal(9, 'YlOrRd')), space='Lab')
+## convert gene ID to Symbol
+
+
+upsetplot(bpEnrichment[[1]])
+#cnetplot(bpEnrichment_new)
+
+pdf(file = "results/figures/vsmc-multimir-gobp-upset.pdf", width = 18, height = 10)
+#plotEnrich(enrichDGN(bpEnrichment[[2]]), plot_type = "upset", main_text_size = 15, legend_text_size = 8)
+upsetplot(enrichDO(bpEnrichment[[2]]))
+dev.off()
+
+
+results <- data.frame(
+  
+)
+
+bpEnrichment_new <- setReadable(bpEnrichment[[1]], 'org.Hs.eg.db', 'SYMBOL')
+pdf(file = "results/figures/vsmc-multimir-gobp-heatplot.pdf", width = 18, height = 10)
+heatplot(bpEnrichment_new,  showCategory=20, foldChange = multimir[[2]])
+dev.off()
+
+pdf(file = "results/figures/vsmc-multimir-gobp-ema.pdf", width = 18, height = 10)
+emapplot(enrichDO(bpEnrichment[[2]]))
+dev.off()
+
+
+
+
+
+
+
+
+
+
+pdf(file = "results/figures/vsmc-multimir-gobp-mir323.pdf", width = 6, height = 5)
+dotplot(bpEnrichment[[1]], showCategory=10) + 
+ggplot2::ggtitle("miR-323a-3p") +
+  ggplot2::xlab("Enrichment") +
+  ggplot2::scale_color_gradient(low = "#ffc2df", high = "#7c0046") +
+  theme(
+    title = element_text(face = "bold"),
+    axis.text.y = element_text(size = 10))
+dev.off()
+
+
+pdf(file = "results/figures/vsmc-multimir-gobp-mir449.pdf", width = 6, height = 5)
+dotplot(bpEnrichment[[2]], showCategory=10) + 
+ggplot2::ggtitle("miR-449b-5p") +
+  ggplot2::xlab("Enrichment") +
+  ggplot2::scale_color_gradient(low = "#ffc2df", high = "#7c0046")+
+  theme(
+    title = element_text(face = "bold"),
+    axis.text.y = element_text(size = 10))
+dev.off()
+
+
+pdf(file = "results/figures/vsmc-multimir-gobp-mir491.pdf", width = 6, height = 5)
+dotplot(bpEnrichment[[3]], showCategory=10) + 
+ggplot2::ggtitle("miR-491-3p") +
+  ggplot2::xlab("Enrichment") +
+  ggplot2::scale_color_gradient(low = "#ffc2df", high = "#7c0046")+
+  theme(
+    title = element_text(face = "bold"),
+    axis.text.y = element_text(size = 10))
+dev.off()
+
+
+pdf(file = "results/figures/vsmc-multimir-gobp-mir892.pdf", width = 6, height = 5)
+dotplot(bpEnrichment[[4]], showCategory=10) + 
+ggplot2::ggtitle("miR-892b") +
+  ggplot2::xlab("Enrichment") +
+  ggplot2::scale_color_gradient(low = "#ffc2df", high = "#7c0046")+
+  theme(
+    title = element_text(face = "bold"),
+    axis.text.y = element_text(size = 10))
+dev.off()
+
+
+pdf(file = "results/figures/vsmc-multimir-gobp-mir1827.pdf", width = 6, height = 5)
+dotplot(bpEnrichment[[5]], showCategory=10) + 
+ggplot2::ggtitle("miR-1827") +
+  ggplot2::xlab("Enrichment") +
+  ggplot2::scale_color_gradient(low = "#ffc2df", high = "#7c0046")+
+  theme(
+    title = element_text(face = "bold"),
+    axis.text.y = element_text(size = 10))
+dev.off()
+
+
+pdf(file = "results/figures/vsmc-multimir-gobp-mir4774.pdf", width = 6, height = 5)
+dotplot(bpEnrichment[[6]], showCategory=10) + 
+ggplot2::ggtitle("miR-4774-3p") +
+  ggplot2::xlab("Enrichment") +
+  ggplot2::scale_color_gradient(low = "#ffc2df", high = "#7c0046")+
+  theme(
+    title = element_text(face = "bold"),
+    axis.text.y = element_text(size = 10))
+dev.off()
+
+
+pdf(file = "results/figures/vsmc-multimir-gobp-mir5681.pdf", width = 6, height = 5)
+dotplot(bpEnrichment[[7]], showCategory=10) + 
+ggplot2::ggtitle("miR-5681b") +
+  ggplot2::xlab("Enrichment") +
+  ggplot2::scale_color_gradient(low = "#ffc2df", high = "#7c0046")+
+  theme(
+    title = element_text(face = "bold"),
+    axis.text.y = element_text(size = 10))
+dev.off()
+
+
+ +theme_2()
++ 
+  
+  coord_equal()+
+  ggplot2::coord_flip()+
+  ggplot2::scale_fill_gradientn(colours = hm.palette(100))+
+  ggplot2::ylab('Annotations of Biological Processes')+
+  ggplot2::xlab('Gene Symbols')+
+  ggplot2::ggtitle('GO Over-representation Analysis')+
+ # ggplot2::theme(panel.background=element_rect(fill="black", colour="black"))+
+  #ggplot2::guides(fill=guide_legend(title="LOD (pg/ml)"))
 
 
 

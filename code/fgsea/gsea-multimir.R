@@ -11,25 +11,20 @@ setwd("/Users/effieklimi/Documents/novel-mirna/")
 miRNAnames <- c("hsa-miR-1827", "hsa-miR-323a-3p", "hsa-miR-449b-5p", "hsa-miR-4774-3p", "hsa-miR-491-3p", "hsa-miR-5681b", "hsa-miR-892b")
 
 ########## pathways ##########
-read.geneset <- function(path_to_gset)  {
-  bp = GSA.read.gmt(path_to_gset)
-  out = bp$genesets
-  out = lapply(1:length(out), function(x) out[[x]][out[[x]] != ""])
-  names(out) = bp$geneset.names
-  return(out)
-}
 
-bp <- read.geneset(url("https://maayanlab.cloud/Enrichr/geneSetLibrary?mode=text&libraryName=GO_Biological_Process_2021"))
-ke <- read.geneset(url("https://maayanlab.cloud/Enrichr/geneSetLibrary?mode=text&libraryName=KEGG_2021_Human"))
-re <- read.geneset(url("https://maayanlab.cloud/Enrichr/geneSetLibrary?mode=text&libraryName=Reactome_2022"))
-all_paths <- c(bp, ke, re)
-names(all_paths) <- tolower(names(all_paths))
+bp <- readRDS("results/rds/pathways/pathways-all-bioprocess.rds")
+ke <- readRDS("results/rds/pathways/pathways-all-kegg.rds")
+re <- readRDS("results/rds/pathways/pathways-all-reactome.rds")
+
+pathsExpressed <- c(bp, ke, re)
+names(pathsExpressed) <- tolower(names(pathsExpressed))
 ##############################
 
-vsmc50Top2 <-
-  readRDS("results/rds/p01/targets50top2-vsmc-p01.rds") %>%
+multimir <-
+  readRDS("results/rds/vsmc-multimir.rds") %>%
   lapply( "[", , c(3, 2)) %>%
   lapply(as_tibble)
+names(multimir) <- miRNAnames
 
 geneLists50Top2 <-
 vsmc50Top2 %>%

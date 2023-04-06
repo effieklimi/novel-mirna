@@ -37,15 +37,15 @@ saveRDS(fgseaResults, file = "results/rds/fgsea/vsmc-fgsea-deleterious.rds")
 # Filter for p value, keep the Normalised Enrichment Scores and format table for the heatmap:
 ccFgseaSig <-
   #lapply(fgseaResults, arrange, -pval) %>%
-  lapply(ccFgsea, filter, padj < 0.05) %>%
+  lapply(ccFgsea, filter, padj < 0.01) %>%
   lapply("[", , c("pathway", "NES")) %>%
   join_all(by = "pathway", type = "left") %>%
   column_to_rownames(var = "pathway") %>%
   `colnames<-`(c(miRNAnames))
-
+ 
 miFgseaSig <-
   #lapply(fgseaResults, arrange, -pval) %>%
-  lapply(miFgsea, filter, padj < 0.05) %>%
+  lapply(miFgsea, filter, padj < 0.01) %>%
   lapply("[", , c("pathway", "NES")) %>%
   join_all(by = "pathway", type = "left") %>%
   column_to_rownames(var = "pathway") %>%
@@ -53,7 +53,7 @@ miFgseaSig <-
 
 delFgseaSig <-
   #lapply(fgseaResults, arrange, -pval) %>%
-  lapply(delFgsea, filter, padj < 0.05) %>%
+  lapply(delFgsea, filter, padj < 0.01) %>%
   lapply("[", , c("pathway", "NES")) %>%
   join_all(by = "pathway", type = "left") %>%
   column_to_rownames(var = "pathway") %>%

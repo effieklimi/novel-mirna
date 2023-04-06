@@ -58,7 +58,7 @@ assignInNamespace(x = "draw_colnames", value = "draw_colnames_45", ns = asNamesp
 anot <- data.frame(row.names = rownames(fgseaResCellCycle), Database = fgseaMatrixCellCycle[,8])
 ann_colors <- list(Database = c("KEGG" = "#636362", "Reactome" = "grey70", "Gene Ontology BP" = "grey90"))
 #ha <- rowAnnotation(foo = anno_mark(at = matchesCellCycle, labels = rownames(fgseaMatrixCellCycle)[matches]))
-pdf(file = "results/figures/fgsea-vsmc-heatmap-cellcycle.pdf", width = 11, height = 6)
+pdf(file = "results/figures/fgsea-vsmc-heatmap-cellcycle.pdf", width = 11, height = 8)
 ComplexHeatmap::pheatmap(fgseaMatrixCellCycle[,c(2,3,5,7,1,4,6)],
     border_color = FALSE,
     cluster_cols = FALSE,

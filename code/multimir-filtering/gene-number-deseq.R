@@ -133,7 +133,7 @@ rownames_to_column("sample") %>%
 mutate(sample = factor(sample, levels = sample)) %>% # This trick update the factor levels
 melt()
 
-pdf(file = "results/figures/vsmc-down-multimir-bar.pdf", width = 9, height = 4.5)
+pdf(file = "results/figures/vsmc-deseq-genenumber.pdf", width = 9, height = 4.5)
 ggplot(vsmcMelt, aes(y = value, x = sample, fill = variable)) +
   geom_bar(position = "stack", stat = "identity", width = .8) +
   scale_fill_manual(
@@ -162,7 +162,7 @@ rownames_to_column("sample") %>%
 mutate(sample = factor(sample, levels = sample)) %>% # This trick update the factor levels
 melt()
 
-pdf(file = "results/figures/endos-down-multimir-bar.pdf", width = 9, height = 4.5)
+pdf(file = "results/figures/endos-deseq-genenumber.pdf", width = 9, height = 4.5)
 ggplot(endosMelt, aes(y = value, x = sample, fill = variable)) +
   geom_bar(position = "stack", stat = "identity", width = .8) +
   scale_fill_manual(

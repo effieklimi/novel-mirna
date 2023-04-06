@@ -44,17 +44,20 @@ endosUr <-
 
 
 # Get all mltimir candidates
-vsmc50Top2 <-
+multimir <-
   readRDS("results/rds/vsmc-multimir.rds") %>%
   lapply( "[", , c(3, 2)) %>%
   lapply(as_tibble)
 
-names(multimir) <- miRnames
+names(multimir) <- miRNAnames
 multimir <- multimir[c(2, 3, 5, 7, 1, 4, 6)]
 targets <- do.call(rbind, multimir)
+genes <-
+    split(targets, duplicated(targets$name) | duplicated(targets$name, fromLast = TRUE)) %>%
+    lapply(distinct, name, .keep_all = TRUE) %>% # remove duplicates
+    lapply(data.frame)
 
-
-
+duplicates <- genes$`TRUE`$name
 
 
 

@@ -38,7 +38,7 @@ fgseaRankedGroupB <- heatmapGroupB[order(rowSums(heatmapGroupB, na.rm = TRUE), d
 fgseaRankedGroupC <- heatmapGroupC[order(rowSums(heatmapGroupC, na.rm = TRUE), decreasing = FALSE),]
 
 matchesGroupA <- which(rownames(fgseaHeatmap) %in% rownames(fgseaRankedGroupA[1:24,]))
-matchesGroupB <- which(rownames(fgseaHeatmap) %in% rownames(fgseaRankedGroupB[1:24,]))
+matchesGroupB <- which(rownames(fgseaHeatmap) %in% rownames(fgseaRankedGroupB[1:19,]))
 matchesGroupC <- which(rownames(fgseaHeatmap) %in% rownames(fgseaRankedGroupC[1:13,]))
 
 matchesAll <- c(matchesGroupA, matchesGroupB, matchesGroupC)
