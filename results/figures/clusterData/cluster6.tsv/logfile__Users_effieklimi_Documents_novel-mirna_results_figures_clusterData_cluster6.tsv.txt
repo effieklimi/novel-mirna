@@ -1,0 +1,13 @@
+GO-Figure! version: 1.0.1
+
+Date run: 2023-05-12
+
+Command line input: ['gofigure.py', '-i', '/Users/effieklimi/Documents/novel-mirna/results/tables/clusterData/cluster6.tsv', '-o', '/Users/effieklimi/Documents/novel-mirna/results/figures/clusterData/cluster6.tsv', '-t', 'Cluster 6', '-p', 'viridis', '-g', 'triple', '-f', 'xx-small', '-m', '20', '-e', '100', '-n', 'bpo', '-si', '0.8']
+
+go.obo version used: releases/2023-04-01
+
+go.obo version used to create GO relations: releases/2023-04-01
+
+
+Calculating biological process
+

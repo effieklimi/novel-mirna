@@ -26,7 +26,7 @@ countFpkm <- read.csv(
   header = TRUE
 ) %>% as_tibble()
 
-genes <- join(targets[, 1], countFpkm[, c(2, 7:40)], by = "name") %>% na.omit 
+genes <- join(targets[,1], countFpkm[, c(2,17:40)], by = "name") %>% na.omit
 genesDuplicates <- 
     split(genes, duplicated(genes$name) | duplicated(genes$name, fromLast = TRUE)) %>%
     lapply(distinct, name, .keep_all = TRUE) %>% # remove duplicates
@@ -85,11 +85,11 @@ colnames(matrix) <- c( "miR-Control", "miR-Control", "miR-Control",
 myBreaks <- c(seq(min(matrix), 0, length.out=ceiling(500/2) + 1), 
               seq(max(matrix)/500, max(matrix), length.out = floor(500/2)))
 
-pdf("results/figures/multimir-heatmap-all.pdf", width = 7, height = 10)
+pdf("results/figures/multimir-heatmap-all-clustered.pdf", width = 7, height = 10)
 ComplexHeatmap::pheatmap(as.matrix(matrix),
     border_color = FALSE,
     cluster_cols = FALSE,
-    cluster_rows = FALSE,
+    cluster_rows = TRUE,
     fontsize_row = 10,
     fontsize_col = 12,
     show_rownames = FALSE,
@@ -119,7 +119,7 @@ dev.off()
 myBreaks <- c(seq(min(matrixUnique), 0, length.out=ceiling(500/2) + 1), 
               seq(max(matrixUnique)/500, max(matrixUnique), length.out = floor(500/2)))
 
-pdf("results/figures/multimir-heatmap-unique.pdf", width = 6, height = 10)
+pdf("results/figures/multimir-heatmap-unique-clustered.pdf", width = 6, height = 10)
 ComplexHeatmap::pheatmap(as.matrix(matrixUnique),
     border_color = FALSE,
     cluster_cols = FALSE,

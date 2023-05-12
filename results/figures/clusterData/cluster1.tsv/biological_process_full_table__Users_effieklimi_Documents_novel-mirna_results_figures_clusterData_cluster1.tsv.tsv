@@ -1,0 +1,51 @@
+Cluster representative	Cluster member	Cluster member description	Member P-value	Member user defined value	Member IC	Member frequency
+GO:0003222	GO:0003222	ventricular trabecula myocardium morphogenesis	7.252e-05	0.000e+00	5.608e+00	2.465e-06
+GO:0003222	GO:0061384	heart trabecula morphogenesis	9.137e-04	0.000e+00	5.461e+00	3.460e-06
+GO:0003222	GO:0061383	trabecula morphogenesis	2.799e-03	0.000e+00	5.424e+00	3.769e-06
+GO:0032869	GO:0032869	cellular response to insulin stimulus	2.415e-04	0.000e+00	4.865e+00	1.364e-05
+GO:0032869	GO:0032868	response to insulin	1.105e-03	0.000e+00	4.664e+00	2.167e-05
+GO:0035966	GO:0035966	response to topologically incorrect protein	4.038e-04	0.000e+00	4.292e+00	5.101e-05
+GO:0035966	GO:0006986	response to unfolded protein	1.496e-03	0.000e+00	4.322e+00	4.768e-05
+GO:0035966	GO:0035967	cellular response to topologically incorrect protein	5.540e-03	0.000e+00	5.053e+00	8.851e-06
+GO:0060537	GO:0060537	muscle tissue development	8.586e-04	0.000e+00	4.575e+00	2.658e-05
+GO:0060537	GO:0007519	skeletal muscle tissue development	2.620e-03	0.000e+00	4.885e+00	1.302e-05
+GO:0060537	GO:0003229	ventricular cardiac muscle tissue development	4.374e-03	0.000e+00	5.895e+00	1.273e-06
+GO:0007565	GO:0007565	female pregnancy	8.912e-04	0.000e+00	5.329e+00	4.686e-06
+GO:0007565	GO:0044703	multi-organism reproductive process	1.506e-03	0.000e+00	5.101e+00	7.934e-06
+GO:0007565	GO:0044706	multi-multicellular organism process	1.870e-03	0.000e+00	5.063e+00	8.649e-06
+GO:0030522	GO:0030522	intracellular receptor signaling pathway	9.254e-04	0.000e+00	3.690e+00	2.042e-04
+GO:0007517	GO:0007517	muscle organ development	9.367e-04	0.000e+00	4.174e+00	6.700e-05
+GO:0007517	GO:0060538	skeletal muscle organ development	3.498e-03	0.000e+00	5.516e+00	3.050e-06
+GO:0070561	GO:0070561	vitamin D receptor signaling pathway	1.888e-03	0.000e+00	6.448e+00	3.560e-07
+GO:0071364	GO:0071364	cellular response to epidermal growth factor stimulus	2.025e-03	0.000e+00	5.237e+00	5.791e-06
+GO:0071364	GO:0070849	response to epidermal growth factor	2.632e-03	0.000e+00	5.196e+00	6.368e-06
+GO:0071375	GO:0071375	cellular response to peptide hormone stimulus	2.363e-03	0.000e+00	4.594e+00	2.544e-05
+GO:0071375	GO:0043434	response to peptide hormone	3.604e-03	0.000e+00	4.405e+00	3.936e-05
+GO:2001234	GO:2001234	negative regulation of apoptotic signaling pathway	2.621e-03	0.000e+00	4.289e+00	5.145e-05
+GO:0055010	GO:0055010	ventricular cardiac muscle tissue morphogenesis	2.632e-03	0.000e+00	5.053e+00	8.847e-06
+GO:0055010	GO:0055008	cardiac muscle tissue morphogenesis	5.584e-03	0.000e+00	4.895e+00	1.275e-05
+GO:0036302	GO:0036302	atrioventricular canal development	2.656e-03	0.000e+00	5.568e+00	2.704e-06
+GO:0071481	GO:0071481	cellular response to X-ray	2.656e-03	0.000e+00	5.902e+00	1.253e-06
+GO:1905214	GO:1905214	regulation of RNA binding	2.656e-03	0.000e+00	5.745e+00	1.800e-06
+GO:0009299	GO:0009299	mRNA transcription	2.973e-03	0.000e+00	4.928e+00	1.179e-05
+GO:0000209	GO:0000209	protein polyubiquitination	3.168e-03	0.000e+00	3.716e+00	1.923e-04
+GO:0090305	GO:0090305	nucleic acid phosphodiester bond hydrolysis	3.301e-03	0.000e+00	2.132e+00	7.387e-03
+GO:0072148	GO:0072148	epithelial cell fate commitment	3.548e-03	0.000e+00	5.488e+00	3.251e-06
+GO:0120034	GO:0120034	positive regulation of plasma membrane bounded cell projection assembly	3.917e-03	0.000e+00	4.725e+00	1.883e-05
+GO:0120034	GO:0120032	regulation of plasma membrane bounded cell projection assembly	5.858e-03	0.000e+00	4.413e+00	3.864e-05
+GO:0120034	GO:0060491	regulation of cell projection assembly	6.117e-03	0.000e+00	3.908e+00	1.235e-04
+GO:0034393	GO:0034393	positive regulation of smooth muscle cell apoptotic process	4.039e-03	0.000e+00	5.769e+00	1.703e-06
+GO:0045618	GO:0045618	positive regulation of keratinocyte differentiation	4.039e-03	0.000e+00	5.557e+00	2.774e-06
+GO:2000846	GO:2000846	regulation of corticosteroid hormone secretion	4.039e-03	0.000e+00	5.656e+00	2.207e-06
+GO:0003198	GO:0003198	epithelial to mesenchymal transition involved in endocardial cushion formation	4.560e-03	0.000e+00	5.747e+00	1.790e-06
+GO:0043161	GO:0043161	proteasome-mediated ubiquitin-dependent protein catabolic process	4.769e-03	0.000e+00	3.213e+00	6.128e-04
+GO:0043161	GO:0036503	ERAD pathway	3.917e-03	0.000e+00	3.888e+00	1.293e-04
+GO:0043161	GO:0034976	response to endoplasmic reticulum stress	4.265e-03	0.000e+00	3.595e+00	2.540e-04
+GO:0071071	GO:0071071	regulation of phospholipid biosynthetic process	5.110e-03	0.000e+00	5.417e+00	3.832e-06
+GO:0042752	GO:0042752	regulation of circadian rhythm	5.377e-03	0.000e+00	4.219e+00	6.040e-05
+GO:0009755	GO:0009755	hormone-mediated signaling pathway	5.484e-03	0.000e+00	3.205e+00	6.232e-04
+GO:0060135	GO:0060135	maternal process involved in female pregnancy	5.584e-03	0.000e+00	5.500e+00	3.161e-06
+GO:0035338	GO:0035338	long-chain fatty-acyl-CoA biosynthetic process	5.688e-03	0.000e+00	5.045e+00	9.009e-06
+GO:0035930	GO:0035930	corticosteroid hormone secretion	5.688e-03	0.000e+00	6.301e+00	5.005e-07
+GO:0008286	GO:0008286	insulin receptor signaling pathway	6.227e-03	0.000e+00	4.612e+00	2.445e-05
+GO:0030150	GO:0030150	protein import into mitochondrial matrix	6.296e-03	0.000e+00	4.090e+00	8.131e-05

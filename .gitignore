@@ -2,6 +2,9 @@
 .Rhistory
 .Rapp.history
 
+#GO-Figure - it asks to create a subdirectory
+.GO-Figure
+
 # MacOS files
 .DS_Store
 

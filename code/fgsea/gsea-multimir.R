@@ -11,7 +11,6 @@ setwd("/Users/effieklimi/Documents/novel-mirna/")
 miRNAnames <- c("hsa-miR-1827", "hsa-miR-323a-3p", "hsa-miR-449b-5p", "hsa-miR-4774-3p", "hsa-miR-491-3p", "hsa-miR-5681b", "hsa-miR-892b")
 
 ########## pathways ##########
-
 bp <- readRDS("results/rds/pathways/pathways-all-bioprocess.rds")
 ke <- readRDS("results/rds/pathways/pathways-all-kegg.rds")
 re <- readRDS("results/rds/pathways/pathways-all-reactome.rds")
@@ -19,20 +18,43 @@ re <- readRDS("results/rds/pathways/pathways-all-reactome.rds")
 pathsExpressed <- c(bp, ke, re)
 names(pathsExpressed) <- tolower(names(pathsExpressed))
 ##############################
-
 multimir <-
   readRDS("results/rds/vsmc-multimir.rds") %>%
   lapply( "[", , c(3, 2)) %>%
   lapply(as_tibble)
-names(multimir) <- miRNAnames
 
-geneLists50Top2 <-
-vsmc50Top2 %>%
-lapply(tibble::deframe) %>%
-lapply(sort, decreasing = TRUE)
+genes <-
+  multimir %>%
+  lapply(tibble::deframe) %>%
+  lapply(sort, decreasing = TRUE)
+names(genes) <- miRNAnames
 
-fgseaResults50Top2 <-
-  map(geneLists50Top2, fgsea, pathways = all_paths, minSize = 20, maxSize = 1000, eps = 0)
+# miR-323a-3p
+
+fgseaRes <- 
+  map(genes, fgsea, pathways = pathsExpressed, minSize = 10, maxSize = 1000, eps = 0) %>%
+  lapply(arrange, pval)
+
+df <- apply(fgseaRes[[2]],2,as.character)
+write.csv(df, file = "results/tables/fgsea-mir323a3p.csv")
+
+fgseaPathways <- 
+  lapply("[", , c("pathway", "NES")) %>%
+  join_all(by = "pathway", type = "left") %>%
+  column_to_rownames(var = "pathway") %>%
+  `colnames<-`(c(miRNAnames))
+
+# miR-449b-5p`
+# miR-491-3p
+# miR-892b
+# miR-1827
+mir1827 <- fgsea(genes[[1]], pathways = pathsExpressed, minSize = 5, maxSize = 1000, eps = 0)
+
+# miR-4774-3p
+# miR-5681b
+
+
+fgsea <- map(geneLists50Top2, fgsea, pathways = all_paths, minSize = 20, maxSize = 1000, eps = 0)
 
 # Filter for p value, keep the Normalised Enrichment Scores and format table for the heatmap:
 fgseaResultsSig <- 
