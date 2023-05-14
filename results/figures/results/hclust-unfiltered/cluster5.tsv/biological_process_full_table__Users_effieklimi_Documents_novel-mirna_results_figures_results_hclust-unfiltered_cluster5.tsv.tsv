@@ -1,0 +1,51 @@
+Cluster representative	Cluster member	Cluster member description	Member P-value	Member user defined value	Member IC	Member frequency
+GO:0030512	GO:0030512	negative regulation of transforming growth factor beta receptor signaling pathway	7.992e-05	0.000e+00	4.639e+00	2.294e-05
+GO:0030512	GO:0017015	regulation of transforming growth factor beta receptor signaling pathway	9.151e-05	0.000e+00	4.485e+00	3.271e-05
+GO:0030512	GO:1903844	regulation of cellular response to transforming growth factor beta stimulus	1.041e-04	0.000e+00	4.480e+00	3.308e-05
+GO:0030512	GO:0090287	regulation of cellular response to growth factor stimulus	1.465e-04	0.000e+00	4.059e+00	8.734e-05
+GO:0045922	GO:0045922	negative regulation of fatty acid metabolic process	1.798e-04	0.000e+00	4.636e+00	2.312e-05
+GO:0045922	GO:0045717	negative regulation of fatty acid biosynthetic process	5.218e-04	0.000e+00	4.704e+00	1.979e-05
+GO:0001837	GO:0001837	epithelial to mesenchymal transition	2.281e-04	0.000e+00	4.785e+00	1.642e-05
+GO:0001837	GO:0048762	mesenchymal cell differentiation	5.010e-04	0.000e+00	4.635e+00	2.318e-05
+GO:0035601	GO:0035601	protein deacylation	3.904e-04	0.000e+00	3.342e+00	4.549e-04
+GO:0035601	GO:0098732	macromolecule deacylation	4.584e-04	0.000e+00	3.322e+00	4.760e-04
+GO:0060485	GO:0060485	mesenchyme development	4.420e-04	0.000e+00	4.884e+00	1.306e-05
+GO:0016575	GO:0016575	histone deacetylation	8.134e-04	0.000e+00	3.729e+00	1.866e-04
+GO:0016575	GO:0006476	protein deacetylation	1.835e-03	0.000e+00	3.558e+00	2.765e-04
+GO:0090101	GO:0090101	negative regulation of transmembrane receptor protein serine/threonine kinase signaling pathway	8.854e-04	0.000e+00	4.277e+00	5.283e-05
+GO:0090101	GO:0090092	regulation of transmembrane receptor protein serine/threonine kinase signaling pathway	1.068e-03	0.000e+00	4.055e+00	8.813e-05
+GO:0071559	GO:0071559	response to transforming growth factor beta	9.091e-04	0.000e+00	4.994e+00	1.015e-05
+GO:0071559	GO:0071560	cellular response to transforming growth factor beta stimulus	3.537e-03	0.000e+00	5.054e+00	8.834e-06
+GO:0007179	GO:0007179	transforming growth factor beta receptor signaling pathway	9.693e-04	0.000e+00	4.310e+00	4.900e-05
+GO:0007179	GO:0007178	transmembrane receptor protein serine/threonine kinase signaling pathway	1.880e-03	0.000e+00	3.818e+00	1.522e-04
+GO:0048705	GO:0048705	skeletal system morphogenesis	1.199e-03	0.000e+00	4.546e+00	2.844e-05
+GO:0140718	GO:0140718	facultative heterochromatin formation	1.319e-03	0.000e+00	4.565e+00	2.722e-05
+GO:0140058	GO:0140058	neuron projection arborization	1.452e-03	0.000e+00	5.650e+00	2.237e-06
+GO:0030326	GO:0030326	embryonic limb morphogenesis	1.641e-03	0.000e+00	4.710e+00	1.951e-05
+GO:0030326	GO:0035113	embryonic appendage morphogenesis	1.641e-03	0.000e+00	4.665e+00	2.162e-05
+GO:0030326	GO:0035108	limb morphogenesis	3.579e-03	0.000e+00	4.534e+00	2.924e-05
+GO:0030326	GO:0035107	appendage morphogenesis	3.579e-03	0.000e+00	4.371e+00	4.259e-05
+GO:0051897	GO:0051897	positive regulation of protein kinase B signaling	1.704e-03	0.000e+00	4.786e+00	1.636e-05
+GO:0051897	GO:0051896	regulation of protein kinase B signaling	2.333e-03	0.000e+00	4.564e+00	2.727e-05
+GO:0060173	GO:0048736	appendage development	1.764e-03	0.000e+00	4.846e+00	1.427e-05
+GO:0060173	GO:0060173	limb development	1.764e-03	0.000e+00	4.945e+00	1.136e-05
+GO:0001654	GO:0001654	eye development	2.018e-03	0.000e+00	4.479e+00	3.319e-05
+GO:0150063	GO:0150063	visual system development	2.164e-03	0.000e+00	6.793e+00	1.612e-07
+GO:0150063	GO:0048880	sensory system development	2.399e-03	0.000e+00	6.219e+00	6.046e-07
+GO:0015886	GO:0015886	heme transport	2.269e-03	0.000e+00	3.516e+00	3.049e-04
+GO:0015886	GO:1901678	iron coordination entity transport	3.878e-03	0.000e+00	2.963e+00	1.089e-03
+GO:1902237	GO:1902237	positive regulation of endoplasmic reticulum stress-induced intrinsic apoptotic signaling pathway	2.269e-03	0.000e+00	5.812e+00	1.542e-06
+GO:1990700	GO:1990700	nucleolar chromatin organization	2.269e-03	0.000e+00	6.560e+00	2.754e-07
+GO:1901184	GO:1901184	regulation of ERBB signaling pathway	2.626e-03	0.000e+00	4.614e+00	2.434e-05
+GO:0061448	GO:0061448	connective tissue development	3.190e-03	0.000e+00	5.000e+00	9.999e-06
+GO:0010506	GO:0010506	regulation of autophagy	3.305e-03	0.000e+00	3.679e+00	2.096e-04
+GO:0006623	GO:0072665	protein localization to vacuole	2.280e-03	0.000e+00	3.873e+00	1.341e-04
+GO:0006623	GO:0006623	protein targeting to vacuole	3.500e-03	0.000e+00	4.097e+00	7.991e-05
+GO:0010453	GO:0010453	regulation of cell fate commitment	3.500e-03	0.000e+00	5.005e+00	9.882e-06
+GO:0001889	GO:0001889	liver development	3.689e-03	0.000e+00	4.599e+00	2.515e-05
+GO:0048012	GO:0048012	hepatocyte growth factor receptor signaling pathway	3.878e-03	0.000e+00	5.662e+00	2.177e-06
+GO:0061008	GO:0061008	hepaticobiliary system development	4.035e-03	0.000e+00	6.582e+00	2.620e-07
+GO:0035791	GO:0035791	platelet-derived growth factor receptor-beta signaling pathway	4.503e-03	0.000e+00	5.687e+00	2.056e-06
+GO:0001890	GO:0001890	placenta development	4.662e-03	0.000e+00	5.241e+00	5.744e-06
+GO:0043491	GO:0043491	protein kinase B signaling	4.770e-03	0.000e+00	5.058e+00	8.757e-06
+GO:0009798	GO:0009798	axis specification	4.904e-03	0.000e+00	4.679e+00	2.093e-05

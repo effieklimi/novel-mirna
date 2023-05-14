@@ -1,0 +1,51 @@
+Cluster representative	Cluster member	Cluster member description	Member P-value	Member user defined value	Member IC	Member frequency
+GO:0007059	GO:0007059	chromosome segregation	8.653e-23	0.000e+00	2.891e+00	1.284e-03
+GO:0007059	GO:0098813	nuclear chromosome segregation	6.677e-17	0.000e+00	4.322e+00	4.770e-05
+GO:0000280	GO:0000280	nuclear division	3.343e-16	0.000e+00	4.223e+00	5.990e-05
+GO:0000280	GO:0140014	mitotic nuclear division	2.304e-14	0.000e+00	5.537e+00	2.905e-06
+GO:0044772	GO:0044772	mitotic cell cycle phase transition	1.279e-13	0.000e+00	4.109e+00	7.787e-05
+GO:0044772	GO:0007093	mitotic cell cycle checkpoint signaling	8.907e-08	0.000e+00	3.990e+00	1.022e-04
+GO:0000070	GO:0000070	mitotic sister chromatid segregation	3.997e-13	0.000e+00	4.837e+00	1.455e-05
+GO:0000070	GO:0000819	sister chromatid segregation	6.548e-13	0.000e+00	4.718e+00	1.913e-05
+GO:0090068	GO:0090068	positive regulation of cell cycle process	1.589e-10	0.000e+00	4.043e+00	9.059e-05
+GO:0090068	GO:0045787	positive regulation of cell cycle	8.875e-10	0.000e+00	3.915e+00	1.215e-04
+GO:0090068	GO:1901987	regulation of cell cycle phase transition	1.541e-09	0.000e+00	3.478e+00	3.326e-04
+GO:0090068	GO:0000075	cell cycle checkpoint signaling	9.483e-09	0.000e+00	3.699e+00	2.000e-04
+GO:0006261	GO:0006261	DNA-templated DNA replication	2.874e-10	0.000e+00	3.047e+00	8.967e-04
+GO:0006261	GO:0033260	nuclear DNA replication	3.231e-07	0.000e+00	4.391e+00	4.062e-05
+GO:0006261	GO:0006260	DNA replication	3.234e-10	0.000e+00	2.060e+00	8.702e-03
+GO:0010948	GO:0010948	negative regulation of cell cycle process	5.916e-10	0.000e+00	3.578e+00	2.643e-04
+GO:0010948	GO:1901988	negative regulation of cell cycle phase transition	1.395e-09	0.000e+00	3.654e+00	2.216e-04
+GO:0010948	GO:0045786	negative regulation of cell cycle	1.016e-09	0.000e+00	3.500e+00	3.165e-04
+GO:0010948	GO:0045930	negative regulation of mitotic cell cycle	8.483e-08	0.000e+00	3.858e+00	1.388e-04
+GO:0010948	GO:0045841	negative regulation of mitotic metaphase/anaphase transition	2.763e-07	0.000e+00	4.284e+00	5.198e-05
+GO:0010948	GO:0071173	spindle assembly checkpoint signaling	1.783e-07	0.000e+00	4.285e+00	5.189e-05
+GO:0010948	GO:0031577	spindle checkpoint signaling	2.226e-07	0.000e+00	4.279e+00	5.260e-05
+GO:0000281	GO:0000281	mitotic cytokinesis	3.759e-09	0.000e+00	4.324e+00	4.739e-05
+GO:0000281	GO:0061640	cytoskeleton-dependent cytokinesis	5.150e-09	0.000e+00	4.203e+00	6.263e-05
+GO:0000281	GO:0000910	cytokinesis	2.265e-08	0.000e+00	3.164e+00	6.862e-04
+GO:0008608	GO:0008608	attachment of spindle microtubules to kinetochore	5.019e-09	0.000e+00	4.172e+00	6.726e-05
+GO:0051988	GO:0051988	regulation of attachment of spindle microtubules to kinetochore	6.765e-09	0.000e+00	4.970e+00	1.071e-05
+GO:0007052	GO:1902850	microtubule cytoskeleton organization involved in mitosis	6.494e-09	0.000e+00	4.118e+00	7.613e-05
+GO:0007052	GO:0007052	mitotic spindle organization	7.277e-09	0.000e+00	4.282e+00	5.220e-05
+GO:0007052	GO:0007051	spindle organization	2.723e-08	0.000e+00	3.848e+00	1.418e-04
+GO:1901990	GO:1901990	regulation of mitotic cell cycle phase transition	1.037e-08	0.000e+00	3.704e+00	1.975e-04
+GO:1901990	GO:1901991	negative regulation of mitotic cell cycle phase transition	1.106e-07	0.000e+00	3.945e+00	1.136e-04
+GO:1901990	GO:0007094	mitotic spindle assembly checkpoint signaling	1.783e-07	0.000e+00	4.292e+00	5.103e-05
+GO:1901990	GO:0071174	mitotic spindle checkpoint signaling	1.783e-07	0.000e+00	4.288e+00	5.151e-05
+GO:1901990	GO:1902100	negative regulation of metaphase/anaphase transition of cell cycle	4.186e-07	0.000e+00	4.273e+00	5.337e-05
+GO:1901990	GO:0051983	regulation of chromosome segregation	2.132e-07	0.000e+00	3.925e+00	1.189e-04
+GO:1901990	GO:0033046	negative regulation of sister chromatid segregation	5.112e-07	0.000e+00	4.284e+00	5.205e-05
+GO:1901990	GO:0007088	regulation of mitotic nuclear division	5.974e-08	0.000e+00	4.092e+00	8.093e-05
+GO:1901990	GO:0051783	regulation of nuclear division	1.866e-07	0.000e+00	4.014e+00	9.685e-05
+GO:0034508	GO:0034508	centromere complex assembly	4.367e-08	0.000e+00	4.853e+00	1.402e-05
+GO:0034508	GO:0065004	protein-DNA complex assembly	2.088e-07	0.000e+00	3.519e+00	3.026e-04
+GO:0006268	GO:0006268	DNA unwinding involved in DNA replication	4.511e-08	0.000e+00	3.586e+00	2.594e-04
+GO:0006310	GO:0006310	DNA recombination	9.812e-08	0.000e+00	1.896e+00	1.270e-02
+GO:0007265	GO:0007265	Ras protein signal transduction	1.234e-07	0.000e+00	3.844e+00	1.432e-04
+GO:0000727	GO:0000727	double-strand break repair via break-induced replication	2.398e-07	0.000e+00	4.662e+00	2.177e-05
+GO:0051304	GO:0051304	chromosome separation	3.632e-07	0.000e+00	3.916e+00	1.214e-04
+GO:1903046	GO:1903046	meiotic cell cycle process	3.851e-07	0.000e+00	3.563e+00	2.732e-04
+GO:0006270	GO:0006270	DNA replication initiation	4.137e-07	0.000e+00	3.269e+00	5.381e-04
+GO:0050000	GO:0050000	chromosome localization	4.200e-07	0.000e+00	4.527e+00	2.975e-05
+GO:1902969	GO:1902969	mitotic DNA replication	4.356e-07	0.000e+00	5.884e+00	1.307e-06

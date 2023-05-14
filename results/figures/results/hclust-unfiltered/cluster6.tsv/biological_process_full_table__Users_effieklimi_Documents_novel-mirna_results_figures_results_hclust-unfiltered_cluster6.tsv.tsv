@@ -1,0 +1,51 @@
+Cluster representative	Cluster member	Cluster member description	Member P-value	Member user defined value	Member IC	Member frequency
+GO:0035303	GO:0035303	regulation of dephosphorylation	9.160e-12	0.000e+00	3.906e+00	1.242e-04
+GO:0035303	GO:0010921	regulation of phosphatase activity	2.852e-05	0.000e+00	3.997e+00	1.007e-04
+GO:0035303	GO:0035305	negative regulation of dephosphorylation	5.892e-06	0.000e+00	4.563e+00	2.735e-05
+GO:0035303	GO:0035304	regulation of protein dephosphorylation	9.680e-10	0.000e+00	4.012e+00	9.722e-05
+GO:0035303	GO:0043666	regulation of phosphoprotein phosphatase activity	2.180e-05	0.000e+00	4.075e+00	8.406e-05
+GO:0035303	GO:0035306	positive regulation of dephosphorylation	3.054e-08	0.000e+00	4.808e+00	1.558e-05
+GO:0035303	GO:0035307	positive regulation of protein dephosphorylation	5.125e-07	0.000e+00	4.880e+00	1.318e-05
+GO:0035303	GO:0045936	negative regulation of phosphate metabolic process	5.657e-07	0.000e+00	3.514e+00	3.063e-04
+GO:0035303	GO:0010563	negative regulation of phosphorus metabolic process	5.883e-07	0.000e+00	3.514e+00	3.063e-04
+GO:0035303	GO:0001933	negative regulation of protein phosphorylation	3.756e-05	0.000e+00	3.897e+00	1.266e-04
+GO:0001952	GO:0001952	regulation of cell-matrix adhesion	4.589e-09	0.000e+00	4.697e+00	2.011e-05
+GO:0001952	GO:0051893	regulation of focal adhesion assembly	3.572e-08	0.000e+00	5.032e+00	9.284e-06
+GO:0001952	GO:0010810	regulation of cell-substrate adhesion	3.540e-08	0.000e+00	4.365e+00	4.312e-05
+GO:0001952	GO:0001954	positive regulation of cell-matrix adhesion	1.717e-05	0.000e+00	5.041e+00	9.092e-06
+GO:0001952	GO:0010812	negative regulation of cell-substrate adhesion	5.096e-07	0.000e+00	4.840e+00	1.445e-05
+GO:0001952	GO:0001953	negative regulation of cell-matrix adhesion	1.596e-06	0.000e+00	5.244e+00	5.707e-06
+GO:0001952	GO:0007162	negative regulation of cell adhesion	5.559e-05	0.000e+00	4.181e+00	6.593e-05
+GO:0048041	GO:0048041	focal adhesion assembly	4.970e-09	0.000e+00	5.410e+00	3.893e-06
+GO:0048041	GO:0150115	cell-substrate junction organization	3.607e-09	0.000e+00	5.118e+00	7.628e-06
+GO:0048041	GO:0007044	cell-substrate junction assembly	1.808e-08	0.000e+00	5.140e+00	7.252e-06
+GO:0048041	GO:0034329	cell junction assembly	7.851e-06	0.000e+00	4.207e+00	6.208e-05
+GO:0150116	GO:0150116	regulation of cell-substrate junction organization	5.866e-09	0.000e+00	4.987e+00	1.031e-05
+GO:0150116	GO:0090109	regulation of cell-substrate junction assembly	3.572e-08	0.000e+00	5.032e+00	9.284e-06
+GO:0150116	GO:0051895	negative regulation of focal adhesion assembly	3.877e-06	0.000e+00	5.606e+00	2.475e-06
+GO:0150116	GO:0150118	negative regulation of cell-substrate junction organization	3.877e-06	0.000e+00	5.606e+00	2.475e-06
+GO:0150116	GO:1901889	negative regulation of cell junction assembly	6.972e-06	0.000e+00	5.208e+00	6.197e-06
+GO:0150116	GO:1901888	regulation of cell junction assembly	1.229e-05	0.000e+00	4.221e+00	6.012e-05
+GO:0007160	GO:0007160	cell-matrix adhesion	1.710e-08	0.000e+00	4.213e+00	6.125e-05
+GO:0007160	GO:0031589	cell-substrate adhesion	6.738e-07	0.000e+00	4.002e+00	9.943e-05
+GO:0016311	GO:0016311	dephosphorylation	2.639e-07	0.000e+00	2.670e+00	2.138e-03
+GO:0016311	GO:0006470	protein dephosphorylation	1.509e-06	0.000e+00	2.956e+00	1.107e-03
+GO:0001667	GO:0001667	ameboidal-type cell migration	3.250e-07	0.000e+00	4.212e+00	6.135e-05
+GO:0051494	GO:0051494	negative regulation of cytoskeleton organization	6.150e-07	0.000e+00	3.557e+00	2.774e-04
+GO:0051494	GO:0010639	negative regulation of organelle organization	1.546e-06	0.000e+00	3.400e+00	3.981e-04
+GO:0051494	GO:0032956	regulation of actin cytoskeleton organization	2.440e-05	0.000e+00	3.380e+00	4.168e-04
+GO:0051494	GO:0032970	regulation of actin filament-based process	2.844e-05	0.000e+00	3.374e+00	4.224e-04
+GO:0051494	GO:1902904	negative regulation of supramolecular fiber organization	5.384e-06	0.000e+00	3.567e+00	2.707e-04
+GO:0051494	GO:1902903	regulation of supramolecular fiber organization	4.567e-05	0.000e+00	3.407e+00	3.914e-04
+GO:0072659	GO:0072659	protein localization to plasma membrane	1.014e-06	0.000e+00	4.271e+00	5.358e-05
+GO:0072659	GO:1990778	protein localization to cell periphery	2.522e-06	0.000e+00	4.207e+00	6.203e-05
+GO:0007264	GO:0007264	small GTPase mediated signal transduction	1.947e-06	0.000e+00	3.179e+00	6.626e-04
+GO:0031954	GO:0031954	positive regulation of protein autophosphorylation	2.425e-06	0.000e+00	5.318e+00	4.803e-06
+GO:0031954	GO:0031952	regulation of protein autophosphorylation	3.177e-06	0.000e+00	5.136e+00	7.306e-06
+GO:0007015	GO:0007015	actin filament organization	1.137e-05	0.000e+00	3.209e+00	6.176e-04
+GO:0071560	GO:0071560	cellular response to transforming growth factor beta stimulus	1.401e-05	0.000e+00	5.054e+00	8.834e-06
+GO:0071560	GO:0071559	response to transforming growth factor beta	1.817e-05	0.000e+00	4.994e+00	1.015e-05
+GO:0048771	GO:0048771	tissue remodeling	1.593e-05	0.000e+00	4.623e+00	2.380e-05
+GO:0050920	GO:0050920	regulation of chemotaxis	3.810e-05	0.000e+00	4.114e+00	7.696e-05
+GO:0050920	GO:0040013	negative regulation of locomotion	4.938e-05	0.000e+00	4.154e+00	7.007e-05
+GO:0044089	GO:0044089	positive regulation of cellular component biogenesis	4.423e-05	0.000e+00	3.936e+00	1.160e-04

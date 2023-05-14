@@ -1,0 +1,51 @@
+Cluster representative	Cluster member	Cluster member description	Member P-value	Member user defined value	Member IC	Member frequency
+GO:0000209	GO:0000209	protein polyubiquitination	1.554e-05	0.000e+00	3.716e+00	1.923e-04
+GO:0032872	GO:0032872	regulation of stress-activated MAPK cascade	3.053e-05	0.000e+00	4.222e+00	6.002e-05
+GO:0032872	GO:0070302	regulation of stress-activated protein kinase signaling cascade	3.373e-05	0.000e+00	4.217e+00	6.074e-05
+GO:0032872	GO:0046328	regulation of JNK cascade	4.801e-04	0.000e+00	4.419e+00	3.810e-05
+GO:0051403	GO:0051403	stress-activated MAPK cascade	1.129e-04	0.000e+00	4.533e+00	2.931e-05
+GO:0051403	GO:0031098	stress-activated protein kinase signaling cascade	1.355e-04	0.000e+00	4.469e+00	3.397e-05
+GO:0051403	GO:0007254	JNK cascade	1.190e-03	0.000e+00	4.940e+00	1.148e-05
+GO:0042770	GO:0042770	signal transduction in response to DNA damage	1.668e-04	0.000e+00	3.927e+00	1.183e-04
+GO:0051091	GO:0051091	positive regulation of DNA-binding transcription factor activity	2.311e-04	0.000e+00	4.143e+00	7.201e-05
+GO:0051091	GO:0051090	regulation of DNA-binding transcription factor activity	1.193e-03	0.000e+00	3.947e+00	1.131e-04
+GO:0030193	GO:0030193	regulation of blood coagulation	3.181e-04	0.000e+00	4.605e+00	2.481e-05
+GO:0030193	GO:1900046	regulation of hemostasis	3.545e-04	0.000e+00	4.599e+00	2.515e-05
+GO:0030193	GO:0050818	regulation of coagulation	4.144e-04	0.000e+00	4.497e+00	3.182e-05
+GO:0032874	GO:0032874	positive regulation of stress-activated MAPK cascade	3.288e-04	0.000e+00	4.476e+00	3.340e-05
+GO:0032874	GO:0070304	positive regulation of stress-activated protein kinase signaling cascade	3.532e-04	0.000e+00	4.471e+00	3.382e-05
+GO:0032874	GO:0046330	positive regulation of JNK cascade	1.011e-03	0.000e+00	4.725e+00	1.885e-05
+GO:0150117	GO:0150117	positive regulation of cell-substrate junction organization	3.991e-04	0.000e+00	5.344e+00	4.531e-06
+GO:0007266	GO:0007266	Rho protein signal transduction	4.345e-04	0.000e+00	4.102e+00	7.902e-05
+GO:0001701	GO:0001701	in utero embryonic development	4.410e-04	0.000e+00	4.462e+00	3.450e-05
+GO:0032092	GO:0032092	positive regulation of protein binding	6.372e-04	0.000e+00	4.834e+00	1.466e-05
+GO:0032092	GO:0051099	positive regulation of binding	1.190e-03	0.000e+00	4.533e+00	2.933e-05
+GO:0007596	GO:0007596	blood coagulation	6.387e-04	0.000e+00	3.965e+00	1.083e-04
+GO:0007596	GO:0050817	coagulation	7.165e-04	0.000e+00	3.961e+00	1.094e-04
+GO:0007596	GO:0007599	hemostasis	7.329e-04	0.000e+00	3.825e+00	1.495e-04
+GO:0007596	GO:0050878	regulation of body fluid levels	4.486e-04	0.000e+00	3.697e+00	2.007e-04
+GO:0034110	GO:0034110	regulation of homotypic cell-cell adhesion	6.762e-04	0.000e+00	5.284e+00	5.196e-06
+GO:0034110	GO:0034111	negative regulation of homotypic cell-cell adhesion	1.882e-03	0.000e+00	5.691e+00	2.039e-06
+GO:0034110	GO:0090331	negative regulation of platelet aggregation	1.373e-03	0.000e+00	5.752e+00	1.770e-06
+GO:0060306	GO:0060306	regulation of membrane repolarization	6.762e-04	0.000e+00	5.188e+00	6.479e-06
+GO:0031330	GO:0009895	negative regulation of catabolic process	7.315e-04	0.000e+00	4.172e+00	6.724e-05
+GO:0031330	GO:0031330	negative regulation of cellular catabolic process	8.560e-04	0.000e+00	4.383e+00	4.137e-05
+GO:0010749	GO:0010749	regulation of nitric oxide mediated signal transduction	9.421e-04	0.000e+00	5.802e+00	1.579e-06
+GO:0042060	GO:0042060	wound healing	9.891e-04	0.000e+00	4.928e+00	1.181e-05
+GO:0034109	GO:0034109	homotypic cell-cell adhesion	1.011e-03	0.000e+00	5.092e+00	8.095e-06
+GO:2000058	GO:2000058	regulation of ubiquitin-dependent protein catabolic process	1.042e-03	0.000e+00	4.293e+00	5.093e-05
+GO:2000058	GO:1903050	regulation of proteolysis involved in protein catabolic process	5.410e-04	0.000e+00	3.641e+00	2.286e-04
+GO:2000058	GO:0061136	regulation of proteasomal protein catabolic process	1.770e-03	0.000e+00	3.657e+00	2.201e-04
+GO:0045765	GO:0045765	regulation of angiogenesis	1.060e-03	0.000e+00	4.087e+00	8.193e-05
+GO:0045765	GO:1901342	regulation of vasculature development	1.172e-03	0.000e+00	4.080e+00	8.327e-05
+GO:1904668	GO:1904668	positive regulation of ubiquitin protein ligase activity	1.148e-03	0.000e+00	4.381e+00	4.156e-05
+GO:1904668	GO:0051348	negative regulation of transferase activity	1.574e-03	0.000e+00	4.123e+00	7.537e-05
+GO:2000169	GO:2000169	regulation of peptidyl-cysteine S-nitrosylation	1.148e-03	0.000e+00	5.963e+00	1.088e-06
+GO:0042176	GO:0042176	regulation of protein catabolic process	1.232e-03	0.000e+00	3.521e+00	3.012e-04
+GO:0007528	GO:0007528	neuromuscular junction development	1.365e-03	0.000e+00	4.981e+00	1.045e-05
+GO:0030195	GO:0030195	negative regulation of blood coagulation	1.633e-03	0.000e+00	4.842e+00	1.438e-05
+GO:0030195	GO:1900047	negative regulation of hemostasis	1.729e-03	0.000e+00	4.838e+00	1.453e-05
+GO:0086009	GO:0086009	membrane repolarization	1.729e-03	0.000e+00	5.145e+00	7.161e-06
+GO:0007565	GO:0007565	female pregnancy	1.770e-03	0.000e+00	5.329e+00	4.686e-06
+GO:0022407	GO:0022407	regulation of cell-cell adhesion	1.815e-03	0.000e+00	3.491e+00	3.231e-04
+GO:0006939	GO:0006939	smooth muscle contraction	1.859e-03	0.000e+00	4.523e+00	3.000e-05

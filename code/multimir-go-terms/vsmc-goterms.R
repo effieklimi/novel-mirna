@@ -44,7 +44,7 @@ bpEnrichment <-
       minGSSize = 10)
 
 bpEnrichTable <- lapply(bpEnrichment, function(x) x@result)
-saveRDS(bpEnrichment, file = "results/rds/vsmc-multimir-gobp.rds")
+saveRDS(bpEnrichment, file = "results/rds/vsmc-multimir-gobp-unclustered-unfiltered.rds")
 
 
 write.table(bpEnrichTable[[1]][1:50, c(1, 5)], file = "/Users/effieklimi/Documents/novel-mirna/results/tables/goterm-semantic-similarity/unclustered-unfiltered/mir323.tsv", sep = "\t", quote = FALSE, row.names = FALSE, col.names = c("% GOterm", "enrichment_P-value"))

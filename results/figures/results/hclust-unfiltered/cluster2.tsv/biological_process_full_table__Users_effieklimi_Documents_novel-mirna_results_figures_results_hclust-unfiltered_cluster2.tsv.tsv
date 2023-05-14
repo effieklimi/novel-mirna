@@ -1,0 +1,50 @@
+Cluster representative	Cluster member	Cluster member description	Member P-value	Member user defined value	Member IC	Member frequency
+GO:1903311	GO:1903311	regulation of mRNA metabolic process	6.187e-06	0.000e+00	3.107e+00	7.818e-04
+GO:1903311	GO:0050684	regulation of mRNA processing	8.610e-04	0.000e+00	3.298e+00	5.031e-04
+GO:1903311	GO:0048024	regulation of mRNA splicing, via spliceosome	2.070e-04	0.000e+00	4.091e+00	8.107e-05
+GO:1903311	GO:0043484	regulation of RNA splicing	1.713e-04	0.000e+00	3.908e+00	1.236e-04
+GO:1903311	GO:0061013	regulation of mRNA catabolic process	9.193e-04	0.000e+00	3.555e+00	2.784e-04
+GO:0006402	GO:0006402	mRNA catabolic process	6.493e-05	0.000e+00	2.964e+00	1.088e-03
+GO:0006402	GO:0006401	RNA catabolic process	8.053e-05	0.000e+00	2.669e+00	2.145e-03
+GO:0006402	GO:0000956	nuclear-transcribed mRNA catabolic process	3.370e-04	0.000e+00	3.333e+00	4.642e-04
+GO:0035020	GO:0035020	regulation of Rac protein signal transduction	9.015e-05	0.000e+00	5.459e+00	3.476e-06
+GO:1903313	GO:1903313	positive regulation of mRNA metabolic process	1.349e-04	0.000e+00	3.775e+00	1.678e-04
+GO:1903313	GO:0061014	positive regulation of mRNA catabolic process	9.871e-04	0.000e+00	3.792e+00	1.613e-04
+GO:0043487	GO:0043487	regulation of RNA stability	1.574e-04	0.000e+00	3.696e+00	2.014e-04
+GO:0043487	GO:0043488	regulation of mRNA stability	5.217e-04	0.000e+00	3.706e+00	1.970e-04
+GO:0034655	GO:0034655	nucleobase-containing compound catabolic process	1.923e-04	0.000e+00	2.387e+00	4.107e-03
+GO:0034655	GO:0044270	cellular nitrogen compound catabolic process	5.603e-04	0.000e+00	2.296e+00	5.059e-03
+GO:0034655	GO:0046700	heterocycle catabolic process	4.917e-04	0.000e+00	2.269e+00	5.380e-03
+GO:0034655	GO:0019439	aromatic compound catabolic process	7.682e-04	0.000e+00	2.186e+00	6.515e-03
+GO:0034655	GO:1901361	organic cyclic compound catabolic process	1.333e-03	0.000e+00	2.192e+00	6.421e-03
+GO:0000375	GO:0000375	RNA splicing, via transesterification reactions	2.585e-04	0.000e+00	3.040e+00	9.118e-04
+GO:0000375	GO:0000377	RNA splicing, via transesterification reactions with bulged adenosine as nucleophile	8.623e-04	0.000e+00	3.063e+00	8.643e-04
+GO:0000375	GO:0008380	RNA splicing	5.603e-04	0.000e+00	2.725e+00	1.886e-03
+GO:0042149	GO:0042149	cellular response to glucose starvation	2.658e-04	0.000e+00	4.896e+00	1.271e-05
+GO:0042149	GO:0009267	cellular response to starvation	2.752e-03	0.000e+00	3.456e+00	3.498e-04
+GO:0042149	GO:0042594	response to starvation	2.028e-03	0.000e+00	3.443e+00	3.608e-04
+GO:0006397	GO:0006397	mRNA processing	3.523e-04	0.000e+00	2.347e+00	4.497e-03
+GO:0006397	GO:0000398	mRNA splicing, via spliceosome	8.623e-04	0.000e+00	3.104e+00	7.876e-04
+GO:0017148	GO:0006417	regulation of translation	2.588e-04	0.000e+00	2.560e+00	2.753e-03
+GO:0017148	GO:0017148	negative regulation of translation	5.055e-04	0.000e+00	3.256e+00	5.545e-04
+GO:0017148	GO:0034249	negative regulation of amide metabolic process	1.103e-03	0.000e+00	3.252e+00	5.593e-04
+GO:0031053	GO:0031053	primary miRNA processing	6.672e-04	0.000e+00	5.023e+00	9.485e-06
+GO:0031053	GO:0035196	miRNA processing	3.463e-04	0.000e+00	4.319e+00	4.794e-05
+GO:0031053	GO:0070918	regulatory ncRNA processing	4.810e-04	0.000e+00	4.168e+00	6.792e-05
+GO:0061157	GO:0061157	mRNA destabilization	8.022e-04	0.000e+00	4.137e+00	7.302e-05
+GO:0061157	GO:0050779	RNA destabilization	9.871e-04	0.000e+00	4.132e+00	7.375e-05
+GO:0040029	GO:0040029	epigenetic regulation of gene expression	1.061e-03	0.000e+00	3.873e+00	1.339e-04
+GO:0016601	GO:0016601	Rac protein signal transduction	1.269e-03	0.000e+00	5.439e+00	3.638e-06
+GO:0042789	GO:0042789	mRNA transcription by RNA polymerase II	1.269e-03	0.000e+00	5.113e+00	7.715e-06
+GO:0042789	GO:0009299	mRNA transcription	1.917e-03	0.000e+00	4.928e+00	1.179e-05
+GO:0048259	GO:0048259	regulation of receptor-mediated endocytosis	1.454e-03	0.000e+00	4.729e+00	1.868e-05
+GO:0006513	GO:0006513	protein monoubiquitination	1.917e-03	0.000e+00	3.686e+00	2.060e-04
+GO:0018210	GO:0018210	peptidyl-threonine modification	2.072e-03	0.000e+00	4.781e+00	1.656e-05
+GO:0006446	GO:0006446	regulation of translational initiation	2.137e-03	0.000e+00	3.848e+00	1.418e-04
+GO:2000637	GO:2000637	positive regulation of miRNA-mediated gene silencing	2.260e-03	0.000e+00	5.431e+00	3.705e-06
+GO:2000637	GO:1900370	positive regulation of post-transcriptional gene silencing by RNA	2.547e-03	0.000e+00	5.390e+00	4.074e-06
+GO:2000637	GO:0060148	positive regulation of post-transcriptional gene silencing	2.547e-03	0.000e+00	5.380e+00	4.172e-06
+GO:0009101	GO:0009101	glycoprotein biosynthetic process	2.572e-03	0.000e+00	4.040e+00	9.127e-05
+GO:0051028	GO:0051028	mRNA transport	2.986e-03	0.000e+00	3.233e+00	5.851e-04
+GO:0051028	GO:0015931	nucleobase-containing compound transport	3.134e-03	0.000e+00	2.919e+00	1.204e-03
+GO:0051983	GO:0051983	regulation of chromosome segregation	2.986e-03	0.000e+00	3.925e+00	1.189e-04

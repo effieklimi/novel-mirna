@@ -1,0 +1,51 @@
+Cluster representative	Cluster member	Cluster member description	Member P-value	Member user defined value	Member IC	Member frequency
+GO:0007411	GO:0007411	axon guidance	4.558e-06	0.000e+00	3.733e+00	1.849e-04
+GO:0007411	GO:0097485	neuron projection guidance	4.862e-06	0.000e+00	3.728e+00	1.871e-04
+GO:0007411	GO:0061564	axon development	4.426e-05	0.000e+00	4.994e+00	1.014e-05
+GO:0016049	GO:0016049	cell growth	5.092e-06	0.000e+00	4.320e+00	4.790e-05
+GO:0007264	GO:0007264	small GTPase mediated signal transduction	1.106e-05	0.000e+00	3.179e+00	6.626e-04
+GO:0007264	GO:0007265	Ras protein signal transduction	5.688e-05	0.000e+00	3.844e+00	1.432e-04
+GO:0007264	GO:0007266	Rho protein signal transduction	6.783e-05	0.000e+00	4.102e+00	7.902e-05
+GO:0035023	GO:0035023	regulation of Rho protein signal transduction	1.476e-05	0.000e+00	4.532e+00	2.937e-05
+GO:0035023	GO:0046578	regulation of Ras protein signal transduction	5.616e-04	0.000e+00	3.706e+00	1.966e-04
+GO:0035023	GO:0051056	regulation of small GTPase mediated signal transduction	1.657e-04	0.000e+00	3.531e+00	2.941e-04
+GO:0006354	GO:0006354	DNA-templated transcription elongation	1.954e-05	0.000e+00	3.634e+00	2.322e-04
+GO:0001558	GO:0001558	regulation of cell growth	3.851e-05	0.000e+00	4.003e+00	9.941e-05
+GO:0001558	GO:0045926	negative regulation of growth	8.748e-04	0.000e+00	4.209e+00	6.180e-05
+GO:0007409	GO:0007409	axonogenesis	3.983e-05	0.000e+00	4.292e+00	5.102e-05
+GO:0062042	GO:0062042	regulation of cardiac epithelial to mesenchymal transition	9.025e-05	0.000e+00	5.912e+00	1.226e-06
+GO:0062042	GO:0010718	positive regulation of epithelial to mesenchymal transition	6.649e-04	0.000e+00	5.017e+00	9.613e-06
+GO:0001667	GO:0001667	ameboidal-type cell migration	1.053e-04	0.000e+00	4.212e+00	6.135e-05
+GO:0009154	GO:0009154	purine ribonucleotide catabolic process	1.064e-04	0.000e+00	4.059e+00	8.733e-05
+GO:0009154	GO:0009261	ribonucleotide catabolic process	2.532e-04	0.000e+00	4.046e+00	8.998e-05
+GO:0009154	GO:0006195	purine nucleotide catabolic process	2.213e-04	0.000e+00	3.694e+00	2.025e-04
+GO:0009154	GO:1901292	nucleoside phosphate catabolic process	3.469e-04	0.000e+00	2.924e+00	1.192e-03
+GO:0009154	GO:0072523	purine-containing compound catabolic process	4.201e-04	0.000e+00	3.294e+00	5.084e-04
+GO:0045661	GO:0045661	regulation of myoblast differentiation	1.439e-04	0.000e+00	5.007e+00	9.835e-06
+GO:0071526	GO:0071526	semaphorin-plexin signaling pathway	1.444e-04	0.000e+00	4.095e+00	8.031e-05
+GO:0071526	GO:1902285	semaphorin-plexin signaling pathway involved in neuron projection guidance	6.891e-04	0.000e+00	5.642e+00	2.281e-06
+GO:0045445	GO:0045445	myoblast differentiation	1.630e-04	0.000e+00	5.291e+00	5.112e-06
+GO:0022604	GO:0022604	regulation of cell morphogenesis	2.062e-04	0.000e+00	2.373e+00	4.238e-03
+GO:0022604	GO:0008360	regulation of cell shape	6.651e-04	0.000e+00	2.378e+00	4.186e-03
+GO:0030168	GO:0030168	platelet activation	2.216e-04	0.000e+00	4.564e+00	2.728e-05
+GO:0071218	GO:0071218	cellular response to misfolded protein	2.325e-04	0.000e+00	5.630e+00	2.345e-06
+GO:0071218	GO:0051788	response to misfolded protein	3.592e-04	0.000e+00	5.523e+00	2.996e-06
+GO:0035633	GO:0035633	maintenance of blood-brain barrier	2.842e-04	0.000e+00	5.902e+00	1.253e-06
+GO:0009214	GO:0009214	cyclic nucleotide catabolic process	2.884e-04	0.000e+00	4.244e+00	5.699e-05
+GO:0009214	GO:0009166	nucleotide catabolic process	7.493e-04	0.000e+00	3.077e+00	8.374e-04
+GO:0034333	GO:0034333	adherens junction assembly	2.884e-04	0.000e+00	5.552e+00	2.808e-06
+GO:0046058	GO:0046058	cAMP metabolic process	2.907e-04	0.000e+00	3.686e+00	2.063e-04
+GO:0031589	GO:0031589	cell-substrate adhesion	3.166e-04	0.000e+00	4.002e+00	9.943e-05
+GO:0035330	GO:0035330	regulation of hippo signaling	4.394e-04	0.000e+00	5.091e+00	8.118e-06
+GO:0034504	GO:0034504	protein localization to nucleus	4.933e-04	0.000e+00	3.669e+00	2.143e-04
+GO:0008154	GO:0008154	actin polymerization or depolymerization	6.232e-04	0.000e+00	4.045e+00	9.014e-05
+GO:0008154	GO:0007015	actin filament organization	7.266e-04	0.000e+00	3.209e+00	6.176e-04
+GO:0046822	GO:0046822	regulation of nucleocytoplasmic transport	6.396e-04	0.000e+00	4.649e+00	2.246e-05
+GO:0006458	GO:0006458	'de novo' protein folding	6.885e-04	0.000e+00	4.307e+00	4.934e-05
+GO:0055091	GO:0055091	phospholipid homeostasis	6.891e-04	0.000e+00	5.363e+00	4.336e-06
+GO:0060841	GO:0060841	venous blood vessel development	6.891e-04	0.000e+00	5.855e+00	1.397e-06
+GO:0010810	GO:0010810	regulation of cell-substrate adhesion	7.746e-04	0.000e+00	4.365e+00	4.312e-05
+GO:0110053	GO:0110053	regulation of actin filament organization	7.777e-04	0.000e+00	3.440e+00	3.628e-04
+GO:0110053	GO:0032970	regulation of actin filament-based process	8.531e-04	0.000e+00	3.374e+00	4.224e-04
+GO:0030198	GO:0030198	extracellular matrix organization	7.890e-04	0.000e+00	3.802e+00	1.579e-04
+GO:0030198	GO:0043062	extracellular structure organization	8.194e-04	0.000e+00	3.790e+00	1.623e-04

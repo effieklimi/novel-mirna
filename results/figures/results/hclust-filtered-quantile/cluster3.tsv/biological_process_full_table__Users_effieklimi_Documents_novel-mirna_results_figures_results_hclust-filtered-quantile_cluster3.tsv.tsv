@@ -1,0 +1,51 @@
+Cluster representative	Cluster member	Cluster member description	Member P-value	Member user defined value	Member IC	Member frequency
+GO:0045807	GO:0045807	positive regulation of endocytosis	1.455e-04	0.000e+00	4.499e+00	3.166e-05
+GO:0045807	GO:0030100	regulation of endocytosis	2.115e-04	0.000e+00	4.115e+00	7.677e-05
+GO:0031333	GO:0031333	negative regulation of protein-containing complex assembly	2.741e-04	0.000e+00	3.578e+00	2.642e-04
+GO:0031333	GO:0043254	regulation of protein-containing complex assembly	8.129e-03	0.000e+00	3.416e+00	3.839e-04
+GO:0033135	GO:0033135	regulation of peptidyl-serine phosphorylation	1.699e-03	0.000e+00	4.669e+00	2.142e-05
+GO:0034121	GO:0062207	regulation of pattern recognition receptor signaling pathway	1.579e-03	0.000e+00	4.369e+00	4.272e-05
+GO:0034121	GO:0034121	regulation of toll-like receptor signaling pathway	2.184e-03	0.000e+00	4.758e+00	1.747e-05
+GO:0034121	GO:0034163	regulation of toll-like receptor 9 signaling pathway	7.318e-03	0.000e+00	5.700e+00	1.995e-06
+GO:0006268	GO:0006268	DNA unwinding involved in DNA replication	2.208e-03	0.000e+00	3.586e+00	2.594e-04
+GO:0006268	GO:0032392	DNA geometric change	6.502e-03	0.000e+00	2.560e+00	2.754e-03
+GO:0051303	GO:0051303	establishment of chromosome localization	2.887e-03	0.000e+00	4.805e+00	1.568e-05
+GO:0051303	GO:0050000	chromosome localization	4.128e-03	0.000e+00	4.527e+00	2.975e-05
+GO:0062149	GO:0062149	detection of stimulus involved in sensory perception of pain	3.211e-03	0.000e+00	5.378e+00	4.189e-06
+GO:0043244	GO:0043244	regulation of protein-containing complex disassembly	3.248e-03	0.000e+00	2.855e+00	1.397e-03
+GO:0043244	GO:1902903	regulation of supramolecular fiber organization	5.164e-03	0.000e+00	3.407e+00	3.914e-04
+GO:0007032	GO:0007032	endosome organization	4.987e-03	0.000e+00	4.436e+00	3.668e-05
+GO:0007032	GO:0006906	vesicle fusion	2.515e-03	0.000e+00	4.280e+00	5.242e-05
+GO:0007032	GO:0090174	organelle membrane fusion	2.744e-03	0.000e+00	4.222e+00	5.997e-05
+GO:0007032	GO:0016050	vesicle organization	2.801e-03	0.000e+00	3.787e+00	1.634e-04
+GO:1902600	GO:1902600	proton transmembrane transport	4.988e-03	0.000e+00	1.658e+00	2.196e-02
+GO:0007059	GO:0007059	chromosome segregation	5.164e-03	0.000e+00	2.891e+00	1.284e-03
+GO:0051258	GO:0051258	protein polymerization	5.645e-03	0.000e+00	3.599e+00	2.516e-04
+GO:0034315	GO:0034315	regulation of Arp2/3 complex-mediated actin nucleation	5.954e-03	0.000e+00	5.044e+00	9.042e-06
+GO:0048679	GO:0048679	regulation of axon regeneration	5.954e-03	0.000e+00	5.312e+00	4.874e-06
+GO:0048679	GO:0070570	regulation of neuron projection regeneration	7.720e-03	0.000e+00	5.280e+00	5.247e-06
+GO:0008611	GO:0008611	ether lipid biosynthetic process	6.035e-03	0.000e+00	4.854e+00	1.398e-05
+GO:0008611	GO:0046504	glycerol ether biosynthetic process	6.035e-03	0.000e+00	4.854e+00	1.398e-05
+GO:0008611	GO:0097384	cellular lipid biosynthetic process	6.035e-03	0.000e+00	4.633e+00	2.330e-05
+GO:0008611	GO:1901503	ether biosynthetic process	7.318e-03	0.000e+00	4.835e+00	1.463e-05
+GO:0046129	GO:0042451	purine nucleoside biosynthetic process	6.035e-03	0.000e+00	3.232e+00	5.867e-04
+GO:0046129	GO:0046129	purine ribonucleoside biosynthetic process	6.035e-03	0.000e+00	3.232e+00	5.867e-04
+GO:0046129	GO:0042455	ribonucleoside biosynthetic process	6.035e-03	0.000e+00	2.603e+00	2.495e-03
+GO:0046929	GO:0046929	negative regulation of neurotransmitter secretion	6.035e-03	0.000e+00	5.654e+00	2.217e-06
+GO:0060920	GO:0060920	cardiac pacemaker cell differentiation	6.035e-03	0.000e+00	6.571e+00	2.687e-07
+GO:0051443	GO:0051443	positive regulation of ubiquitin-protein transferase activity	6.512e-03	0.000e+00	4.346e+00	4.510e-05
+GO:0043161	GO:0043161	proteasome-mediated ubiquitin-dependent protein catabolic process	6.603e-03	0.000e+00	3.213e+00	6.128e-04
+GO:0048524	GO:0048524	positive regulation of viral process	6.875e-03	0.000e+00	4.002e+00	9.950e-05
+GO:0016197	GO:0016197	endosomal transport	7.174e-03	0.000e+00	3.501e+00	3.152e-04
+GO:0032984	GO:0032984	protein-containing complex disassembly	7.174e-03	0.000e+00	2.982e+00	1.042e-03
+GO:0002725	GO:0002707	negative regulation of lymphocyte mediated immunity	4.523e-03	0.000e+00	5.165e+00	6.835e-06
+GO:0002725	GO:0002725	negative regulation of T cell cytokine production	7.318e-03	0.000e+00	5.924e+00	1.192e-06
+GO:0002725	GO:0002706	regulation of lymphocyte mediated immunity	5.059e-03	0.000e+00	4.433e+00	3.693e-05
+GO:0043589	GO:0043589	skin morphogenesis	7.318e-03	0.000e+00	5.544e+00	2.855e-06
+GO:0045088	GO:0045088	regulation of innate immune response	7.537e-03	0.000e+00	3.143e+00	7.189e-04
+GO:0046513	GO:0046513	ceramide biosynthetic process	7.672e-03	0.000e+00	4.047e+00	8.970e-05
+GO:0035308	GO:0035308	negative regulation of protein dephosphorylation	7.720e-03	0.000e+00	4.782e+00	1.651e-05
+GO:0046467	GO:0046467	membrane lipid biosynthetic process	8.091e-03	0.000e+00	2.539e+00	2.893e-03
+GO:0070936	GO:0070936	protein K48-linked ubiquitination	8.091e-03	0.000e+00	4.771e+00	1.693e-05
+GO:0048284	GO:0048284	organelle fusion	8.626e-03	0.000e+00	3.935e+00	1.161e-04
+GO:0071103	GO:0071103	DNA conformation change	8.647e-03	0.000e+00	2.351e+00	4.452e-03
