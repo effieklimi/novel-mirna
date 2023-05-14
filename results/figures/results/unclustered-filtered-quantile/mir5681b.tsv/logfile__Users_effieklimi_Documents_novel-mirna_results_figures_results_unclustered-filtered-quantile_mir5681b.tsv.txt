@@ -1,0 +1,18 @@
+GO-Figure! version: 1.0.1
+
+Date run: 2023-05-14
+
+Command line input: ['GO-Figure/gofigure.py', '-i', '/Users/effieklimi/Documents/novel-mirna/results/tables/goterm-semantic-similarity/unclustered-filtered-quantile/mir5681b.tsv', '-o', '/Users/effieklimi/Documents/novel-mirna/results/figures/results/unclustered-filtered-quantile/mir5681b.tsv', '-t', 'Cluster 4', '-p', 'viridis', '-g', 'triple', '-f', 'xx-small', '-m', '20', '-e', '100', '-n', 'bpo', '-si', '0.8']
+
+go.obo version used: releases/2023-04-01
+
+go.obo version used to create GO relations: releases/2023-04-01
+
+
+Calculating biological process
+
+The following GO terms are converted or deleted because either they are an alt_id and not a primary id in the go.obo, because they are obsolete in the go.obo, or because they can't be found in the go.obo: 
+
+Original GO	New GO(s)	Reason
+	GO:0048875	removed
+	GO:0110150	removed

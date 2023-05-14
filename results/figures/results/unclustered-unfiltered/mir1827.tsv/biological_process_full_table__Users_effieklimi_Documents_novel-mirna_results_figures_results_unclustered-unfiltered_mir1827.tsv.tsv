@@ -1,0 +1,51 @@
+Cluster representative	Cluster member	Cluster member description	Member P-value	Member user defined value	Member IC	Member frequency
+GO:0009101	GO:0009101	glycoprotein biosynthetic process	2.005e-06	0.000e+00	4.040e+00	9.127e-05
+GO:0009101	GO:0030166	proteoglycan biosynthetic process	5.265e-04	0.000e+00	4.066e+00	8.587e-05
+GO:0009101	GO:0009100	glycoprotein metabolic process	7.326e-05	0.000e+00	3.735e+00	1.839e-04
+GO:0000904	GO:0000904	cell morphogenesis involved in differentiation	2.808e-05	0.000e+00	4.417e+00	3.824e-05
+GO:0000904	GO:0048667	cell morphogenesis involved in neuron differentiation	4.879e-04	0.000e+00	5.381e+00	4.162e-06
+GO:0051645	GO:0051645	Golgi localization	9.532e-05	0.000e+00	5.499e+00	3.171e-06
+GO:0006486	GO:0006486	protein glycosylation	1.701e-04	0.000e+00	2.795e+00	1.603e-03
+GO:0006486	GO:0043413	macromolecule glycosylation	1.701e-04	0.000e+00	2.795e+00	1.603e-03
+GO:0006486	GO:0070085	glycosylation	4.643e-04	0.000e+00	2.705e+00	1.973e-03
+GO:0006486	GO:0006493	protein O-linked glycosylation	1.027e-03	0.000e+00	3.569e+00	2.696e-04
+GO:0010998	GO:0010998	regulation of translational initiation by eIF2 alpha phosphorylation	2.561e-04	0.000e+00	4.996e+00	1.010e-05
+GO:0010998	GO:0043558	regulation of translational initiation in response to stress	3.380e-04	0.000e+00	4.925e+00	1.189e-05
+GO:0010998	GO:0043555	regulation of translation in response to stress	5.390e-04	0.000e+00	4.826e+00	1.494e-05
+GO:0031589	GO:0031589	cell-substrate adhesion	4.840e-04	0.000e+00	4.002e+00	9.943e-05
+GO:0031589	GO:0007160	cell-matrix adhesion	3.388e-03	0.000e+00	4.213e+00	6.125e-05
+GO:0031589	GO:0034446	substrate adhesion-dependent cell spreading	1.241e-03	0.000e+00	5.070e+00	8.515e-06
+GO:0051984	GO:0051984	positive regulation of chromosome segregation	6.697e-04	0.000e+00	5.188e+00	6.483e-06
+GO:0010256	GO:0010256	endomembrane system organization	7.775e-04	0.000e+00	5.660e+00	2.187e-06
+GO:0032989	GO:0032989	cellular component morphogenesis	8.528e-04	0.000e+00	4.063e+00	8.656e-05
+GO:0032989	GO:0032990	cell part morphogenesis	1.873e-03	0.000e+00	4.063e+00	8.656e-05
+GO:0035459	GO:0035459	vesicle cargo loading	9.448e-04	0.000e+00	5.184e+00	6.553e-06
+GO:0055081	GO:0055081	monoatomic anion homeostasis	1.305e-03	0.000e+00	5.456e+00	3.500e-06
+GO:0061564	GO:0061564	axon development	1.608e-03	0.000e+00	4.994e+00	1.014e-05
+GO:0034329	GO:0034329	cell junction assembly	1.643e-03	0.000e+00	4.207e+00	6.208e-05
+GO:0022604	GO:0022604	regulation of cell morphogenesis	1.715e-03	0.000e+00	2.373e+00	4.238e-03
+GO:0032412	GO:0032412	regulation of monoatomic ion transmembrane transporter activity	2.042e-03	0.000e+00	4.011e+00	9.748e-05
+GO:0032412	GO:0022898	regulation of transmembrane transporter activity	3.200e-03	0.000e+00	4.000e+00	1.001e-04
+GO:0001954	GO:0001952	regulation of cell-matrix adhesion	1.661e-03	0.000e+00	4.697e+00	2.011e-05
+GO:0001954	GO:0001954	positive regulation of cell-matrix adhesion	2.065e-03	0.000e+00	5.041e+00	9.092e-06
+GO:0001954	GO:0010810	regulation of cell-substrate adhesion	4.099e-03	0.000e+00	4.365e+00	4.312e-05
+GO:0007409	GO:0007409	axonogenesis	2.441e-03	0.000e+00	4.292e+00	5.102e-05
+GO:0007409	GO:0048812	neuron projection morphogenesis	1.364e-03	0.000e+00	4.099e+00	7.970e-05
+GO:0007409	GO:0120039	plasma membrane bounded cell projection morphogenesis	1.367e-03	0.000e+00	4.091e+00	8.105e-05
+GO:0007409	GO:0048858	cell projection morphogenesis	1.662e-03	0.000e+00	4.087e+00	8.186e-05
+GO:0150172	GO:0150172	regulation of phosphatidylcholine metabolic process	2.565e-03	0.000e+00	5.804e+00	1.572e-06
+GO:0051604	GO:0051604	protein maturation	2.636e-03	0.000e+00	2.550e+00	2.818e-03
+GO:0048193	GO:0048193	Golgi vesicle transport	2.776e-03	0.000e+00	3.078e+00	8.359e-04
+GO:0050801	GO:0050801	monoatomic ion homeostasis	3.409e-03	0.000e+00	2.888e+00	1.293e-03
+GO:0050801	GO:0098771	inorganic ion homeostasis	4.004e-03	0.000e+00	2.908e+00	1.236e-03
+GO:0047496	GO:0047496	vesicle transport along microtubule	3.624e-03	0.000e+00	5.180e+00	6.614e-06
+GO:0048675	GO:0048675	axon extension	3.669e-03	0.000e+00	4.904e+00	1.248e-05
+GO:1902285	GO:1902285	semaphorin-plexin signaling pathway involved in neuron projection guidance	3.743e-03	0.000e+00	5.642e+00	2.281e-06
+GO:0034508	GO:0034508	centromere complex assembly	3.979e-03	0.000e+00	4.853e+00	1.402e-05
+GO:1901888	GO:1901888	regulation of cell junction assembly	4.316e-03	0.000e+00	4.221e+00	6.012e-05
+GO:0006897	GO:0006897	endocytosis	4.477e-03	0.000e+00	2.423e+00	3.776e-03
+GO:0010948	GO:0010948	negative regulation of cell cycle process	4.666e-03	0.000e+00	3.578e+00	2.643e-04
+GO:0000082	GO:0000082	G1/S transition of mitotic cell cycle	4.745e-03	0.000e+00	4.933e+00	1.166e-05
+GO:0001933	GO:0001933	negative regulation of protein phosphorylation	4.792e-03	0.000e+00	3.897e+00	1.266e-04
+GO:0010770	GO:0010769	regulation of cell morphogenesis involved in differentiation	2.774e-03	0.000e+00	5.212e+00	6.140e-06
+GO:0010770	GO:0010770	positive regulation of cell morphogenesis involved in differentiation	4.838e-03	0.000e+00	5.320e+00	4.786e-06

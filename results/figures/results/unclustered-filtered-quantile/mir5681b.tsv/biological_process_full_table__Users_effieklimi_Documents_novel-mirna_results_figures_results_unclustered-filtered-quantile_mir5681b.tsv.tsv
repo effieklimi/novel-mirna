@@ -1,0 +1,49 @@
+Cluster representative	Cluster member	Cluster member description	Member P-value	Member user defined value	Member IC	Member frequency
+GO:0010758	GO:0010758	regulation of macrophage chemotaxis	1.329e-04	0.000e+00	5.373e+00	4.239e-06
+GO:0010758	GO:0010759	positive regulation of macrophage chemotaxis	2.463e-03	0.000e+00	5.536e+00	2.912e-06
+GO:0010758	GO:1905521	regulation of macrophage migration	3.891e-04	0.000e+00	5.187e+00	6.506e-06
+GO:0010758	GO:1905523	positive regulation of macrophage migration	3.226e-03	0.000e+00	5.405e+00	3.940e-06
+GO:0048246	GO:0048246	macrophage chemotaxis	3.083e-04	0.000e+00	5.722e+00	1.898e-06
+GO:0048246	GO:1905517	macrophage migration	7.752e-04	0.000e+00	5.490e+00	3.238e-06
+GO:0016266	GO:0016266	O-glycan processing	3.891e-04	0.000e+00	5.543e+00	2.865e-06
+GO:0030595	GO:0030595	leukocyte chemotaxis	4.559e-04	0.000e+00	4.568e+00	2.704e-05
+GO:0030595	GO:0050900	leukocyte migration	4.987e-03	0.000e+00	4.336e+00	4.615e-05
+GO:0030595	GO:0060326	cell chemotaxis	1.940e-03	0.000e+00	3.953e+00	1.113e-04
+GO:0002688	GO:0002688	regulation of leukocyte chemotaxis	5.801e-04	0.000e+00	4.578e+00	2.640e-05
+GO:0002688	GO:0002690	positive regulation of leukocyte chemotaxis	3.139e-03	0.000e+00	4.688e+00	2.051e-05
+GO:0002688	GO:0050920	regulation of chemotaxis	4.822e-03	0.000e+00	4.114e+00	7.696e-05
+GO:0002688	GO:0002685	regulation of leukocyte migration	5.819e-03	0.000e+00	4.275e+00	5.314e-05
+GO:0097529	GO:0097529	myeloid leukocyte migration	6.110e-04	0.000e+00	4.643e+00	2.278e-05
+GO:0097529	GO:0071621	granulocyte chemotaxis	5.479e-03	0.000e+00	4.956e+00	1.105e-05
+GO:0002544	GO:0002544	chronic inflammatory response	1.235e-03	0.000e+00	5.897e+00	1.266e-06
+GO:0018342	GO:0018342	protein prenylation	1.235e-03	0.000e+00	3.965e+00	1.084e-04
+GO:0018342	GO:0097354	prenylation	1.235e-03	0.000e+00	3.965e+00	1.084e-04
+GO:0030218	GO:0030218	erythrocyte differentiation	1.576e-03	0.000e+00	4.720e+00	1.904e-05
+GO:0034101	GO:0034101	erythrocyte homeostasis	2.053e-03	0.000e+00	5.796e+00	1.599e-06
+GO:0034101	GO:0002262	myeloid cell homeostasis	4.432e-03	0.000e+00	5.192e+00	6.432e-06
+GO:0030502	GO:0030502	negative regulation of bone mineralization	2.119e-03	0.000e+00	5.543e+00	2.865e-06
+GO:0030502	GO:0070168	negative regulation of biomineral tissue development	5.038e-03	0.000e+00	5.352e+00	4.444e-06
+GO:0030502	GO:0030279	negative regulation of ossification	7.219e-03	0.000e+00	5.164e+00	6.862e-06
+GO:0046058	GO:0046058	cAMP metabolic process	2.463e-03	0.000e+00	3.686e+00	2.063e-04
+GO:0046058	GO:0009187	cyclic nucleotide metabolic process	5.038e-03	0.000e+00	3.120e+00	7.578e-04
+GO:0009100	GO:0009100	glycoprotein metabolic process	2.659e-03	0.000e+00	3.735e+00	1.839e-04
+GO:0006605	GO:0006605	protein targeting	2.976e-03	0.000e+00	2.675e+00	2.113e-03
+GO:0046887	GO:0046887	positive regulation of hormone secretion	3.305e-03	0.000e+00	4.640e+00	2.290e-05
+GO:0006493	GO:0006493	protein O-linked glycosylation	3.475e-03	0.000e+00	3.569e+00	2.696e-04
+GO:0030324	GO:0030324	lung development	4.065e-03	0.000e+00	4.820e+00	1.513e-05
+GO:0044060	GO:0044060	regulation of endocrine process	4.085e-03	0.000e+00	5.122e+00	7.547e-06
+GO:0009306	GO:0009306	protein secretion	4.407e-03	0.000e+00	2.670e+00	2.136e-03
+GO:0009306	GO:0035592	establishment of protein localization to extracellular region	4.407e-03	0.000e+00	2.670e+00	2.137e-03
+GO:0009306	GO:0071692	protein localization to extracellular region	4.887e-03	0.000e+00	2.670e+00	2.137e-03
+GO:0030323	GO:0030323	respiratory tube development	4.432e-03	0.000e+00	5.647e+00	2.254e-06
+GO:2000434	GO:2000434	regulation of protein neddylation	4.550e-03	0.000e+00	5.548e+00	2.828e-06
+GO:0016239	GO:0016239	positive regulation of macroautophagy	4.819e-03	0.000e+00	4.733e+00	1.850e-05
+GO:0051310	GO:0051310	metaphase plate congression	5.253e-03	0.000e+00	4.871e+00	1.346e-05
+GO:0051310	GO:0051303	establishment of chromosome localization	6.694e-03	0.000e+00	4.805e+00	1.568e-05
+GO:0010573	GO:0010573	vascular endothelial growth factor production	6.084e-03	0.000e+00	5.573e+00	2.674e-06
+GO:0060541	GO:0060541	respiratory system development	6.127e-03	0.000e+00	5.282e+00	5.220e-06
+GO:0006730	GO:0006730	one-carbon metabolic process	7.219e-03	0.000e+00	2.576e+00	2.655e-03
+GO:0006935	GO:0006935	chemotaxis	7.356e-03	0.000e+00	2.524e+00	2.992e-03
+GO:0006935	GO:0042330	taxis	7.356e-03	0.000e+00	2.523e+00	2.996e-03
+GO:0030511	GO:0030511	positive regulation of transforming growth factor beta receptor signaling pathway	7.820e-03	0.000e+00	5.238e+00	5.784e-06
+GO:0071634	GO:0071634	regulation of transforming growth factor beta production	7.820e-03	0.000e+00	5.154e+00	7.010e-06

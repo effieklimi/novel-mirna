@@ -1,0 +1,51 @@
+Cluster representative	Cluster member	Cluster member description	Member P-value	Member user defined value	Member IC	Member frequency
+GO:0048012	GO:0048012	hepatocyte growth factor receptor signaling pathway	2.208e-03	0.000e+00	5.662e+00	2.177e-06
+GO:0043687	GO:0043687	post-translational protein modification	2.530e-03	0.000e+00	4.168e+00	6.800e-05
+GO:0035269	GO:0035269	protein O-linked mannosylation	2.600e-03	0.000e+00	3.961e+00	1.093e-04
+GO:0035269	GO:0035268	protein mannosylation	5.003e-03	0.000e+00	3.954e+00	1.111e-04
+GO:0035269	GO:0097502	mannosylation	1.273e-02	0.000e+00	3.952e+00	1.117e-04
+GO:0003009	GO:0003009	skeletal muscle contraction	3.473e-03	0.000e+00	5.410e+00	3.893e-06
+GO:0090330	GO:0090330	regulation of platelet aggregation	4.464e-03	0.000e+00	5.368e+00	4.283e-06
+GO:0090330	GO:0034110	regulation of homotypic cell-cell adhesion	8.117e-03	0.000e+00	5.284e+00	5.196e-06
+GO:0090330	GO:0010543	regulation of platelet activation	1.031e-02	0.000e+00	5.122e+00	7.547e-06
+GO:0090050	GO:0090050	positive regulation of cell migration involved in sprouting angiogenesis	5.003e-03	0.000e+00	5.385e+00	4.118e-06
+GO:0090050	GO:0090049	regulation of cell migration involved in sprouting angiogenesis	1.538e-02	0.000e+00	5.130e+00	7.416e-06
+GO:0010594	GO:0010594	regulation of endothelial cell migration	6.061e-03	0.000e+00	4.413e+00	3.868e-05
+GO:0010594	GO:0010632	regulation of epithelial cell migration	1.755e-02	0.000e+00	4.287e+00	5.168e-05
+GO:0010594	GO:0010595	positive regulation of endothelial cell migration	1.228e-02	0.000e+00	4.610e+00	2.455e-05
+GO:0035767	GO:0035767	endothelial cell chemotaxis	6.789e-03	0.000e+00	5.804e+00	1.569e-06
+GO:0035767	GO:0043542	endothelial cell migration	1.687e-02	0.000e+00	4.849e+00	1.416e-05
+GO:0036010	GO:0036010	protein localization to endosome	6.789e-03	0.000e+00	5.658e+00	2.197e-06
+GO:0019985	GO:0019985	translesion synthesis	8.117e-03	0.000e+00	4.246e+00	5.670e-05
+GO:0019985	GO:0000731	DNA synthesis involved in DNA repair	1.726e-02	0.000e+00	4.148e+00	7.107e-05
+GO:0019985	GO:0006301	postreplication repair	1.631e-02	0.000e+00	4.142e+00	7.206e-05
+GO:0030517	GO:0030517	negative regulation of axon extension	8.117e-03	0.000e+00	5.207e+00	6.211e-06
+GO:0030517	GO:0050771	negative regulation of axonogenesis	1.824e-02	0.000e+00	5.074e+00	8.427e-06
+GO:0000209	GO:0000209	protein polyubiquitination	8.205e-03	0.000e+00	3.716e+00	1.923e-04
+GO:0006730	GO:0006730	one-carbon metabolic process	8.821e-03	0.000e+00	2.576e+00	2.655e-03
+GO:0000466	GO:0000466	maturation of 5.8S rRNA from tricistronic rRNA transcript (SSU-rRNA, 5.8S rRNA, LSU-rRNA)	9.551e-03	0.000e+00	4.529e+00	2.957e-05
+GO:0000466	GO:0000460	maturation of 5.8S rRNA	1.824e-02	0.000e+00	4.458e+00	3.483e-05
+GO:0014911	GO:0014911	positive regulation of smooth muscle cell migration	9.551e-03	0.000e+00	5.417e+00	3.829e-06
+GO:0018108	GO:0018108	peptidyl-tyrosine phosphorylation	1.009e-02	0.000e+00	4.534e+00	2.922e-05
+GO:0018108	GO:0018212	peptidyl-tyrosine modification	1.046e-02	0.000e+00	4.049e+00	8.931e-05
+GO:0050881	GO:0050879	multicellular organismal movement	1.031e-02	0.000e+00	5.497e+00	3.181e-06
+GO:0050881	GO:0050881	musculoskeletal movement	1.031e-02	0.000e+00	5.588e+00	2.583e-06
+GO:0045446	GO:0045446	endothelial cell differentiation	1.109e-02	0.000e+00	5.173e+00	6.708e-06
+GO:0000469	GO:0000469	cleavage involved in rRNA processing	1.190e-02	0.000e+00	4.091e+00	8.109e-05
+GO:0007095	GO:0007095	mitotic G2 DNA damage checkpoint signaling	1.273e-02	0.000e+00	4.578e+00	2.640e-05
+GO:0007095	GO:0010948	negative regulation of cell cycle process	1.521e-02	0.000e+00	3.578e+00	2.643e-04
+GO:0007095	GO:0045786	negative regulation of cell cycle	8.695e-03	0.000e+00	3.500e+00	3.165e-04
+GO:0051443	GO:0051443	positive regulation of ubiquitin-protein transferase activity	1.273e-02	0.000e+00	4.346e+00	4.510e-05
+GO:0050921	GO:0050921	positive regulation of chemotaxis	1.442e-02	0.000e+00	4.500e+00	3.159e-05
+GO:0050921	GO:0032103	positive regulation of response to external stimulus	1.620e-02	0.000e+00	3.631e+00	2.340e-04
+GO:0002066	GO:0002066	columnar/cuboidal epithelial cell development	1.447e-02	0.000e+00	5.127e+00	7.463e-06
+GO:0071526	GO:0071526	semaphorin-plexin signaling pathway	1.447e-02	0.000e+00	4.095e+00	8.031e-05
+GO:0071548	GO:0071548	response to dexamethasone	1.538e-02	0.000e+00	5.460e+00	3.470e-06
+GO:0006260	GO:0006260	DNA replication	1.620e-02	0.000e+00	2.060e+00	8.702e-03
+GO:0003158	GO:0003158	endothelium development	1.628e-02	0.000e+00	5.874e+00	1.337e-06
+GO:0051402	GO:0051402	neuron apoptotic process	1.687e-02	0.000e+00	4.740e+00	1.821e-05
+GO:1901998	GO:1901998	toxin transport	1.726e-02	0.000e+00	4.270e+00	5.371e-05
+GO:0009611	GO:0009611	response to wounding	1.731e-02	0.000e+00	4.125e+00	7.496e-05
+GO:0050918	GO:0050918	positive chemotaxis	1.824e-02	0.000e+00	4.988e+00	1.029e-05
+GO:0043524	GO:0043524	negative regulation of neuron apoptotic process	1.879e-02	0.000e+00	4.520e+00	3.023e-05
+GO:0007519	GO:0007519	skeletal muscle tissue development	1.985e-02	0.000e+00	4.885e+00	1.302e-05

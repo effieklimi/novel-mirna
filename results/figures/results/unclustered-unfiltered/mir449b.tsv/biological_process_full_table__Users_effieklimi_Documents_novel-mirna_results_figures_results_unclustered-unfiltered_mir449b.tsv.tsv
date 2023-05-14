@@ -1,0 +1,51 @@
+Cluster representative	Cluster member	Cluster member description	Member P-value	Member user defined value	Member IC	Member frequency
+GO:0120039	GO:0120039	plasma membrane bounded cell projection morphogenesis	6.574e-09	0.000e+00	4.091e+00	8.105e-05
+GO:0120039	GO:0048858	cell projection morphogenesis	9.319e-09	0.000e+00	4.087e+00	8.186e-05
+GO:0120039	GO:0048812	neuron projection morphogenesis	7.985e-08	0.000e+00	4.099e+00	7.970e-05
+GO:0120039	GO:0007409	axonogenesis	2.479e-06	0.000e+00	4.292e+00	5.102e-05
+GO:0032990	GO:0032990	cell part morphogenesis	2.717e-08	0.000e+00	4.063e+00	8.656e-05
+GO:0032990	GO:0032989	cellular component morphogenesis	3.335e-07	0.000e+00	4.063e+00	8.656e-05
+GO:0001667	GO:0001667	ameboidal-type cell migration	3.140e-08	0.000e+00	4.212e+00	6.135e-05
+GO:0001667	GO:0010631	epithelial cell migration	1.467e-06	0.000e+00	4.573e+00	2.674e-05
+GO:0051668	GO:0051668	localization within membrane	3.705e-08	0.000e+00	2.812e+00	1.543e-03
+GO:0051668	GO:0072657	protein localization to membrane	3.366e-07	0.000e+00	2.841e+00	1.443e-03
+GO:0007265	GO:0007265	Ras protein signal transduction	3.922e-08	0.000e+00	3.844e+00	1.432e-04
+GO:0007265	GO:0007264	small GTPase mediated signal transduction	1.107e-07	0.000e+00	3.179e+00	6.626e-04
+GO:0071363	GO:0071363	cellular response to growth factor stimulus	5.991e-08	0.000e+00	4.278e+00	5.271e-05
+GO:0071363	GO:0070848	response to growth factor	1.575e-07	0.000e+00	4.245e+00	5.690e-05
+GO:0007162	GO:0007162	negative regulation of cell adhesion	6.220e-08	0.000e+00	4.181e+00	6.593e-05
+GO:0007162	GO:0030155	regulation of cell adhesion	2.966e-07	0.000e+00	3.375e+00	4.218e-04
+GO:0048588	GO:0048588	developmental cell growth	1.744e-07	0.000e+00	4.490e+00	3.238e-05
+GO:0048588	GO:1990138	neuron projection extension	1.663e-05	0.000e+00	4.751e+00	1.776e-05
+GO:0030036	GO:0030036	actin cytoskeleton organization	2.737e-07	0.000e+00	3.457e+00	3.489e-04
+GO:0040013	GO:0040013	negative regulation of locomotion	5.125e-07	0.000e+00	4.154e+00	7.007e-05
+GO:0040013	GO:0050922	negative regulation of chemotaxis	2.076e-05	0.000e+00	5.001e+00	9.969e-06
+GO:0006897	GO:0006897	endocytosis	5.766e-07	0.000e+00	2.423e+00	3.776e-03
+GO:0006897	GO:0006898	receptor-mediated endocytosis	4.293e-06	0.000e+00	2.681e+00	2.083e-03
+GO:0072659	GO:0072659	protein localization to plasma membrane	8.738e-07	0.000e+00	4.271e+00	5.358e-05
+GO:0072659	GO:1990778	protein localization to cell periphery	2.084e-06	0.000e+00	4.207e+00	6.203e-05
+GO:0000904	GO:0000904	cell morphogenesis involved in differentiation	9.730e-07	0.000e+00	4.417e+00	3.824e-05
+GO:0000904	GO:0048667	cell morphogenesis involved in neuron differentiation	9.495e-06	0.000e+00	5.381e+00	4.162e-06
+GO:0060627	GO:0060627	regulation of vesicle-mediated transport	1.433e-06	0.000e+00	3.820e+00	1.514e-04
+GO:0060627	GO:0030100	regulation of endocytosis	6.100e-06	0.000e+00	4.115e+00	7.677e-05
+GO:0090132	GO:0090132	epithelium migration	1.467e-06	0.000e+00	6.576e+00	2.654e-07
+GO:0090132	GO:0090130	tissue migration	1.887e-06	0.000e+00	5.691e+00	2.035e-06
+GO:0042060	GO:0009611	response to wounding	2.529e-06	0.000e+00	4.125e+00	7.496e-05
+GO:0042060	GO:0042060	wound healing	2.735e-06	0.000e+00	4.928e+00	1.181e-05
+GO:0031589	GO:0031589	cell-substrate adhesion	3.245e-06	0.000e+00	4.002e+00	9.943e-05
+GO:0031589	GO:0007160	cell-matrix adhesion	2.556e-05	0.000e+00	4.213e+00	6.125e-05
+GO:0051056	GO:0051056	regulation of small GTPase mediated signal transduction	3.745e-06	0.000e+00	3.531e+00	2.941e-04
+GO:0001525	GO:0001525	angiogenesis	4.799e-06	0.000e+00	4.023e+00	9.475e-05
+GO:0007169	GO:0007169	transmembrane receptor protein tyrosine kinase signaling pathway	5.656e-06	0.000e+00	3.320e+00	4.783e-04
+GO:0007169	GO:0007178	transmembrane receptor protein serine/threonine kinase signaling pathway	1.358e-05	0.000e+00	3.818e+00	1.522e-04
+GO:0045936	GO:0045936	negative regulation of phosphate metabolic process	6.149e-06	0.000e+00	3.514e+00	3.063e-04
+GO:0045936	GO:0010563	negative regulation of phosphorus metabolic process	6.781e-06	0.000e+00	3.514e+00	3.063e-04
+GO:0045596	GO:0045596	negative regulation of cell differentiation	8.700e-06	0.000e+00	3.838e+00	1.451e-04
+GO:0002064	GO:0002064	epithelial cell development	1.150e-05	0.000e+00	4.516e+00	3.051e-05
+GO:0045601	GO:0045601	regulation of endothelial cell differentiation	1.190e-05	0.000e+00	5.219e+00	6.043e-06
+GO:0061564	GO:0061564	axon development	1.391e-05	0.000e+00	4.994e+00	1.014e-05
+GO:0043086	GO:0043086	negative regulation of catalytic activity	1.631e-05	0.000e+00	3.382e+00	4.153e-04
+GO:1901342	GO:1901342	regulation of vasculature development	1.668e-05	0.000e+00	4.080e+00	8.327e-05
+GO:0090287	GO:0090287	regulation of cellular response to growth factor stimulus	1.691e-05	0.000e+00	4.059e+00	8.734e-05
+GO:0022604	GO:0022604	regulation of cell morphogenesis	1.954e-05	0.000e+00	2.373e+00	4.238e-03
+GO:0050878	GO:0050878	regulation of body fluid levels	2.213e-05	0.000e+00	3.697e+00	2.007e-04

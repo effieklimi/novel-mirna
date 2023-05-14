@@ -1,0 +1,51 @@
+Cluster representative	Cluster member	Cluster member description	Member P-value	Member user defined value	Member IC	Member frequency
+GO:0001944	GO:0001944	vasculature development	1.265e-07	0.000e+00	4.867e+00	1.360e-05
+GO:0001525	GO:0001525	angiogenesis	1.692e-07	0.000e+00	4.023e+00	9.475e-05
+GO:0001568	GO:0001568	blood vessel development	2.968e-07	0.000e+00	4.514e+00	3.064e-05
+GO:0001568	GO:0035904	aorta development	2.617e-03	0.000e+00	5.253e+00	5.582e-06
+GO:0048514	GO:0048514	blood vessel morphogenesis	6.809e-07	0.000e+00	4.608e+00	2.465e-05
+GO:0051056	GO:0051056	regulation of small GTPase mediated signal transduction	6.814e-06	0.000e+00	3.531e+00	2.941e-04
+GO:0051056	GO:0046578	regulation of Ras protein signal transduction	1.654e-03	0.000e+00	3.706e+00	1.966e-04
+GO:0030036	GO:0030036	actin cytoskeleton organization	1.479e-05	0.000e+00	3.457e+00	3.489e-04
+GO:0045765	GO:0045765	regulation of angiogenesis	1.489e-05	0.000e+00	4.087e+00	8.193e-05
+GO:0045765	GO:1901342	regulation of vasculature development	1.891e-05	0.000e+00	4.080e+00	8.327e-05
+GO:0007264	GO:0007264	small GTPase mediated signal transduction	1.639e-05	0.000e+00	3.179e+00	6.626e-04
+GO:0007264	GO:0007265	Ras protein signal transduction	1.740e-04	0.000e+00	3.844e+00	1.432e-04
+GO:0045766	GO:0045766	positive regulation of angiogenesis	1.129e-04	0.000e+00	4.500e+00	3.164e-05
+GO:0045766	GO:1904018	positive regulation of vasculature development	1.129e-04	0.000e+00	4.500e+00	3.164e-05
+GO:0051493	GO:0051493	regulation of cytoskeleton organization	1.484e-04	0.000e+00	3.264e+00	5.440e-04
+GO:0051493	GO:0032956	regulation of actin cytoskeleton organization	8.751e-04	0.000e+00	3.380e+00	4.168e-04
+GO:0051493	GO:0010638	positive regulation of organelle organization	1.254e-03	0.000e+00	3.825e+00	1.498e-04
+GO:0006470	GO:0006470	protein dephosphorylation	2.233e-04	0.000e+00	2.956e+00	1.107e-03
+GO:0006470	GO:0016311	dephosphorylation	1.012e-03	0.000e+00	2.670e+00	2.138e-03
+GO:0030857	GO:0030857	negative regulation of epithelial cell differentiation	4.552e-04	0.000e+00	5.045e+00	9.012e-06
+GO:0043535	GO:0043535	regulation of blood vessel endothelial cell migration	5.376e-04	0.000e+00	4.743e+00	1.805e-05
+GO:0010165	GO:0010165	response to X-ray	7.513e-04	0.000e+00	5.357e+00	4.393e-06
+GO:0010165	GO:0010212	response to ionizing radiation	4.150e-04	0.000e+00	4.276e+00	5.296e-05
+GO:0010165	GO:0071479	cellular response to ionizing radiation	2.049e-03	0.000e+00	4.716e+00	1.922e-05
+GO:0072659	GO:0072659	protein localization to plasma membrane	7.600e-04	0.000e+00	4.271e+00	5.358e-05
+GO:0072659	GO:1990778	protein localization to cell periphery	1.472e-03	0.000e+00	4.207e+00	6.203e-05
+GO:0045785	GO:0045785	positive regulation of cell adhesion	8.512e-04	0.000e+00	3.516e+00	3.045e-04
+GO:0071417	GO:1901699	cellular response to nitrogen compound	6.797e-04	0.000e+00	3.974e+00	1.061e-04
+GO:0071417	GO:0071417	cellular response to organonitrogen compound	9.131e-04	0.000e+00	4.013e+00	9.712e-05
+GO:0031116	GO:0031116	positive regulation of microtubule polymerization	1.006e-03	0.000e+00	5.268e+00	5.391e-06
+GO:0031116	GO:0031112	positive regulation of microtubule polymerization or depolymerization	2.200e-03	0.000e+00	5.015e+00	9.667e-06
+GO:0031110	GO:0031110	regulation of microtubule polymerization or depolymerization	1.054e-03	0.000e+00	4.369e+00	4.276e-05
+GO:0031110	GO:0031113	regulation of microtubule polymerization	2.170e-03	0.000e+00	4.925e+00	1.190e-05
+GO:0032970	GO:0032970	regulation of actin filament-based process	1.146e-03	0.000e+00	3.374e+00	4.224e-04
+GO:0002064	GO:0002064	epithelial cell development	1.269e-03	0.000e+00	4.516e+00	3.051e-05
+GO:0006301	GO:0006301	postreplication repair	1.288e-03	0.000e+00	4.142e+00	7.206e-05
+GO:0009167	GO:0009167	purine ribonucleoside monophosphate metabolic process	1.288e-03	0.000e+00	2.185e+00	6.531e-03
+GO:0009167	GO:0009126	purine nucleoside monophosphate metabolic process	2.023e-03	0.000e+00	2.185e+00	6.536e-03
+GO:0034112	GO:0034112	positive regulation of homotypic cell-cell adhesion	1.290e-03	0.000e+00	5.675e+00	2.113e-06
+GO:0034330	GO:0034330	cell junction organization	2.089e-03	0.000e+00	3.948e+00	1.128e-04
+GO:1902903	GO:1902903	regulation of supramolecular fiber organization	2.120e-03	0.000e+00	3.407e+00	3.914e-04
+GO:0043010	GO:0043010	camera-type eye development	2.279e-03	0.000e+00	4.766e+00	1.714e-05
+GO:0001935	GO:0001935	endothelial cell proliferation	2.355e-03	0.000e+00	4.899e+00	1.263e-05
+GO:0045787	GO:0045787	positive regulation of cell cycle	2.417e-03	0.000e+00	3.915e+00	1.215e-04
+GO:0086001	GO:0086001	cardiac muscle cell action potential	2.498e-03	0.000e+00	5.104e+00	7.877e-06
+GO:0009314	GO:0009314	response to radiation	2.533e-03	0.000e+00	3.236e+00	5.806e-04
+GO:0007156	GO:0007156	homophilic cell adhesion via plasma membrane adhesion molecules	2.746e-03	0.000e+00	3.357e+00	4.396e-04
+GO:0035633	GO:0035633	maintenance of blood-brain barrier	2.926e-03	0.000e+00	5.902e+00	1.253e-06
+GO:0031109	GO:0031109	microtubule polymerization or depolymerization	2.980e-03	0.000e+00	4.383e+00	4.142e-05
+GO:0007169	GO:0007169	transmembrane receptor protein tyrosine kinase signaling pathway	3.196e-03	0.000e+00	3.320e+00	4.783e-04

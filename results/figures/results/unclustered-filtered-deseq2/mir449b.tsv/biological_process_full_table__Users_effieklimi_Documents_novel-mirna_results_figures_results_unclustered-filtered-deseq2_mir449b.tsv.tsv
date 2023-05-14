@@ -1,0 +1,51 @@
+Cluster representative	Cluster member	Cluster member description	Member P-value	Member user defined value	Member IC	Member frequency
+GO:0002064	GO:0002064	epithelial cell development	6.611e-06	0.000e+00	4.516e+00	3.051e-05
+GO:0002064	GO:0001885	endothelial cell development	7.421e-04	0.000e+00	5.160e+00	6.919e-06
+GO:0002064	GO:0061028	establishment of endothelial barrier	1.158e-03	0.000e+00	5.298e+00	5.035e-06
+GO:1903902	GO:1903902	positive regulation of viral life cycle	2.690e-05	0.000e+00	5.407e+00	3.913e-06
+GO:0030855	GO:0030855	epithelial cell differentiation	5.986e-05	0.000e+00	4.092e+00	8.097e-05
+GO:0051231	GO:0051231	spindle elongation	7.171e-05	0.000e+00	5.567e+00	2.707e-06
+GO:0006270	GO:0006270	DNA replication initiation	7.925e-05	0.000e+00	3.269e+00	5.381e-04
+GO:0090235	GO:0090235	regulation of metaphase plate congression	1.500e-04	0.000e+00	5.545e+00	2.852e-06
+GO:1901016	GO:1901016	regulation of potassium ion transmembrane transporter activity	3.493e-04	0.000e+00	4.453e+00	3.526e-05
+GO:1901016	GO:1901379	regulation of potassium ion transmembrane transport	1.880e-03	0.000e+00	4.282e+00	5.225e-05
+GO:1903046	GO:1903046	meiotic cell cycle process	3.790e-04	0.000e+00	3.563e+00	2.732e-04
+GO:0032467	GO:0032467	positive regulation of cytokinesis	4.145e-04	0.000e+00	4.844e+00	1.432e-05
+GO:0032467	GO:0032465	regulation of cytokinesis	8.594e-04	0.000e+00	4.259e+00	5.513e-05
+GO:2000641	GO:2000641	regulation of early endosome to late endosome transport	4.652e-04	0.000e+00	4.749e+00	1.781e-05
+GO:2000641	GO:1903649	regulation of cytoplasmic transport	1.557e-03	0.000e+00	4.707e+00	1.965e-05
+GO:0051310	GO:0051310	metaphase plate congression	6.566e-04	0.000e+00	4.871e+00	1.346e-05
+GO:0051310	GO:0051303	establishment of chromosome localization	1.109e-03	0.000e+00	4.805e+00	1.568e-05
+GO:0051310	GO:0050000	chromosome localization	1.912e-03	0.000e+00	4.527e+00	2.975e-05
+GO:0016575	GO:0016575	histone deacetylation	6.655e-04	0.000e+00	3.729e+00	1.866e-04
+GO:0016575	GO:0006476	protein deacetylation	1.903e-03	0.000e+00	3.558e+00	2.765e-04
+GO:0006268	GO:0006268	DNA unwinding involved in DNA replication	1.090e-03	0.000e+00	3.586e+00	2.594e-04
+GO:0045787	GO:0045787	positive regulation of cell cycle	1.139e-03	0.000e+00	3.915e+00	1.215e-04
+GO:0045787	GO:0090068	positive regulation of cell cycle process	2.859e-03	0.000e+00	4.043e+00	9.059e-05
+GO:0048285	GO:0048285	organelle fission	1.149e-03	0.000e+00	3.818e+00	1.520e-04
+GO:0048285	GO:0000280	nuclear division	2.403e-03	0.000e+00	4.223e+00	5.990e-05
+GO:0044770	GO:0044770	cell cycle phase transition	1.172e-03	0.000e+00	4.095e+00	8.034e-05
+GO:0044770	GO:0044843	cell cycle G1/S phase transition	2.412e-03	0.000e+00	4.914e+00	1.218e-05
+GO:0051590	GO:0051590	positive regulation of neurotransmitter transport	1.187e-03	0.000e+00	5.522e+00	3.003e-06
+GO:0051255	GO:0051255	spindle midzone assembly	1.605e-03	0.000e+00	5.416e+00	3.839e-06
+GO:1901380	GO:1901380	negative regulation of potassium ion transmembrane transport	1.605e-03	0.000e+00	5.282e+00	5.230e-06
+GO:1901380	GO:0043266	regulation of potassium ion transport	2.886e-03	0.000e+00	4.262e+00	5.475e-05
+GO:0098813	GO:0007059	chromosome segregation	1.590e-03	0.000e+00	2.891e+00	1.284e-03
+GO:0098813	GO:0098813	nuclear chromosome segregation	1.671e-03	0.000e+00	4.322e+00	4.770e-05
+GO:0060324	GO:0060324	face development	1.675e-03	0.000e+00	5.462e+00	3.450e-06
+GO:0001778	GO:0001778	plasma membrane repair	1.836e-03	0.000e+00	5.193e+00	6.419e-06
+GO:1902532	GO:1902532	negative regulation of intracellular signal transduction	2.104e-03	0.000e+00	3.698e+00	2.003e-04
+GO:1902532	GO:0043408	regulation of MAPK cascade	3.198e-03	0.000e+00	3.663e+00	2.173e-04
+GO:0045723	GO:0045723	positive regulation of fatty acid biosynthetic process	2.105e-03	0.000e+00	5.394e+00	4.034e-06
+GO:0086103	GO:0086103	G protein-coupled receptor signaling pathway involved in heart process	2.105e-03	0.000e+00	5.840e+00	1.444e-06
+GO:0044000	GO:0044000	movement in host	2.436e-03	0.000e+00	2.268e+00	5.392e-03
+GO:0030174	GO:0030174	regulation of DNA-templated DNA replication initiation	2.692e-03	0.000e+00	4.023e+00	9.488e-05
+GO:1902969	GO:1902969	mitotic DNA replication	2.692e-03	0.000e+00	5.884e+00	1.307e-06
+GO:1903140	GO:1901550	regulation of endothelial cell development	2.692e-03	0.000e+00	5.516e+00	3.047e-06
+GO:1903140	GO:1903140	regulation of establishment of endothelial barrier	2.692e-03	0.000e+00	5.516e+00	3.047e-06
+GO:0007595	GO:0007595	lactation	2.877e-03	0.000e+00	5.399e+00	3.994e-06
+GO:0007595	GO:0007589	body fluid secretion	2.886e-03	0.000e+00	4.905e+00	1.244e-05
+GO:0007595	GO:0050878	regulation of body fluid levels	2.225e-03	0.000e+00	3.697e+00	2.007e-04
+GO:0017156	GO:0017156	calcium-ion regulated exocytosis	2.877e-03	0.000e+00	4.500e+00	3.160e-05
+GO:0030036	GO:0030036	actin cytoskeleton organization	3.287e-03	0.000e+00	3.457e+00	3.489e-04
+GO:0033599	GO:0033599	regulation of mammary gland epithelial cell proliferation	3.370e-03	0.000e+00	5.546e+00	2.845e-06

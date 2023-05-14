@@ -1,0 +1,51 @@
+Cluster representative	Cluster member	Cluster member description	Member P-value	Member user defined value	Member IC	Member frequency
+GO:0045332	GO:0045332	phospholipid translocation	2.159e-03	0.000e+00	4.293e+00	5.093e-05
+GO:0045332	GO:0034204	lipid translocation	3.275e-03	0.000e+00	3.599e+00	2.515e-04
+GO:0045332	GO:0097035	regulation of membrane lipid distribution	5.092e-03	0.000e+00	3.576e+00	2.655e-04
+GO:0043244	GO:0043244	regulation of protein-containing complex disassembly	2.389e-03	0.000e+00	2.855e+00	1.397e-03
+GO:0043244	GO:1901880	negative regulation of protein depolymerization	1.225e-02	0.000e+00	3.690e+00	2.043e-04
+GO:0043244	GO:0010639	negative regulation of organelle organization	7.060e-03	0.000e+00	3.400e+00	3.981e-04
+GO:0008611	GO:0008611	ether lipid biosynthetic process	4.261e-03	0.000e+00	4.854e+00	1.398e-05
+GO:0008611	GO:0046504	glycerol ether biosynthetic process	4.261e-03	0.000e+00	4.854e+00	1.398e-05
+GO:0008611	GO:0097384	cellular lipid biosynthetic process	4.261e-03	0.000e+00	4.633e+00	2.330e-05
+GO:0008611	GO:1901503	ether biosynthetic process	4.261e-03	0.000e+00	4.835e+00	1.463e-05
+GO:0008611	GO:0046485	ether lipid metabolic process	7.242e-03	0.000e+00	4.818e+00	1.520e-05
+GO:0008611	GO:0006662	glycerol ether metabolic process	7.242e-03	0.000e+00	4.818e+00	1.520e-05
+GO:0008611	GO:0018904	ether metabolic process	8.394e-03	0.000e+00	4.705e+00	1.971e-05
+GO:0042455	GO:0042455	ribonucleoside biosynthetic process	4.261e-03	0.000e+00	2.603e+00	2.495e-03
+GO:0042455	GO:0009163	nucleoside biosynthetic process	8.394e-03	0.000e+00	2.603e+00	2.495e-03
+GO:0042455	GO:0034404	nucleobase-containing small molecule biosynthetic process	8.394e-03	0.000e+00	2.603e+00	2.495e-03
+GO:0042455	GO:1901659	glycosyl compound biosynthetic process	1.230e-02	0.000e+00	2.580e+00	2.629e-03
+GO:0046129	GO:0042451	purine nucleoside biosynthetic process	4.261e-03	0.000e+00	3.232e+00	5.867e-04
+GO:0046129	GO:0046129	purine ribonucleoside biosynthetic process	4.261e-03	0.000e+00	3.232e+00	5.867e-04
+GO:0046129	GO:0046128	purine ribonucleoside metabolic process	8.394e-03	0.000e+00	3.223e+00	5.987e-04
+GO:0046129	GO:0042278	purine nucleoside metabolic process	1.230e-02	0.000e+00	3.194e+00	6.404e-04
+GO:0050951	GO:0050951	sensory perception of temperature stimulus	4.261e-03	0.000e+00	6.051e+00	8.901e-07
+GO:0090026	GO:0090026	positive regulation of monocyte chemotaxis	4.261e-03	0.000e+00	5.192e+00	6.429e-06
+GO:0090026	GO:0090025	regulation of monocyte chemotaxis	9.622e-03	0.000e+00	5.139e+00	7.265e-06
+GO:0000727	GO:0000727	double-strand break repair via break-induced replication	5.174e-03	0.000e+00	4.662e+00	2.177e-05
+GO:0006525	GO:0006525	arginine metabolic process	5.174e-03	0.000e+00	2.321e+00	4.774e-03
+GO:0051303	GO:0051303	establishment of chromosome localization	5.843e-03	0.000e+00	4.805e+00	1.568e-05
+GO:0051303	GO:0050000	chromosome localization	8.091e-03	0.000e+00	4.527e+00	2.975e-05
+GO:0062149	GO:0062149	detection of stimulus involved in sensory perception of pain	6.168e-03	0.000e+00	5.378e+00	4.189e-06
+GO:0001833	GO:0001833	inner cell mass cell proliferation	7.242e-03	0.000e+00	5.693e+00	2.029e-06
+GO:0009065	GO:0009065	glutamine family amino acid catabolic process	8.394e-03	0.000e+00	3.020e+00	9.544e-04
+GO:0039535	GO:0039535	regulation of RIG-I signaling pathway	8.394e-03	0.000e+00	5.149e+00	7.094e-06
+GO:0039535	GO:0039531	regulation of viral-induced cytoplasmic pattern recognition receptor signaling pathway	1.230e-02	0.000e+00	4.767e+00	1.709e-05
+GO:0061337	GO:0061337	cardiac conduction	8.491e-03	0.000e+00	5.066e+00	8.599e-06
+GO:1902036	GO:1902036	regulation of hematopoietic stem cell differentiation	9.622e-03	0.000e+00	5.407e+00	3.913e-06
+GO:0040020	GO:0040020	regulation of meiotic nuclear division	1.093e-02	0.000e+00	4.851e+00	1.408e-05
+GO:0061952	GO:0061952	midbody abscission	1.093e-02	0.000e+00	5.269e+00	5.381e-06
+GO:0032984	GO:0032984	protein-containing complex disassembly	1.097e-02	0.000e+00	2.982e+00	1.042e-03
+GO:0071870	GO:0071868	cellular response to monoamine stimulus	1.157e-02	0.000e+00	5.450e+00	3.547e-06
+GO:0071870	GO:0071870	cellular response to catecholamine stimulus	1.157e-02	0.000e+00	5.478e+00	3.329e-06
+GO:0071870	GO:0071869	response to catecholamine	1.296e-02	0.000e+00	5.429e+00	3.722e-06
+GO:0071870	GO:0071867	response to monoamine	1.296e-02	0.000e+00	5.391e+00	4.064e-06
+GO:0002082	GO:0002082	regulation of oxidative phosphorylation	1.230e-02	0.000e+00	5.385e+00	4.125e-06
+GO:0007059	GO:0007059	chromosome segregation	1.238e-02	0.000e+00	2.891e+00	1.284e-03
+GO:0070265	GO:0070265	necrotic cell death	1.296e-02	0.000e+00	5.329e+00	4.692e-06
+GO:0001832	GO:0001832	blastocyst growth	1.375e-02	0.000e+00	6.001e+00	9.976e-07
+GO:0051480	GO:0051480	regulation of cytosolic calcium ion concentration	1.375e-02	0.000e+00	4.989e+00	1.026e-05
+GO:0090201	GO:0090201	negative regulation of release of cytochrome c from mitochondria	1.375e-02	0.000e+00	5.537e+00	2.902e-06
+GO:0008406	GO:0008406	gonad development	1.403e-02	0.000e+00	4.567e+00	2.711e-05
+GO:0045137	GO:0045137	development of primary sexual characteristics	1.442e-02	0.000e+00	5.843e+00	1.434e-06

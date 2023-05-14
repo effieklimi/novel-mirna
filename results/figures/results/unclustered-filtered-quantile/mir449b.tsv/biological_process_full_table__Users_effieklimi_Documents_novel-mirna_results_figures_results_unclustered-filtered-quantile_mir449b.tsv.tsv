@@ -1,0 +1,51 @@
+Cluster representative	Cluster member	Cluster member description	Member P-value	Member user defined value	Member IC	Member frequency
+GO:0002064	GO:0002064	epithelial cell development	2.638e-06	0.000e+00	4.516e+00	3.051e-05
+GO:0002064	GO:0001885	endothelial cell development	1.053e-03	0.000e+00	5.160e+00	6.919e-06
+GO:0002064	GO:0061028	establishment of endothelial barrier	1.561e-03	0.000e+00	5.298e+00	5.035e-06
+GO:1901380	GO:1901380	negative regulation of potassium ion transmembrane transport	3.123e-06	0.000e+00	5.282e+00	5.230e-06
+GO:1901380	GO:0043267	negative regulation of potassium ion transport	1.276e-05	0.000e+00	5.228e+00	5.918e-06
+GO:1901380	GO:0034763	negative regulation of transmembrane transport	2.597e-03	0.000e+00	4.461e+00	3.457e-05
+GO:1901016	GO:1901016	regulation of potassium ion transmembrane transporter activity	3.218e-06	0.000e+00	4.453e+00	3.526e-05
+GO:1901016	GO:1901379	regulation of potassium ion transmembrane transport	3.857e-06	0.000e+00	4.282e+00	5.225e-05
+GO:1901016	GO:0043266	regulation of potassium ion transport	8.182e-06	0.000e+00	4.262e+00	5.475e-05
+GO:0017156	GO:0017156	calcium-ion regulated exocytosis	3.464e-05	0.000e+00	4.500e+00	3.160e-05
+GO:1903902	GO:1903902	positive regulation of viral life cycle	3.717e-05	0.000e+00	5.407e+00	3.913e-06
+GO:1903902	GO:0048524	positive regulation of viral process	1.445e-03	0.000e+00	4.002e+00	9.950e-05
+GO:0030855	GO:0030855	epithelial cell differentiation	5.478e-05	0.000e+00	4.092e+00	8.097e-05
+GO:0030855	GO:0002065	columnar/cuboidal epithelial cell differentiation	6.049e-04	0.000e+00	4.699e+00	2.000e-05
+GO:0030855	GO:0045446	endothelial cell differentiation	5.369e-04	0.000e+00	5.173e+00	6.708e-06
+GO:0030855	GO:0002067	glandular epithelial cell differentiation	2.000e-03	0.000e+00	4.915e+00	1.217e-05
+GO:0051231	GO:0051231	spindle elongation	9.318e-05	0.000e+00	5.567e+00	2.707e-06
+GO:0006270	GO:0006270	DNA replication initiation	1.149e-04	0.000e+00	3.269e+00	5.381e-04
+GO:0090235	GO:0090235	regulation of metaphase plate congression	1.944e-04	0.000e+00	5.545e+00	2.852e-06
+GO:0030036	GO:0030036	actin cytoskeleton organization	2.909e-04	0.000e+00	3.457e+00	3.489e-04
+GO:0071805	GO:0071805	potassium ion transmembrane transport	3.100e-04	0.000e+00	2.865e+00	1.366e-03
+GO:0071805	GO:0006813	potassium ion transport	8.151e-04	0.000e+00	2.433e+00	3.687e-03
+GO:0017158	GO:0017158	regulation of calcium ion-dependent exocytosis	4.675e-04	0.000e+00	5.209e+00	6.177e-06
+GO:0017158	GO:0060627	regulation of vesicle-mediated transport	2.404e-03	0.000e+00	3.820e+00	1.514e-04
+GO:0030857	GO:0030857	negative regulation of epithelial cell differentiation	5.638e-04	0.000e+00	5.045e+00	9.012e-06
+GO:0030857	GO:0045601	regulation of endothelial cell differentiation	3.312e-04	0.000e+00	5.219e+00	6.043e-06
+GO:0030857	GO:0030856	regulation of epithelial cell differentiation	6.370e-04	0.000e+00	4.531e+00	2.946e-05
+GO:1903046	GO:1903046	meiotic cell cycle process	6.424e-04	0.000e+00	3.563e+00	2.732e-04
+GO:0051988	GO:0051988	regulation of attachment of spindle microtubules to kinetochore	7.569e-04	0.000e+00	4.970e+00	1.071e-05
+GO:0033260	GO:0033260	nuclear DNA replication	7.758e-04	0.000e+00	4.391e+00	4.062e-05
+GO:0033260	GO:0044786	cell cycle DNA replication	1.198e-03	0.000e+00	4.336e+00	4.618e-05
+GO:0031589	GO:0031589	cell-substrate adhesion	8.873e-04	0.000e+00	4.002e+00	9.943e-05
+GO:0032970	GO:0032970	regulation of actin filament-based process	1.068e-03	0.000e+00	3.374e+00	4.224e-04
+GO:0043408	GO:0043408	regulation of MAPK cascade	1.223e-03	0.000e+00	3.663e+00	2.173e-04
+GO:0061005	GO:0061005	cell differentiation involved in kidney development	1.371e-03	0.000e+00	5.212e+00	6.137e-06
+GO:0003158	GO:0003158	endothelium development	1.388e-03	0.000e+00	5.874e+00	1.337e-06
+GO:0006268	GO:0006268	DNA unwinding involved in DNA replication	1.399e-03	0.000e+00	3.586e+00	2.594e-04
+GO:0003184	GO:0003184	pulmonary valve morphogenesis	1.442e-03	0.000e+00	5.679e+00	2.093e-06
+GO:0051590	GO:0051590	positive regulation of neurotransmitter transport	1.442e-03	0.000e+00	5.522e+00	3.003e-06
+GO:0010810	GO:0030155	regulation of cell adhesion	1.303e-03	0.000e+00	3.375e+00	4.218e-04
+GO:0010810	GO:0010810	regulation of cell-substrate adhesion	1.456e-03	0.000e+00	4.365e+00	4.312e-05
+GO:0007265	GO:0007265	Ras protein signal transduction	1.603e-03	0.000e+00	3.844e+00	1.432e-04
+GO:0051255	GO:0051255	spindle midzone assembly	1.948e-03	0.000e+00	5.416e+00	3.839e-06
+GO:0060324	GO:0060324	face development	2.250e-03	0.000e+00	5.462e+00	3.450e-06
+GO:0048285	GO:0048285	organelle fission	2.500e-03	0.000e+00	3.818e+00	1.520e-04
+GO:0045723	GO:0045723	positive regulation of fatty acid biosynthetic process	2.551e-03	0.000e+00	5.394e+00	4.034e-06
+GO:0000904	GO:0000904	cell morphogenesis involved in differentiation	2.614e-03	0.000e+00	4.417e+00	3.824e-05
+GO:0044770	GO:0044770	cell cycle phase transition	2.684e-03	0.000e+00	4.095e+00	8.034e-05
+GO:0032535	GO:0032535	regulation of cellular component size	2.688e-03	0.000e+00	3.431e+00	3.711e-04
+GO:0006260	GO:0006260	DNA replication	2.788e-03	0.000e+00	2.060e+00	8.702e-03

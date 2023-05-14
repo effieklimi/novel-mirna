@@ -1,0 +1,50 @@
+Cluster representative	Cluster member	Cluster member description	Member P-value	Member user defined value	Member IC	Member frequency
+GO:0001568	GO:0001568	blood vessel development	1.321e-04	0.000e+00	4.514e+00	3.064e-05
+GO:0016266	GO:0016266	O-glycan processing	2.230e-04	0.000e+00	5.543e+00	2.865e-06
+GO:0001944	GO:0001944	vasculature development	2.832e-04	0.000e+00	4.867e+00	1.360e-05
+GO:0048514	GO:0048514	blood vessel morphogenesis	3.770e-04	0.000e+00	4.608e+00	2.465e-05
+GO:0010633	GO:0010633	negative regulation of epithelial cell migration	4.880e-04	0.000e+00	4.880e+00	1.319e-05
+GO:0010633	GO:0010596	negative regulation of endothelial cell migration	1.148e-03	0.000e+00	4.969e+00	1.073e-05
+GO:0010633	GO:0051547	regulation of keratinocyte migration	1.003e-03	0.000e+00	5.718e+00	1.915e-06
+GO:0050922	GO:0050922	negative regulation of chemotaxis	5.106e-04	0.000e+00	5.001e+00	9.969e-06
+GO:0050922	GO:0002688	regulation of leukocyte chemotaxis	4.084e-03	0.000e+00	4.578e+00	2.640e-05
+GO:0050680	GO:0050680	negative regulation of epithelial cell proliferation	6.628e-04	0.000e+00	4.588e+00	2.580e-05
+GO:0009187	GO:0009187	cyclic nucleotide metabolic process	7.223e-04	0.000e+00	3.120e+00	7.578e-04
+GO:0009187	GO:0046058	cAMP metabolic process	2.858e-03	0.000e+00	3.686e+00	2.063e-04
+GO:0070168	GO:0070168	negative regulation of biomineral tissue development	7.223e-04	0.000e+00	5.352e+00	4.444e-06
+GO:0070168	GO:0030502	negative regulation of bone mineralization	2.281e-03	0.000e+00	5.543e+00	2.865e-06
+GO:0015748	GO:0015748	organophosphate ester transport	7.662e-04	0.000e+00	3.279e+00	5.258e-04
+GO:0015748	GO:0015914	phospholipid transport	1.913e-03	0.000e+00	3.557e+00	2.771e-04
+GO:0061045	GO:0061045	negative regulation of wound healing	1.014e-03	0.000e+00	4.751e+00	1.772e-05
+GO:0061045	GO:1903035	negative regulation of response to wounding	2.735e-03	0.000e+00	4.665e+00	2.164e-05
+GO:0061045	GO:0032102	negative regulation of response to external stimulus	3.190e-03	0.000e+00	3.218e+00	6.049e-04
+GO:0045859	GO:0045859	regulation of protein kinase activity	1.064e-03	0.000e+00	3.576e+00	2.652e-04
+GO:0045859	GO:0045860	positive regulation of protein kinase activity	3.189e-03	0.000e+00	3.980e+00	1.047e-04
+GO:0045859	GO:0032147	activation of protein kinase activity	3.933e-03	0.000e+00	4.488e+00	3.254e-05
+GO:0001525	GO:0001525	angiogenesis	1.174e-03	0.000e+00	4.023e+00	9.475e-05
+GO:0006493	GO:0006493	protein O-linked glycosylation	1.232e-03	0.000e+00	3.569e+00	2.696e-04
+GO:0008608	GO:0008608	attachment of spindle microtubules to kinetochore	1.295e-03	0.000e+00	4.172e+00	6.726e-05
+GO:0030279	GO:0030279	negative regulation of ossification	1.483e-03	0.000e+00	5.164e+00	6.862e-06
+GO:0007169	GO:0007169	transmembrane receptor protein tyrosine kinase signaling pathway	1.555e-03	0.000e+00	3.320e+00	4.783e-04
+GO:0006869	GO:0006869	lipid transport	1.754e-03	0.000e+00	2.829e+00	1.483e-03
+GO:0051546	GO:0051546	keratinocyte migration	1.782e-03	0.000e+00	5.971e+00	1.068e-06
+GO:0010876	GO:0010876	lipid localization	1.972e-03	0.000e+00	6.587e+00	2.586e-07
+GO:0017156	GO:0017156	calcium-ion regulated exocytosis	2.330e-03	0.000e+00	4.500e+00	3.160e-05
+GO:0048863	GO:0048863	stem cell differentiation	2.513e-03	0.000e+00	4.669e+00	2.141e-05
+GO:0001953	GO:0010812	negative regulation of cell-substrate adhesion	2.735e-03	0.000e+00	4.840e+00	1.445e-05
+GO:0001953	GO:0001953	negative regulation of cell-matrix adhesion	3.051e-03	0.000e+00	5.244e+00	5.707e-06
+GO:0035850	GO:0030855	epithelial cell differentiation	1.690e-03	0.000e+00	4.092e+00	8.097e-05
+GO:0035850	GO:0035850	epithelial cell differentiation involved in kidney development	3.051e-03	0.000e+00	5.379e+00	4.178e-06
+GO:0033002	GO:0033002	muscle cell proliferation	3.156e-03	0.000e+00	5.089e+00	8.142e-06
+GO:0060395	GO:0060395	SMAD protein signal transduction	3.302e-03	0.000e+00	4.947e+00	1.129e-05
+GO:0001819	GO:0001819	positive regulation of cytokine production	3.758e-03	0.000e+00	3.721e+00	1.902e-04
+GO:0001837	GO:0001837	epithelial to mesenchymal transition	3.893e-03	0.000e+00	4.785e+00	1.642e-05
+GO:0030595	GO:0060326	cell chemotaxis	2.866e-03	0.000e+00	3.953e+00	1.113e-04
+GO:0030595	GO:0030595	leukocyte chemotaxis	4.095e-03	0.000e+00	4.568e+00	2.704e-05
+GO:0017158	GO:0017158	regulation of calcium ion-dependent exocytosis	4.262e-03	0.000e+00	5.209e+00	6.177e-06
+GO:0032495	GO:0032495	response to muramyl dipeptide	4.262e-03	0.000e+00	5.395e+00	4.024e-06
+GO:0042058	GO:0042058	regulation of epidermal growth factor receptor signaling pathway	4.304e-03	0.000e+00	4.631e+00	2.341e-05
+GO:0045445	GO:0045445	myoblast differentiation	4.373e-03	0.000e+00	5.291e+00	5.112e-06
+GO:0003407	GO:0003407	neural retina development	4.397e-03	0.000e+00	5.304e+00	4.968e-06
+GO:0006605	GO:0006605	protein targeting	4.547e-03	0.000e+00	2.675e+00	2.113e-03
+GO:0001656	GO:0001656	metanephros development	4.682e-03	0.000e+00	5.247e+00	5.663e-06

@@ -1,0 +1,51 @@
+Cluster representative	Cluster member	Cluster member description	Member P-value	Member user defined value	Member IC	Member frequency
+GO:0009065	GO:0009065	glutamine family amino acid catabolic process	6.678e-04	0.000e+00	3.020e+00	9.544e-04
+GO:1904035	GO:1904035	regulation of epithelial cell apoptotic process	1.611e-03	0.000e+00	4.802e+00	1.577e-05
+GO:1904035	GO:1904036	negative regulation of epithelial cell apoptotic process	1.068e-02	0.000e+00	5.024e+00	9.462e-06
+GO:1904035	GO:2000351	regulation of endothelial cell apoptotic process	7.698e-03	0.000e+00	5.082e+00	8.273e-06
+GO:0006268	GO:0006268	DNA unwinding involved in DNA replication	2.286e-03	0.000e+00	3.586e+00	2.594e-04
+GO:0051592	GO:0051592	response to calcium ion	2.978e-03	0.000e+00	4.540e+00	2.884e-05
+GO:0050728	GO:0050728	negative regulation of inflammatory response	3.515e-03	0.000e+00	4.572e+00	2.679e-05
+GO:0045332	GO:0045332	phospholipid translocation	4.266e-03	0.000e+00	4.293e+00	5.093e-05
+GO:0045332	GO:0034204	lipid translocation	6.419e-03	0.000e+00	3.599e+00	2.515e-04
+GO:0045332	GO:0015914	phospholipid transport	7.995e-03	0.000e+00	3.557e+00	2.771e-04
+GO:0045332	GO:0097035	regulation of membrane lipid distribution	9.880e-03	0.000e+00	3.576e+00	2.655e-04
+GO:1904019	GO:1904019	epithelial cell apoptotic process	4.560e-03	0.000e+00	5.071e+00	8.498e-06
+GO:1904019	GO:0072577	endothelial cell apoptotic process	1.068e-02	0.000e+00	5.906e+00	1.243e-06
+GO:0070507	GO:0070507	regulation of microtubule cytoskeleton organization	4.855e-03	0.000e+00	3.988e+00	1.027e-04
+GO:0070507	GO:0031110	regulation of microtubule polymerization or depolymerization	9.935e-03	0.000e+00	4.369e+00	4.276e-05
+GO:0008611	GO:0008611	ether lipid biosynthetic process	6.807e-03	0.000e+00	4.854e+00	1.398e-05
+GO:0008611	GO:0046504	glycerol ether biosynthetic process	6.807e-03	0.000e+00	4.854e+00	1.398e-05
+GO:0008611	GO:0097384	cellular lipid biosynthetic process	6.807e-03	0.000e+00	4.633e+00	2.330e-05
+GO:0008611	GO:1901503	ether biosynthetic process	6.807e-03	0.000e+00	4.835e+00	1.463e-05
+GO:0008611	GO:0046485	ether lipid metabolic process	1.151e-02	0.000e+00	4.818e+00	1.520e-05
+GO:0008611	GO:0006662	glycerol ether metabolic process	1.151e-02	0.000e+00	4.818e+00	1.520e-05
+GO:0008611	GO:0018904	ether metabolic process	1.331e-02	0.000e+00	4.705e+00	1.971e-05
+GO:0046129	GO:0042451	purine nucleoside biosynthetic process	6.807e-03	0.000e+00	3.232e+00	5.867e-04
+GO:0046129	GO:0046129	purine ribonucleoside biosynthetic process	6.807e-03	0.000e+00	3.232e+00	5.867e-04
+GO:0046129	GO:0046128	purine ribonucleoside metabolic process	1.331e-02	0.000e+00	3.223e+00	5.987e-04
+GO:0046129	GO:0042455	ribonucleoside biosynthetic process	6.807e-03	0.000e+00	2.603e+00	2.495e-03
+GO:0046129	GO:0009163	nucleoside biosynthetic process	1.331e-02	0.000e+00	2.603e+00	2.495e-03
+GO:0046129	GO:0034404	nucleobase-containing small molecule biosynthetic process	1.331e-02	0.000e+00	2.603e+00	2.495e-03
+GO:0050951	GO:0050951	sensory perception of temperature stimulus	6.807e-03	0.000e+00	6.051e+00	8.901e-07
+GO:0090026	GO:0090026	positive regulation of monocyte chemotaxis	6.807e-03	0.000e+00	5.192e+00	6.429e-06
+GO:1901879	GO:0043244	regulation of protein-containing complex disassembly	6.665e-03	0.000e+00	2.855e+00	1.397e-03
+GO:1901879	GO:1901879	regulation of protein depolymerization	7.553e-03	0.000e+00	3.673e+00	2.123e-04
+GO:0000727	GO:0000727	double-strand break repair via break-induced replication	8.250e-03	0.000e+00	4.662e+00	2.177e-05
+GO:0006525	GO:0006525	arginine metabolic process	8.250e-03	0.000e+00	2.321e+00	4.774e-03
+GO:0014046	GO:0014046	dopamine secretion	8.250e-03	0.000e+00	6.211e+00	6.147e-07
+GO:0014046	GO:0015872	dopamine transport	1.523e-02	0.000e+00	5.239e+00	5.774e-06
+GO:0014059	GO:0014059	regulation of dopamine secretion	8.250e-03	0.000e+00	5.252e+00	5.599e-06
+GO:0007009	GO:0007009	plasma membrane organization	9.757e-03	0.000e+00	3.918e+00	1.207e-04
+GO:0062149	GO:0062149	detection of stimulus involved in sensory perception of pain	9.818e-03	0.000e+00	5.378e+00	4.189e-06
+GO:0031348	GO:0031348	negative regulation of defense response	1.094e-02	0.000e+00	2.731e+00	1.856e-03
+GO:0001833	GO:0001833	inner cell mass cell proliferation	1.151e-02	0.000e+00	5.693e+00	2.029e-06
+GO:1900264	GO:1900262	regulation of DNA-directed DNA polymerase activity	1.151e-02	0.000e+00	5.564e+00	2.727e-06
+GO:1900264	GO:1900264	positive regulation of DNA-directed DNA polymerase activity	1.151e-02	0.000e+00	5.564e+00	2.727e-06
+GO:1902969	GO:1902969	mitotic DNA replication	1.151e-02	0.000e+00	5.884e+00	1.307e-06
+GO:0032506	GO:0032506	cytokinetic process	1.151e-02	0.000e+00	2.938e+00	1.152e-03
+GO:0030148	GO:0030148	sphingolipid biosynthetic process	1.157e-02	0.000e+00	3.838e+00	1.451e-04
+GO:1902904	GO:1902904	negative regulation of supramolecular fiber organization	1.323e-02	0.000e+00	3.567e+00	2.707e-04
+GO:0051303	GO:0051303	establishment of chromosome localization	1.338e-02	0.000e+00	4.805e+00	1.568e-05
+GO:0030317	GO:0030317	flagellated sperm motility	1.523e-02	0.000e+00	4.624e+00	2.377e-05
+GO:0030317	GO:0097722	sperm motility	1.523e-02	0.000e+00	4.623e+00	2.382e-05

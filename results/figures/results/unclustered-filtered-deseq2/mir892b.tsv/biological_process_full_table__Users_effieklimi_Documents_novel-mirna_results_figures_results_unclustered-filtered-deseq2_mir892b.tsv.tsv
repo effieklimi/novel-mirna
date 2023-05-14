@@ -1,0 +1,50 @@
+Cluster representative	Cluster member	Cluster member description	Member P-value	Member user defined value	Member IC	Member frequency
+GO:0007264	GO:0007264	small GTPase mediated signal transduction	4.226e-05	0.000e+00	3.179e+00	6.626e-04
+GO:0007264	GO:0007265	Ras protein signal transduction	9.805e-05	0.000e+00	3.844e+00	1.432e-04
+GO:0007264	GO:0007266	Rho protein signal transduction	2.047e-03	0.000e+00	4.102e+00	7.902e-05
+GO:0051056	GO:0051056	regulation of small GTPase mediated signal transduction	1.462e-04	0.000e+00	3.531e+00	2.941e-04
+GO:0071577	GO:0071577	zinc ion transmembrane transport	1.706e-04	0.000e+00	3.929e+00	1.177e-04
+GO:0071577	GO:0006829	zinc ion transport	2.787e-04	0.000e+00	3.479e+00	3.320e-04
+GO:0071902	GO:0071902	positive regulation of protein serine/threonine kinase activity	3.215e-04	0.000e+00	4.330e+00	4.675e-05
+GO:0071902	GO:0045860	positive regulation of protein kinase activity	9.287e-04	0.000e+00	3.980e+00	1.047e-04
+GO:0071902	GO:0045737	positive regulation of cyclin-dependent protein serine/threonine kinase activity	8.877e-04	0.000e+00	4.764e+00	1.724e-05
+GO:0071902	GO:1904031	positive regulation of cyclin-dependent protein kinase activity	1.214e-03	0.000e+00	4.752e+00	1.772e-05
+GO:0071902	GO:0090068	positive regulation of cell cycle process	2.127e-03	0.000e+00	4.043e+00	9.059e-05
+GO:0071902	GO:0045787	positive regulation of cell cycle	1.783e-03	0.000e+00	3.915e+00	1.215e-04
+GO:0071902	GO:0071900	regulation of protein serine/threonine kinase activity	1.147e-03	0.000e+00	3.774e+00	1.684e-04
+GO:0071902	GO:0045859	regulation of protein kinase activity	3.180e-03	0.000e+00	3.576e+00	2.652e-04
+GO:0071902	GO:0001934	positive regulation of protein phosphorylation	1.612e-03	0.000e+00	3.695e+00	2.016e-04
+GO:0071902	GO:0042327	positive regulation of phosphorylation	8.668e-04	0.000e+00	3.654e+00	2.216e-04
+GO:0071902	GO:0033674	positive regulation of kinase activity	1.338e-03	0.000e+00	3.925e+00	1.187e-04
+GO:0071902	GO:0051347	positive regulation of transferase activity	1.695e-03	0.000e+00	3.744e+00	1.802e-04
+GO:0071902	GO:0043666	regulation of phosphoprotein phosphatase activity	7.857e-03	0.000e+00	4.075e+00	8.406e-05
+GO:0014002	GO:0014002	astrocyte development	3.480e-04	0.000e+00	5.610e+00	2.455e-06
+GO:0006882	GO:0006882	intracellular zinc ion homeostasis	1.042e-03	0.000e+00	4.452e+00	3.533e-05
+GO:0007175	GO:0007175	negative regulation of epidermal growth factor-activated receptor activity	1.535e-03	0.000e+00	5.388e+00	4.091e-06
+GO:0007175	GO:0007176	regulation of epidermal growth factor-activated receptor activity	7.319e-03	0.000e+00	5.165e+00	6.832e-06
+GO:0007175	GO:0050732	negative regulation of peptidyl-tyrosine phosphorylation	5.543e-03	0.000e+00	4.936e+00	1.159e-05
+GO:0044770	GO:0044770	cell cycle phase transition	1.612e-03	0.000e+00	4.095e+00	8.034e-05
+GO:0044770	GO:0044772	mitotic cell cycle phase transition	3.824e-03	0.000e+00	4.109e+00	7.787e-05
+GO:0044770	GO:0000086	G2/M transition of mitotic cell cycle	5.816e-03	0.000e+00	4.924e+00	1.192e-05
+GO:0010212	GO:0010212	response to ionizing radiation	1.656e-03	0.000e+00	4.276e+00	5.296e-05
+GO:0010212	GO:0071479	cellular response to ionizing radiation	5.959e-03	0.000e+00	4.716e+00	1.922e-05
+GO:0001944	GO:0001944	vasculature development	1.757e-03	0.000e+00	4.867e+00	1.360e-05
+GO:0001568	GO:0001568	blood vessel development	2.364e-03	0.000e+00	4.514e+00	3.064e-05
+GO:0001568	GO:0035904	aorta development	7.857e-03	0.000e+00	5.253e+00	5.582e-06
+GO:0036120	GO:0036120	cellular response to platelet-derived growth factor stimulus	4.093e-03	0.000e+00	5.646e+00	2.257e-06
+GO:0036120	GO:0036119	response to platelet-derived growth factor	5.566e-03	0.000e+00	5.581e+00	2.623e-06
+GO:0072348	GO:0072348	sulfur compound transport	4.144e-03	0.000e+00	2.988e+00	1.028e-03
+GO:0001783	GO:0001783	B cell apoptotic process	4.795e-03	0.000e+00	5.623e+00	2.385e-06
+GO:1901699	GO:1901699	cellular response to nitrogen compound	5.728e-03	0.000e+00	3.974e+00	1.061e-04
+GO:0046651	GO:0046651	lymphocyte proliferation	6.256e-03	0.000e+00	4.619e+00	2.404e-05
+GO:0046651	GO:0032943	mononuclear cell proliferation	7.879e-03	0.000e+00	4.606e+00	2.475e-05
+GO:0009264	GO:0009262	deoxyribonucleotide metabolic process	4.580e-03	0.000e+00	2.715e+00	1.926e-03
+GO:0009264	GO:0009264	deoxyribonucleotide catabolic process	6.406e-03	0.000e+00	3.460e+00	3.471e-04
+GO:0009264	GO:0009166	nucleotide catabolic process	4.502e-03	0.000e+00	3.077e+00	8.374e-04
+GO:0009264	GO:1901292	nucleoside phosphate catabolic process	5.959e-03	0.000e+00	2.924e+00	1.192e-03
+GO:0009264	GO:0046434	organophosphate catabolic process	4.366e-03	0.000e+00	2.756e+00	1.753e-03
+GO:0046386	GO:0019692	deoxyribose phosphate metabolic process	4.580e-03	0.000e+00	2.841e+00	1.441e-03
+GO:0046386	GO:0046386	deoxyribose phosphate catabolic process	6.406e-03	0.000e+00	3.633e+00	2.330e-04
+GO:0006260	GO:0006260	DNA replication	6.534e-03	0.000e+00	2.060e+00	8.702e-03
+GO:0000041	GO:0000041	transition metal ion transport	6.800e-03	0.000e+00	2.491e+00	3.231e-03
+GO:1905475	GO:1905475	regulation of protein localization to membrane	7.600e-03	0.000e+00	3.608e+00	2.466e-04

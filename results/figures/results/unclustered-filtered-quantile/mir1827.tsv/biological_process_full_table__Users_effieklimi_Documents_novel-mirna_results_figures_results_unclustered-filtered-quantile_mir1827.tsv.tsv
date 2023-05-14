@@ -1,0 +1,51 @@
+Cluster representative	Cluster member	Cluster member description	Member P-value	Member user defined value	Member IC	Member frequency
+GO:0007059	GO:0007059	chromosome segregation	9.559e-11	0.000e+00	2.891e+00	1.284e-03
+GO:0007059	GO:0098813	nuclear chromosome segregation	1.937e-06	0.000e+00	4.322e+00	4.770e-05
+GO:0000075	GO:0000075	cell cycle checkpoint signaling	2.168e-08	0.000e+00	3.699e+00	2.000e-04
+GO:0000075	GO:1901988	negative regulation of cell cycle phase transition	4.297e-07	0.000e+00	3.654e+00	2.216e-04
+GO:0000075	GO:1901987	regulation of cell cycle phase transition	9.785e-05	0.000e+00	3.478e+00	3.326e-04
+GO:0000075	GO:0031570	DNA integrity checkpoint signaling	3.088e-04	0.000e+00	3.846e+00	1.424e-04
+GO:0000280	GO:0000280	nuclear division	3.773e-08	0.000e+00	4.223e+00	5.990e-05
+GO:0000280	GO:0048285	organelle fission	9.712e-08	0.000e+00	3.818e+00	1.520e-04
+GO:0000280	GO:0140014	mitotic nuclear division	7.416e-07	0.000e+00	5.537e+00	2.905e-06
+GO:0007093	GO:0007093	mitotic cell cycle checkpoint signaling	2.874e-07	0.000e+00	3.990e+00	1.022e-04
+GO:0007093	GO:0045930	negative regulation of mitotic cell cycle	1.638e-05	0.000e+00	3.858e+00	1.388e-04
+GO:0010948	GO:0010948	negative regulation of cell cycle process	3.114e-07	0.000e+00	3.578e+00	2.643e-04
+GO:0010948	GO:0045786	negative regulation of cell cycle	8.895e-07	0.000e+00	3.500e+00	3.165e-04
+GO:0007088	GO:0007088	regulation of mitotic nuclear division	3.512e-07	0.000e+00	4.092e+00	8.093e-05
+GO:0007088	GO:0051783	regulation of nuclear division	1.704e-06	0.000e+00	4.014e+00	9.685e-05
+GO:0051983	GO:0051983	regulation of chromosome segregation	5.906e-07	0.000e+00	3.925e+00	1.189e-04
+GO:0051983	GO:0030071	regulation of mitotic metaphase/anaphase transition	5.020e-04	0.000e+00	3.989e+00	1.025e-04
+GO:0051983	GO:0051984	positive regulation of chromosome segregation	2.670e-06	0.000e+00	5.188e+00	6.483e-06
+GO:0051304	GO:0051304	chromosome separation	3.261e-06	0.000e+00	3.916e+00	1.214e-04
+GO:0044770	GO:0044770	cell cycle phase transition	6.949e-06	0.000e+00	4.095e+00	8.034e-05
+GO:0044770	GO:0044772	mitotic cell cycle phase transition	1.091e-04	0.000e+00	4.109e+00	7.787e-05
+GO:0000070	GO:0000070	mitotic sister chromatid segregation	1.324e-05	0.000e+00	4.837e+00	1.455e-05
+GO:0000070	GO:0000819	sister chromatid segregation	1.936e-05	0.000e+00	4.718e+00	1.913e-05
+GO:0007094	GO:0007094	mitotic spindle assembly checkpoint signaling	1.625e-05	0.000e+00	4.292e+00	5.103e-05
+GO:0007094	GO:0071174	mitotic spindle checkpoint signaling	1.625e-05	0.000e+00	4.288e+00	5.151e-05
+GO:0071173	GO:0071173	spindle assembly checkpoint signaling	1.625e-05	0.000e+00	4.285e+00	5.189e-05
+GO:0071173	GO:0031577	spindle checkpoint signaling	1.949e-05	0.000e+00	4.279e+00	5.260e-05
+GO:0051276	GO:0051276	chromosome organization	2.156e-05	0.000e+00	2.198e+00	6.343e-03
+GO:0045841	GO:0045841	negative regulation of mitotic metaphase/anaphase transition	2.325e-05	0.000e+00	4.284e+00	5.198e-05
+GO:0045841	GO:0033048	negative regulation of mitotic sister chromatid segregation	2.761e-05	0.000e+00	4.284e+00	5.199e-05
+GO:0045841	GO:1902100	negative regulation of metaphase/anaphase transition of cell cycle	2.761e-05	0.000e+00	4.273e+00	5.337e-05
+GO:0045841	GO:2000816	negative regulation of mitotic sister chromatid separation	2.761e-05	0.000e+00	4.284e+00	5.199e-05
+GO:0045841	GO:0033046	negative regulation of sister chromatid segregation	2.761e-05	0.000e+00	4.284e+00	5.205e-05
+GO:0045841	GO:1905819	negative regulation of chromosome separation	3.263e-05	0.000e+00	4.273e+00	5.338e-05
+GO:0045841	GO:1905818	regulation of chromosome separation	1.729e-05	0.000e+00	4.161e+00	6.903e-05
+GO:0045841	GO:0051985	negative regulation of chromosome segregation	3.263e-05	0.000e+00	4.272e+00	5.350e-05
+GO:0045841	GO:0033047	regulation of mitotic sister chromatid segregation	6.100e-05	0.000e+00	4.196e+00	6.374e-05
+GO:0045841	GO:0045839	negative regulation of mitotic nuclear division	6.100e-05	0.000e+00	4.271e+00	5.361e-05
+GO:0045841	GO:0051784	negative regulation of nuclear division	9.371e-05	0.000e+00	4.202e+00	6.280e-05
+GO:0007346	GO:0007346	regulation of mitotic cell cycle	3.811e-05	0.000e+00	3.572e+00	2.679e-04
+GO:0007346	GO:1901991	negative regulation of mitotic cell cycle phase transition	7.968e-05	0.000e+00	3.945e+00	1.136e-04
+GO:0061028	GO:0061028	establishment of endothelial barrier	4.842e-05	0.000e+00	5.298e+00	5.035e-06
+GO:0061028	GO:0001885	endothelial cell development	3.665e-04	0.000e+00	5.160e+00	6.919e-06
+GO:1901978	GO:1901978	positive regulation of cell cycle checkpoint	9.990e-05	0.000e+00	5.571e+00	2.684e-06
+GO:1901978	GO:0090232	positive regulation of spindle checkpoint	2.386e-04	0.000e+00	5.686e+00	2.059e-06
+GO:1901978	GO:1901976	regulation of cell cycle checkpoint	1.840e-04	0.000e+00	4.891e+00	1.286e-05
+GO:1901978	GO:0090267	positive regulation of mitotic cell cycle spindle assembly checkpoint	2.386e-04	0.000e+00	5.686e+00	2.059e-06
+GO:0006261	GO:0006261	DNA-templated DNA replication	1.876e-04	0.000e+00	3.047e+00	8.967e-04
+GO:0006268	GO:0006268	DNA unwinding involved in DNA replication	2.216e-04	0.000e+00	3.586e+00	2.594e-04
+GO:0001833	GO:0001833	inner cell mass cell proliferation	3.372e-04	0.000e+00	5.693e+00	2.029e-06

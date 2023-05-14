@@ -1,0 +1,51 @@
+Cluster representative	Cluster member	Cluster member description	Member P-value	Member user defined value	Member IC	Member frequency
+GO:0090068	GO:0090068	positive regulation of cell cycle process	8.258e-05	0.000e+00	4.043e+00	9.059e-05
+GO:0090068	GO:0045787	positive regulation of cell cycle	4.577e-04	0.000e+00	3.915e+00	1.215e-04
+GO:0035020	GO:0035020	regulation of Rac protein signal transduction	1.386e-04	0.000e+00	5.459e+00	3.476e-06
+GO:0035020	GO:0046578	regulation of Ras protein signal transduction	8.669e-03	0.000e+00	3.706e+00	1.966e-04
+GO:0000132	GO:0000132	establishment of mitotic spindle orientation	4.274e-04	0.000e+00	4.753e+00	1.766e-05
+GO:0000132	GO:0051294	establishment of spindle orientation	6.565e-04	0.000e+00	4.728e+00	1.873e-05
+GO:0040001	GO:0040001	establishment of mitotic spindle localization	7.239e-04	0.000e+00	4.639e+00	2.294e-05
+GO:0040001	GO:0051293	establishment of spindle localization	1.534e-03	0.000e+00	4.589e+00	2.575e-05
+GO:0040001	GO:0051653	spindle localization	2.023e-03	0.000e+00	4.575e+00	2.662e-05
+GO:0040001	GO:1902850	microtubule cytoskeleton organization involved in mitosis	9.100e-03	0.000e+00	4.118e+00	7.613e-05
+GO:0016601	GO:0016601	Rac protein signal transduction	9.520e-04	0.000e+00	5.439e+00	3.638e-06
+GO:0043954	GO:0043954	cellular component maintenance	1.425e-03	0.000e+00	4.679e+00	2.095e-05
+GO:0043954	GO:0034331	cell junction maintenance	7.609e-03	0.000e+00	5.074e+00	8.438e-06
+GO:0010638	GO:0010638	positive regulation of organelle organization	1.699e-03	0.000e+00	3.825e+00	1.498e-04
+GO:0010638	GO:0051495	positive regulation of cytoskeleton organization	8.883e-03	0.000e+00	4.299e+00	5.020e-05
+GO:0010638	GO:1902117	positive regulation of organelle assembly	7.231e-03	0.000e+00	4.598e+00	2.522e-05
+GO:1901976	GO:1901976	regulation of cell cycle checkpoint	2.023e-03	0.000e+00	4.891e+00	1.286e-05
+GO:1901976	GO:0090231	regulation of spindle checkpoint	5.219e-03	0.000e+00	5.045e+00	9.022e-06
+GO:0090267	GO:0090232	positive regulation of spindle checkpoint	2.067e-03	0.000e+00	5.686e+00	2.059e-06
+GO:0090267	GO:0090267	positive regulation of mitotic cell cycle spindle assembly checkpoint	2.067e-03	0.000e+00	5.686e+00	2.059e-06
+GO:0090267	GO:1901978	positive regulation of cell cycle checkpoint	4.687e-03	0.000e+00	5.571e+00	2.684e-06
+GO:0035774	GO:0035774	positive regulation of insulin secretion involved in cellular response to glucose stimulus	2.829e-03	0.000e+00	5.333e+00	4.645e-06
+GO:0035774	GO:0061178	regulation of insulin secretion involved in cellular response to glucose stimulus	1.194e-02	0.000e+00	5.076e+00	8.390e-06
+GO:0035774	GO:0050714	positive regulation of protein secretion	9.095e-03	0.000e+00	4.636e+00	2.313e-05
+GO:0051304	GO:0051304	chromosome separation	4.241e-03	0.000e+00	3.916e+00	1.214e-04
+GO:0030010	GO:0030010	establishment of cell polarity	4.374e-03	0.000e+00	4.392e+00	4.050e-05
+GO:0090266	GO:0090266	regulation of mitotic cell cycle spindle assembly checkpoint	5.219e-03	0.000e+00	5.045e+00	9.022e-06
+GO:0090266	GO:1903504	regulation of mitotic spindle checkpoint	5.219e-03	0.000e+00	5.045e+00	9.022e-06
+GO:0051897	GO:0051897	positive regulation of protein kinase B signaling	6.126e-03	0.000e+00	4.786e+00	1.636e-05
+GO:0051348	GO:0051348	negative regulation of transferase activity	6.204e-03	0.000e+00	4.123e+00	7.537e-05
+GO:0008654	GO:0008654	phospholipid biosynthetic process	6.860e-03	0.000e+00	2.126e+00	7.489e-03
+GO:0007143	GO:0007143	female meiotic nuclear division	6.973e-03	0.000e+00	5.026e+00	9.422e-06
+GO:0007143	GO:0007127	meiosis I	6.944e-03	0.000e+00	4.822e+00	1.505e-05
+GO:0007143	GO:0061982	meiosis I cell cycle process	8.131e-03	0.000e+00	4.102e+00	7.909e-05
+GO:0051056	GO:0051056	regulation of small GTPase mediated signal transduction	7.276e-03	0.000e+00	3.531e+00	2.941e-04
+GO:0098656	GO:0098656	monoatomic anion transmembrane transport	7.458e-03	0.000e+00	2.844e+00	1.432e-03
+GO:0046471	GO:0046471	phosphatidylglycerol metabolic process	7.609e-03	0.000e+00	3.667e+00	2.151e-04
+GO:0046471	GO:0045017	glycerolipid biosynthetic process	5.248e-03	0.000e+00	2.642e+00	2.278e-03
+GO:0046471	GO:0046488	phosphatidylinositol metabolic process	4.934e-03	0.000e+00	2.787e+00	1.632e-03
+GO:0046471	GO:0006650	glycerophospholipid metabolic process	8.955e-03	0.000e+00	2.571e+00	2.687e-03
+GO:0048261	GO:0048261	negative regulation of receptor-mediated endocytosis	7.609e-03	0.000e+00	5.348e+00	4.484e-06
+GO:0048261	GO:0048259	regulation of receptor-mediated endocytosis	8.767e-03	0.000e+00	4.729e+00	1.868e-05
+GO:0150117	GO:0150117	positive regulation of cell-substrate junction organization	9.668e-03	0.000e+00	5.344e+00	4.531e-06
+GO:0030195	GO:0061041	regulation of wound healing	9.431e-03	0.000e+00	4.464e+00	3.435e-05
+GO:0030195	GO:0030195	negative regulation of blood coagulation	1.040e-02	0.000e+00	4.842e+00	1.438e-05
+GO:0030195	GO:1900047	negative regulation of hemostasis	1.116e-02	0.000e+00	4.838e+00	1.453e-05
+GO:0030195	GO:0050819	negative regulation of coagulation	1.194e-02	0.000e+00	4.677e+00	2.104e-05
+GO:0033028	GO:0033028	myeloid cell apoptotic process	1.116e-02	0.000e+00	5.664e+00	2.166e-06
+GO:0030261	GO:0030261	chromosome condensation	1.194e-02	0.000e+00	3.490e+00	3.238e-04
+GO:2000648	GO:2000648	positive regulation of stem cell proliferation	1.194e-02	0.000e+00	5.043e+00	9.056e-06

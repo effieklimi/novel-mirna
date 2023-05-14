@@ -1,0 +1,51 @@
+Cluster representative	Cluster member	Cluster member description	Member P-value	Member user defined value	Member IC	Member frequency
+GO:0030522	GO:0030522	intracellular receptor signaling pathway	6.415e-05	0.000e+00	3.690e+00	2.042e-04
+GO:0030522	GO:0030518	intracellular steroid hormone receptor signaling pathway	2.881e-04	0.000e+00	4.631e+00	2.336e-05
+GO:0043524	GO:0043524	negative regulation of neuron apoptotic process	5.108e-04	0.000e+00	4.520e+00	3.023e-05
+GO:0043524	GO:0043523	regulation of neuron apoptotic process	2.044e-03	0.000e+00	4.390e+00	4.069e-05
+GO:0043401	GO:0043401	steroid hormone mediated signaling pathway	7.996e-04	0.000e+00	3.886e+00	1.300e-04
+GO:0043401	GO:0009755	hormone-mediated signaling pathway	3.000e-03	0.000e+00	3.205e+00	6.232e-04
+GO:0003012	GO:0003012	muscle system process	9.700e-04	0.000e+00	4.184e+00	6.546e-05
+GO:0003012	GO:0006936	muscle contraction	5.650e-03	0.000e+00	4.265e+00	5.436e-05
+GO:0071383	GO:0048545	response to steroid hormone	1.106e-03	0.000e+00	4.697e+00	2.011e-05
+GO:0071383	GO:0071383	cellular response to steroid hormone stimulus	1.123e-03	0.000e+00	5.038e+00	9.170e-06
+GO:1903312	GO:1903312	negative regulation of mRNA metabolic process	1.200e-03	0.000e+00	3.373e+00	4.232e-04
+GO:1903312	GO:0048024	regulation of mRNA splicing, via spliceosome	5.686e-03	0.000e+00	4.091e+00	8.107e-05
+GO:0042921	GO:0042921	glucocorticoid receptor signaling pathway	1.528e-03	0.000e+00	5.282e+00	5.230e-06
+GO:0042921	GO:0031958	corticosteroid receptor signaling pathway	2.063e-03	0.000e+00	5.280e+00	5.247e-06
+GO:0070934	GO:0070934	CRD-mediated mRNA stabilization	1.528e-03	0.000e+00	5.677e+00	2.106e-06
+GO:0070934	GO:0031330	negative regulation of cellular catabolic process	4.888e-03	0.000e+00	4.383e+00	4.137e-05
+GO:0006446	GO:0006446	regulation of translational initiation	1.987e-03	0.000e+00	3.848e+00	1.418e-04
+GO:0051099	GO:0051099	positive regulation of binding	2.156e-03	0.000e+00	4.533e+00	2.933e-05
+GO:0051099	GO:1900120	regulation of receptor binding	6.397e-03	0.000e+00	5.251e+00	5.609e-06
+GO:0051402	GO:0051402	neuron apoptotic process	2.525e-03	0.000e+00	4.740e+00	1.821e-05
+GO:0035338	GO:0035338	long-chain fatty-acyl-CoA biosynthetic process	2.702e-03	0.000e+00	5.045e+00	9.009e-06
+GO:0038095	GO:0038095	Fc-epsilon receptor signaling pathway	3.449e-03	0.000e+00	5.619e+00	2.405e-06
+GO:1905145	GO:1905145	cellular response to acetylcholine	3.449e-03	0.000e+00	6.367e+00	4.299e-07
+GO:1905145	GO:1905144	response to acetylcholine	5.292e-03	0.000e+00	6.118e+00	7.625e-07
+GO:0007254	GO:0007254	JNK cascade	3.531e-03	0.000e+00	4.940e+00	1.148e-05
+GO:0048821	GO:0048821	erythrocyte development	3.939e-03	0.000e+00	5.204e+00	6.258e-06
+GO:0016074	GO:0016074	sno(s)RNA metabolic process	4.311e-03	0.000e+00	5.066e+00	8.599e-06
+GO:1902018	GO:1902018	negative regulation of cilium assembly	4.311e-03	0.000e+00	5.507e+00	3.110e-06
+GO:1902018	GO:0120032	regulation of plasma membrane bounded cell projection assembly	7.054e-03	0.000e+00	4.413e+00	3.864e-05
+GO:0002639	GO:0002637	regulation of immunoglobulin production	3.419e-03	0.000e+00	4.884e+00	1.307e-05
+GO:0002639	GO:0002639	positive regulation of immunoglobulin production	4.508e-03	0.000e+00	5.055e+00	8.807e-06
+GO:0002639	GO:0045191	regulation of isotype switching	3.420e-03	0.000e+00	5.158e+00	6.950e-06
+GO:0002639	GO:0002889	regulation of immunoglobulin mediated immune response	6.543e-03	0.000e+00	4.993e+00	1.016e-05
+GO:1903725	GO:1903725	regulation of phospholipid metabolic process	4.508e-03	0.000e+00	5.141e+00	7.232e-06
+GO:0044057	GO:0044057	regulation of system process	4.898e-03	0.000e+00	3.702e+00	1.985e-04
+GO:0006413	GO:0006413	translational initiation	4.922e-03	0.000e+00	2.504e+00	3.135e-03
+GO:0034390	GO:0034390	smooth muscle cell apoptotic process	5.292e-03	0.000e+00	6.830e+00	1.478e-07
+GO:0034391	GO:0034391	regulation of smooth muscle cell apoptotic process	5.292e-03	0.000e+00	5.424e+00	3.765e-06
+GO:0009611	GO:0009611	response to wounding	5.519e-03	0.000e+00	4.125e+00	7.496e-05
+GO:0034446	GO:0034446	substrate adhesion-dependent cell spreading	5.686e-03	0.000e+00	5.070e+00	8.515e-06
+GO:1901031	GO:1901031	regulation of response to reactive oxygen species	5.808e-03	0.000e+00	4.692e+00	2.032e-05
+GO:0035567	GO:0035567	non-canonical Wnt signaling pathway	6.113e-03	0.000e+00	4.881e+00	1.316e-05
+GO:0009070	GO:0009070	serine family amino acid biosynthetic process	6.397e-03	0.000e+00	2.565e+00	2.722e-03
+GO:0010042	GO:0010042	response to manganese ion	6.397e-03	0.000e+00	5.894e+00	1.276e-06
+GO:0001889	GO:0001889	liver development	6.423e-03	0.000e+00	4.599e+00	2.515e-05
+GO:0001952	GO:0001952	regulation of cell-matrix adhesion	6.423e-03	0.000e+00	4.697e+00	2.011e-05
+GO:0003158	GO:0003158	endothelium development	6.423e-03	0.000e+00	5.874e+00	1.337e-06
+GO:0002712	GO:0002712	regulation of B cell mediated immunity	6.543e-03	0.000e+00	4.993e+00	1.017e-05
+GO:0033574	GO:0033574	response to testosterone	6.543e-03	0.000e+00	5.709e+00	1.955e-06
+GO:0070252	GO:0070252	actin-mediated cell contraction	6.675e-03	0.000e+00	5.296e+00	5.055e-06

@@ -1,0 +1,51 @@
+Cluster representative	Cluster member	Cluster member description	Member P-value	Member user defined value	Member IC	Member frequency
+GO:0035020	GO:0035020	regulation of Rac protein signal transduction	8.763e-05	0.000e+00	5.459e+00	3.476e-06
+GO:0051145	GO:0051145	smooth muscle cell differentiation	3.744e-04	0.000e+00	5.311e+00	4.891e-06
+GO:0051145	GO:0042692	muscle cell differentiation	1.075e-03	0.000e+00	4.678e+00	2.101e-05
+GO:0071560	GO:0071559	response to transforming growth factor beta	2.497e-04	0.000e+00	4.994e+00	1.015e-05
+GO:0071560	GO:0071560	cellular response to transforming growth factor beta stimulus	4.751e-04	0.000e+00	5.054e+00	8.834e-06
+GO:0071560	GO:0071363	cellular response to growth factor stimulus	6.053e-04	0.000e+00	4.278e+00	5.271e-05
+GO:0071560	GO:0070848	response to growth factor	6.283e-04	0.000e+00	4.245e+00	5.690e-05
+GO:0035633	GO:0035633	maintenance of blood-brain barrier	5.061e-04	0.000e+00	5.902e+00	1.253e-06
+GO:0007179	GO:0007178	transmembrane receptor protein serine/threonine kinase signaling pathway	5.662e-04	0.000e+00	3.818e+00	1.522e-04
+GO:0007179	GO:0007179	transforming growth factor beta receptor signaling pathway	6.430e-04	0.000e+00	4.310e+00	4.900e-05
+GO:0007179	GO:0032924	activin receptor signaling pathway	4.307e-03	0.000e+00	5.211e+00	6.157e-06
+GO:0140013	GO:0140013	meiotic nuclear division	8.113e-04	0.000e+00	4.341e+00	4.559e-05
+GO:0140013	GO:1903046	meiotic cell cycle process	9.305e-04	0.000e+00	3.563e+00	2.732e-04
+GO:0150065	GO:0150065	regulation of deacetylase activity	9.897e-04	0.000e+00	5.893e+00	1.280e-06
+GO:0016311	GO:0016311	dephosphorylation	1.151e-03	0.000e+00	2.670e+00	2.138e-03
+GO:0016311	GO:0006470	protein dephosphorylation	6.402e-03	0.000e+00	2.956e+00	1.107e-03
+GO:0003272	GO:0003272	endocardial cushion formation	1.174e-03	0.000e+00	5.856e+00	1.394e-06
+GO:0051321	GO:0051321	meiotic cell cycle	1.201e-03	0.000e+00	3.842e+00	1.438e-04
+GO:0030857	GO:0030856	regulation of epithelial cell differentiation	7.738e-04	0.000e+00	4.531e+00	2.946e-05
+GO:0030857	GO:0030857	negative regulation of epithelial cell differentiation	1.479e-03	0.000e+00	5.045e+00	9.012e-06
+GO:0003198	GO:0003198	epithelial to mesenchymal transition involved in endocardial cushion formation	1.998e-03	0.000e+00	5.747e+00	1.790e-06
+GO:0003198	GO:0060317	cardiac epithelial to mesenchymal transition	6.083e-03	0.000e+00	5.295e+00	5.072e-06
+GO:0003198	GO:0001837	epithelial to mesenchymal transition	6.983e-03	0.000e+00	4.785e+00	1.642e-05
+GO:0051345	GO:0051345	positive regulation of hydrolase activity	2.028e-03	0.000e+00	3.518e+00	3.032e-04
+GO:0010718	GO:0010718	positive regulation of epithelial to mesenchymal transition	2.283e-03	0.000e+00	5.017e+00	9.613e-06
+GO:0003161	GO:0003161	cardiac conduction system development	2.382e-03	0.000e+00	6.054e+00	8.834e-07
+GO:0000226	GO:0000226	microtubule cytoskeleton organization	2.497e-03	0.000e+00	3.147e+00	7.121e-04
+GO:0045216	GO:0045216	cell-cell junction organization	2.545e-03	0.000e+00	4.333e+00	4.642e-05
+GO:0048863	GO:0048863	stem cell differentiation	2.567e-03	0.000e+00	4.669e+00	2.141e-05
+GO:0046471	GO:0046471	phosphatidylglycerol metabolic process	2.934e-03	0.000e+00	3.667e+00	2.151e-04
+GO:1902117	GO:1902117	positive regulation of organelle assembly	3.305e-03	0.000e+00	4.598e+00	2.522e-05
+GO:0016601	GO:0016601	Rac protein signal transduction	3.471e-03	0.000e+00	5.439e+00	3.638e-06
+GO:0031053	GO:0031053	primary miRNA processing	3.553e-03	0.000e+00	5.023e+00	9.485e-06
+GO:0031053	GO:0070918	regulatory ncRNA processing	6.956e-03	0.000e+00	4.168e+00	6.792e-05
+GO:0045165	GO:0045165	cell fate commitment	3.642e-03	0.000e+00	4.318e+00	4.810e-05
+GO:0045132	GO:0045132	meiotic chromosome segregation	3.883e-03	0.000e+00	4.678e+00	2.099e-05
+GO:0045132	GO:0061982	meiosis I cell cycle process	4.416e-03	0.000e+00	4.102e+00	7.909e-05
+GO:0003203	GO:0003203	endocardial cushion morphogenesis	4.307e-03	0.000e+00	5.492e+00	3.221e-06
+GO:0003203	GO:0072132	mesenchyme morphogenesis	4.665e-03	0.000e+00	5.342e+00	4.548e-06
+GO:0060395	GO:0060395	SMAD protein signal transduction	4.958e-03	0.000e+00	4.947e+00	1.129e-05
+GO:0018107	GO:0018210	peptidyl-threonine modification	2.923e-03	0.000e+00	4.781e+00	1.656e-05
+GO:0018107	GO:0018107	peptidyl-threonine phosphorylation	5.507e-03	0.000e+00	4.835e+00	1.463e-05
+GO:0030216	GO:0030216	keratinocyte differentiation	5.872e-03	0.000e+00	4.986e+00	1.034e-05
+GO:0007548	GO:0007548	sex differentiation	5.953e-03	0.000e+00	4.867e+00	1.357e-05
+GO:0030195	GO:0061045	negative regulation of wound healing	5.363e-03	0.000e+00	4.751e+00	1.772e-05
+GO:0030195	GO:0030195	negative regulation of blood coagulation	6.083e-03	0.000e+00	4.842e+00	1.438e-05
+GO:0030195	GO:0061041	regulation of wound healing	6.326e-03	0.000e+00	4.464e+00	3.435e-05
+GO:0031047	GO:0031047	RNA-mediated gene silencing	6.357e-03	0.000e+00	3.208e+00	6.192e-04
+GO:0051147	GO:0051147	regulation of muscle cell differentiation	6.971e-03	0.000e+00	4.631e+00	2.341e-05
+GO:0007098	GO:0007098	centrosome cycle	6.983e-03	0.000e+00	4.653e+00	2.223e-05
