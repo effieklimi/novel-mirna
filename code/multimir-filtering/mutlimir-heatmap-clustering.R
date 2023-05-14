@@ -105,11 +105,25 @@ ComplexHeatmap::pheatmap(as.matrix(matrix),
     "7"), c(492, 1066, 570, 960, 1271, 273, 246)),
     annotation_legend = TRUE,
     colorRampPalette(c("#002f80", "white", "#87003f"))(500),
-    breaks=myBreaks
+    breaks = myBreaks
 )
 dev.off()
 
-
+pdf("results/figures/multimir-heatmap-all-clustered.pdf", width = 7, height = 10)
+ComplexHeatmap::pheatmap(as.matrix(matrix),
+    border_color = FALSE,
+    cluster_cols = FALSE,
+    cluster_rows = TRUE,
+    fontsize_row = 10,
+    fontsize_col = 12,
+    show_rownames = FALSE,
+    show_colnames = TRUE,
+    row_split = 5,
+    legend = TRUE,
+    annotation_legend = TRUE,
+    colorRampPalette(c("#002f80", "white", "#87003f"))(500)
+)
+dev.off()
 
 
 
