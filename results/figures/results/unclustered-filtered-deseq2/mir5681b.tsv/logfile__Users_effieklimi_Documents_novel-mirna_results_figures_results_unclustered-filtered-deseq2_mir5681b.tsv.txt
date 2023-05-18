@@ -2,7 +2,7 @@ GO-Figure! version: 1.0.1
 
 Date run: 2023-05-14
 
-Command line input: ['GO-Figure/gofigure.py', '-i', '/Users/effieklimi/Documents/novel-mirna/results/tables/goterm-semantic-similarity/unclustered-filtered-deseq2/mir5681b.tsv', '-o', '/Users/effieklimi/Documents/novel-mirna/results/figures/results/unclustered-filtered-deseq2/mir5681b.tsv', '-t', 'Cluster 4', '-p', 'viridis', '-g', 'triple', '-f', 'xx-small', '-m', '20', '-e', '100', '-n', 'bpo', '-si', '0.8']
+Command line input: ['GO-Figure/gofigure.py', '-i', '/Users/effieklimi/Documents/novel-mirna/results/tables/goterm-semantic-similarity/unclustered-filtered-deseq2/mir5681b.tsv', '-o', '/Users/effieklimi/Documents/novel-mirna/results/figures/results/unclustered-filtered-deseq2/mir5681b.tsv', '-t', 'mir5681b', '-p', 'viridis', '-g', 'triple', '-f', 'xx-small', '-m', '20', '-e', '100', '-n', 'bpo', '-si', '0.8']
 
 go.obo version used: releases/2023-04-01
 

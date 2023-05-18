@@ -1,0 +1,51 @@
+Cluster representative	Cluster member	Cluster member description	Member P-value	Member user defined value	Member IC	Member frequency
+GO:0035020	GO:0035020	regulation of Rac protein signal transduction	8.502e-06	0.000e+00	5.459e+00	3.476e-06
+GO:0035020	GO:0046578	regulation of Ras protein signal transduction	5.957e-03	0.000e+00	3.706e+00	1.966e-04
+GO:0016601	GO:0016601	Rac protein signal transduction	1.301e-04	0.000e+00	5.439e+00	3.638e-06
+GO:0016601	GO:0007265	Ras protein signal transduction	5.136e-03	0.000e+00	3.844e+00	1.432e-04
+GO:0008654	GO:0008654	phospholipid biosynthetic process	1.469e-04	0.000e+00	2.126e+00	7.489e-03
+GO:0008654	GO:0006644	phospholipid metabolic process	2.025e-03	0.000e+00	2.060e+00	8.711e-03
+GO:0008654	GO:0006650	glycerophospholipid metabolic process	4.549e-04	0.000e+00	2.571e+00	2.687e-03
+GO:0008654	GO:0046486	glycerolipid metabolic process	2.345e-03	0.000e+00	2.527e+00	2.975e-03
+GO:0042147	GO:0042147	retrograde transport, endosome to Golgi	1.835e-04	0.000e+00	3.810e+00	1.550e-04
+GO:0042147	GO:0016482	cytosolic transport	4.385e-04	0.000e+00	3.688e+00	2.050e-04
+GO:0042147	GO:0016197	endosomal transport	5.365e-04	0.000e+00	3.501e+00	3.152e-04
+GO:0046488	GO:0046488	phosphatidylinositol metabolic process	3.582e-04	0.000e+00	2.787e+00	1.632e-03
+GO:0046488	GO:0006661	phosphatidylinositol biosynthetic process	1.119e-03	0.000e+00	2.889e+00	1.292e-03
+GO:0046488	GO:0046854	phosphatidylinositol phosphate biosynthetic process	6.854e-03	0.000e+00	3.202e+00	6.277e-04
+GO:0046488	GO:0045017	glycerolipid biosynthetic process	7.756e-04	0.000e+00	2.642e+00	2.278e-03
+GO:0046488	GO:0046474	glycerophospholipid biosynthetic process	1.658e-03	0.000e+00	2.674e+00	2.120e-03
+GO:0006054	GO:0006054	N-acetylneuraminate metabolic process	1.922e-03	0.000e+00	4.012e+00	9.732e-05
+GO:0033210	GO:0033210	leptin-mediated signaling pathway	1.922e-03	0.000e+00	5.552e+00	2.805e-06
+GO:0042789	GO:0042789	mRNA transcription by RNA polymerase II	2.225e-03	0.000e+00	5.113e+00	7.715e-06
+GO:0042789	GO:0009299	mRNA transcription	3.051e-03	0.000e+00	4.928e+00	1.179e-05
+GO:0046427	GO:0046427	positive regulation of receptor signaling pathway via JAK-STAT	2.536e-03	0.000e+00	5.230e+00	5.888e-06
+GO:0046427	GO:1904894	positive regulation of receptor signaling pathway via STAT	3.236e-03	0.000e+00	5.170e+00	6.768e-06
+GO:1990090	GO:1990090	cellular response to nerve growth factor stimulus	2.701e-03	0.000e+00	5.582e+00	2.620e-06
+GO:1990090	GO:1990089	response to nerve growth factor	3.051e-03	0.000e+00	5.576e+00	2.657e-06
+GO:0072683	GO:0072683	T cell extravasation	2.705e-03	0.000e+00	6.318e+00	4.803e-07
+GO:0046007	GO:0046007	negative regulation of activated T cell proliferation	3.612e-03	0.000e+00	5.726e+00	1.878e-06
+GO:0007259	GO:0007259	receptor signaling pathway via JAK-STAT	3.921e-03	0.000e+00	4.846e+00	1.426e-05
+GO:0007259	GO:0097696	receptor signaling pathway via STAT	5.093e-03	0.000e+00	4.835e+00	1.461e-05
+GO:0031053	GO:0031053	primary miRNA processing	4.112e-03	0.000e+00	5.023e+00	9.485e-06
+GO:0031053	GO:0035196	miRNA processing	4.489e-03	0.000e+00	4.319e+00	4.794e-05
+GO:0031053	GO:0070918	regulatory ncRNA processing	5.466e-03	0.000e+00	4.168e+00	6.792e-05
+GO:0034349	GO:0034349	glial cell apoptotic process	4.112e-03	0.000e+00	5.990e+00	1.024e-06
+GO:0002931	GO:0002931	response to ischemia	4.262e-03	0.000e+00	5.325e+00	4.736e-06
+GO:0016050	GO:0016050	vesicle organization	4.676e-03	0.000e+00	3.787e+00	1.634e-04
+GO:0044320	GO:0044320	cellular response to leptin stimulus	5.202e-03	0.000e+00	6.067e+00	8.565e-07
+GO:0044320	GO:0044321	response to leptin	7.731e-03	0.000e+00	5.544e+00	2.858e-06
+GO:0043112	GO:0043112	receptor metabolic process	5.466e-03	0.000e+00	3.875e+00	1.334e-04
+GO:0046579	GO:0046579	positive regulation of Ras protein signal transduction	6.276e-03	0.000e+00	4.763e+00	1.724e-05
+GO:0046579	GO:0051057	positive regulation of small GTPase mediated signal transduction	8.774e-03	0.000e+00	4.739e+00	1.826e-05
+GO:0043954	GO:0043954	cellular component maintenance	6.854e-03	0.000e+00	4.679e+00	2.095e-05
+GO:0007398	GO:0007398	ectoderm development	7.731e-03	0.000e+00	5.772e+00	1.690e-06
+GO:0034394	GO:0034394	protein localization to cell surface	8.103e-03	0.000e+00	5.233e+00	5.848e-06
+GO:0097193	GO:0097193	intrinsic apoptotic signaling pathway	8.642e-03	0.000e+00	4.385e+00	4.123e-05
+GO:2000637	GO:2000637	positive regulation of miRNA-mediated gene silencing	9.165e-03	0.000e+00	5.431e+00	3.705e-06
+GO:2000637	GO:1900370	positive regulation of post-transcriptional gene silencing by RNA	9.923e-03	0.000e+00	5.390e+00	4.074e-06
+GO:2000637	GO:0060148	positive regulation of post-transcriptional gene silencing	9.923e-03	0.000e+00	5.380e+00	4.172e-06
+GO:0043523	GO:0043523	regulation of neuron apoptotic process	9.517e-03	0.000e+00	4.390e+00	4.069e-05
+GO:1904019	GO:1904019	epithelial cell apoptotic process	9.601e-03	0.000e+00	5.071e+00	8.498e-06
+GO:0001707	GO:0001707	mesoderm formation	9.840e-03	0.000e+00	5.110e+00	7.759e-06
+GO:0001911	GO:0001911	negative regulation of leukocyte mediated cytotoxicity	9.923e-03	0.000e+00	5.590e+00	2.570e-06
