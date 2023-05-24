@@ -40,16 +40,16 @@ names(genes) <- mirNames
 
 # MultimiR for all 7 miRNAs, top 50% of at least 2 tools
 multimirPredicted50Freq2 <- map(
-  mirNames, 
+  mirNames,
   ~ get_multimir(
     org = "hsa",
     table = "predicted",
-    mirna = ., 
-    predicted.cutoff.type = "p", 
-    predicted.cutoff = 50, 
+    mirna = .,
+    predicted.cutoff.type = "p",
+    predicted.cutoff = 50,
     predicted.site = "all"
   )
-) %>% 
+) %>%
   lapply(function(x) x@data) %>%
   lapply("[", , 4) %>%
   lapply(unlist) %>%
@@ -64,3 +64,4 @@ targets50Top2 <-
 names(targets50Top2) <- names(deseq)
 
 saveRDS(targets50Top2, file = "/Users/effieklimi/Documents/novel-mirna/results/rds/vsmc-multimir-threshold.rds")
+                                                                                                        

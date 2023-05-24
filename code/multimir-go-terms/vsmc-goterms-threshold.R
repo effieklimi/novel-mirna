@@ -30,8 +30,11 @@ geneLists50Top2BP <-
       minGSSize = 10) %>%
   lapply(function(x) x@result)
 
+bpEnrichTable <- lapply(bpEnrichment, function(x) x@result)
 saveRDS(geneLists50Top2BP, file = "results/rds/vsmc-multimir-gobp-unclustered-filtered-deseq2.rds")
 
+bpSimplify <- lapply(bpEnrichment, simplify, cutoff = 0.7, by = "p.adjust", select_fun = min, measure = "Wang")
+bpSimpTable <- lapply(bpSimplify, function(x) x@result)
 
 write.table(geneLists50Top2BP[[1]][1:50, c(1, 5)], file = "/Users/effieklimi/Documents/novel-mirna/results/tables/goterm-semantic-similarity/unclustered-filtered-deseq2/mir1827.tsv", sep = "\t", quote = FALSE, row.names = FALSE, col.names = c("% GOterm", "enrichment_P-value"))
 write.table(geneLists50Top2BP[[2]][1:50, c(1, 5)], file = "/Users/effieklimi/Documents/novel-mirna/results/tables/goterm-semantic-similarity/unclustered-filtered-deseq2/mir323.tsv", sep = "\t", quote = FALSE, row.names = FALSE, col.names = c("% GOterm", "enrichment_P-value"))

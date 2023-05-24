@@ -69,7 +69,7 @@ deseqResults <-
         altHypothesis = "greaterAbs",
         independentFiltering = TRUE,
         pAdjustMethod = "BH", # default
-        alpha = 0.01
+        alpha = 0.05
       )
 
   }
@@ -90,7 +90,7 @@ deseqResults <-
         data.frame() %>%
         rownames_to_column(var = "EnsID") %>%
         as_tibble() %>%
-        filter(padj < 0.01) %>%
+        filter(padj < 0.05) %>%
         merge(annotation, by = 1, all.x = FALSE)
 
   }

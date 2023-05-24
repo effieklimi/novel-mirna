@@ -51,7 +51,7 @@ dds <- DESeqDataSetFromMatrix(
   design = ~ patient + condition
 )
 
-# Setting FBS02 as ref (can't use "contrast" due to running apeglm shrinkage):
+# Setting mirctrl as ref (can't use "contrast" due to running apeglm shrinkage):
 dds$condition <- relevel(dds$condition, ref = "mirctrl")
 # Running DESeq2 with a Wald test:
 dds <- DESeq(dds, test = "Wald")
@@ -68,7 +68,7 @@ deseqResults <-
         altHypothesis = "greaterAbs",
         independentFiltering = TRUE,
         pAdjustMethod = "BH", # default
-        alpha = 0.01
+        alpha = 0.05
       )
 
   }
@@ -89,7 +89,7 @@ deseqResults <-
         data.frame() %>%
         rownames_to_column(var = "EnsID") %>%
         as_tibble() %>%
-        filter(padj < 0.01) %>%
+        filter(padj < 0.05) %>%
         merge(annotation, by = 1, all.x = FALSE)
 
   }
