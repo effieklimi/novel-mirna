@@ -58,7 +58,7 @@ multimirPredicted50Freq2 <- map(
   lapply(filter, Freq >= 2)
 
 targets50Top2 <- 
-  mapply(function(x, y) x[which(as.list(x$name) %in% y$Var1),], genes, multimirPredicted50Freq2, SIMPLIFY = FALSE) %>%
+  mapply(function(x, y) x[which(as.list(x$name) %in% y$Var1), ], genes, multimirPredicted50Freq2, SIMPLIFY = FALSE) %>%
   lapply(filter, log2FoldChange < 0)
 
 names(targets50Top2) <- names(deseq)
