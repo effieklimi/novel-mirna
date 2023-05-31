@@ -305,33 +305,24 @@ write.table(geneOntologyTable[[8]][1:50, c(1, 5)], file = "/Users/effieklimi/Doc
 
 # 3. hclust -> lfc filt post hoc -> go enrichment
 
-deseq <- 
-  readRDS("results/rds/vsmc-deseq2.rds") %>%
-  lapply("[", , c(1, 3, 7)) %>%
-  map(~ mutate(.x, EnsID = ensIdSplit(EnsID))) %>%
-  lapply(as_tibble) %>%
-  lapply(filter, name %in% fpkm$name) %>%
-  lapply(filter, log2FoldChange < -log2(1.5))
-names(deseq) <- mirNames
-deseq <- deseq[c(2, 3, 5, 7, 1, 4, 6)]
-genes <- do.call(rbind, genes)
-
-# loading expression data and multimir data
-multimir <-
-  readRDS("results/rds/vsmc-multimir.rds") %>%
-  lapply( "[", , c(3, 2)) %>%
-  lapply(filter, log2FoldChange < -log2(1.5))
-names(multimir) <- miRnames
-multimir <- multimir[c(2, 3, 5, 7, 1, 4, 6)]
-targets <- do.call(rbind, multimir)
-
 
 countFpkm <- read.csv(
   "results/tables/vsmcFpkm.csv",
   header = TRUE
 ) %>% as_tibble()
 
-genes <- join(targets[, 1], countFpkm[, c(2, 17:40)], by = "name") %>% na.omit %>% distinct(name, .keep_all = TRUE)
+deseq <- 
+  readRDS("results/rds/vsmc-deseq2.rds") %>%
+  lapply("[", , c(1, 3, 7)) %>%
+  map(~ mutate(.x, EnsID = ensIdSplit(EnsID))) %>%
+  lapply(as_tibble) %>%
+  lapply(filter, name %in% countFpkm$name) %>%
+  lapply(filter, log2FoldChange < -log2(1.5))
+names(deseq) <- mirNames
+deseq <- deseq[c(2, 3, 5, 7, 1, 4, 6)]
+deseq <- do.call(rbind, deseq)
+
+genes <- join(deseq[, 3], countFpkm[, c(2, 17:40)], by = "name") %>% na.omit %>% distinct(name, .keep_all = TRUE)
 matrix <- genes[, 2:25]
 rownames(matrix) <- genes$name
 matrix <- as.matrix(matrix) %>% +1 %>% log2()
@@ -344,15 +335,12 @@ colnames(matrix) <- colNames
 
 # clustering 
 distances <- hclust(dist(matrix))
-clusters <- cut_lower_fun(as.dendrogram(distances), h = 9.14)
-#9.2 gives 5(188-1031) median= 304
-#9.14 gives 6(188-528) mean = 361.5 <-
-#9.13 gives 6(114-467) mean = 377.5
-#9.12 gives 7(114-467) median = 280
-#9.11 gives 7(114-467) median = 280
-#9.07  gives 8(114-467) median = 214
-#9.05  gives 8(80-528) median = 221 
-#9.04  gives 9(66-467) median = 188
+clusters <- cut_lower_fun(as.dendrogram(distances), h = 9.30)
+#9.32 gives 7(495-2258) median = 1381
+
+#9.3 gives 8(495-2258) median = 977.5
+#9.26 gives 10(442-1705) median = 956
+#9.2 gives 12(315-1132) median = 853
 
 length(clusters)
 min(unlist(lapply(clusters, length)))
@@ -408,7 +396,7 @@ ComplexHeatmap::pheatmap(as.matrix(clusterMatrix),
     row_split = rep(clustersNo$name, clustersNo$geneNo),
     legend = TRUE,
     annotation_legend = TRUE,
-    colorRampPalette(c("#002f80", "white", "#87003f"))(500)
+    colorRampPalette(c("#bad3ff", "#000000","#ffc5e03f"))(500)
 )
 dev.off()
 #
@@ -422,7 +410,7 @@ geneOntology <-
       OrgDb         = org.Hs.eg.db,
       ont           = "BP",
       pAdjustMethod = "BH",
-      pvalueCutoff  = 1,
+      pvalueCutoff  = 0.05,
       qvalueCutoff  = 1,
       minGSSize     = 10)
 

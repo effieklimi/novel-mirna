@@ -7,11 +7,12 @@ library("reshape2")
 library("ggbreak")
 library("enrichR")
 library("enrichplot")
+library("ReactomePA")
 
 options(warn = 1)
 setwd("/Users/effieklimi/Documents/novel-mirna/")
 
-mirNames <- c("hsa-miR-1827", "hsa-miR-323a-3p", "hsa-miR-449b-5p", "hsa-miR-4774-3p", "hsa-miR-491-3p", "hsa-miR-5681b", "hsa-miR-892b")
+#mirNames <- c("hsa-miR-1827", "hsa-miR-323a-3p", "hsa-miR-449b-5p", "hsa-miR-4774-3p", "hsa-miR-491-3p", "hsa-miR-5681b", "hsa-miR-892b")
 targets <- readRDS("results/rds/vsmc-multimir.rds")
 
 bpOrder <- c(targets[2], targets[3], targets[5], targets[7], targets[1], targets[4], targets[6])
@@ -20,6 +21,7 @@ multimir <-
   readRDS("results/rds/vsmc-multimir.rds") %>%
   lapply( "[", , c(3, 2)) %>%
   lapply("as_tibble") %>%
+  lapply(filter, log2FoldChange < -log2(1.5)) %>%
   lapply(tibble::deframe) %>%
   lapply(sort, decreasing = FALSE)
 
@@ -28,16 +30,11 @@ fpkm <- read.csv(
   header = TRUE
 ) %>% as_tibble()
 
-# Use of quantile filtering: taking the top x% of genes based on LFC instead of using a cutoff
-# Top 25%: By ranking genes per miRNA by LFC (decreasing) -> smallest LFC ranges from -0.892 to -1.04
-# Top 50%: By ranking genes per miRNA by LFC (decreasing) -> smallest LFC ranges from -0.623 to -0.773
-
+# Using a strict LFC cutoff of 1.5, we get the most genes.
+# Gene numbers range between 164 to 709
 bpEnrichment <-
   lapply(bpOrder, "[", , c(3, 2)) %>%
-  lapply(tibble::deframe) %>%
-  lapply(sort, decreasing = TRUE) %>%
-  lapply(tibble::enframe) %>%
-  lapply(filter, value < quantile(value, .5)) %>%
+  lapply(filter, log2FoldChange < -log2(1.5)) %>%
   lapply(tibble::deframe) %>%
   lapply(names) %>%
   map(enrichGO,
@@ -46,7 +43,29 @@ bpEnrichment <-
       OrgDb         = org.Hs.eg.db,
       ont           = "BP",
       pAdjustMethod = "BH",
-      pvalueCutoff  = 1,
+      pvalueCutoff  = 0.05,
+      qvalueCutoff = 1,
+      minGSSize = 10)
+
+
+background <- 
+    select(org.Hs.eg.db,
+       keys = fpkm$name,
+       columns = c("ENTREZID"),
+       keytype = "SYMBOL")
+
+bpEnrichment <-
+  lapply(bpOrder, "[", , c(3, 2)) %>%
+  lapply(filter, log2FoldChange < -log2(1.5)) %>%
+  lapply(tibble::deframe) %>%
+  lapply(names) %>%
+  lapply( function(x) select(org.Hs.eg.db, keys = x, columns = "ENTREZID", keytype="SYMBOL")) %>%
+  lapply("[", , 2) %>%
+  map(enrichPathway,
+      universe      = background$ENTREZID,
+      organism         = "human",
+      pAdjustMethod = "BH",
+      pvalueCutoff  = 0.05,
       qvalueCutoff = 1,
       minGSSize = 10)
 

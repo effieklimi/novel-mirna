@@ -18,7 +18,7 @@ read.geneset <- function(path_to_gset)  {
   names(out) = bp$geneset.names
   return(out)
 }
-
+ 
 bp <- readRDS("results/rds/pathways/pathways-all-bioprocess.rds") 
 ke <- readRDS("results/rds/pathways/pathways-all-kegg.rds")
 re <- readRDS("results/rds/pathways/pathways-all-reactome.rds")

@@ -26,8 +26,9 @@ draw_colnames_45 <- function(coln, gaps, ...) {
 miRNAnames <- c("hsa-miR-1827", "hsa-miR-323a-3p", "hsa-miR-449b-5p", "hsa-miR-4774-3p", "hsa-miR-491-3p", "hsa-miR-5681b", "hsa-miR-892b")
 
 bp <- readRDS("results/rds/pathways/pathways-all-bioprocess.rds")
-ke <- readRDS("results/rds/pathways/pathways-all-kegg.rds")
+#ke <- readRDS("results/rds/pathways/pathways-all-kegg.rds")
 re <- readRDS("results/rds/pathways/pathways-all-reactome.rds")
+names(bp) %>% lapply(str_to_sentence) %>% lapply(gsub, pattern = "Dna", replacement = "DNA", fixed = TRUE) -> names(bp)
 
 fgseaResCellCycle <- read.csv(
   "results/tables/fgsea-vsmc-cellcycle-sigNES.csv",

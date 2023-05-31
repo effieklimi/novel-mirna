@@ -9,7 +9,7 @@ expressed <- read.csv("/Users/effieklimi/Documents/novel-mirna/results/tables/vs
 
 ccGs <- readRDS("results/rds/pathways/pathways-cellcycle.rds")
 miGs <- readRDS("results/rds/pathways/pathways-motility.rds")
-delGs <- readRDS("results/rds/pathways/pathway-deleterious.rds")
+delGs <- readRDS("results/rds/pathways/pathway-deleterious.rds") 
 
 shrinkResults <-
   readRDS("results/rds/vsmc-deseq2.rds") %>%

@@ -28,7 +28,6 @@ fpkm <- read.csv(
   header = TRUE
 ) %>% as_tibble()
 
-# For the pathway analysis we took the uppermost quartile wrt logfoldchange
 bpEnrichment <-
   lapply(bpOrder, "[", , c(3, 2)) %>%
   lapply(tibble::deframe) %>%
@@ -45,6 +44,10 @@ bpEnrichment <-
 
 bpEnrichTable <- lapply(bpEnrichment, function(x) x@result)
 saveRDS(bpEnrichment, file = "results/rds/vsmc-multimir-gobp-unclustered-unfiltered.rds")
+
+bpSimplify <- lapply(bpEnrichment, simplify, cutoff = 0.7, by = "p.adjust", select_fun = min, measure = "Wang")
+bpSimpTable <- lapply(bpSimplify, function(x) x@result)
+
 
 
 write.table(bpEnrichTable[[1]][1:50, c(1, 5)], file = "/Users/effieklimi/Documents/novel-mirna/results/tables/goterm-semantic-similarity/unclustered-unfiltered/mir323.tsv", sep = "\t", quote = FALSE, row.names = FALSE, col.names = c("% GOterm", "enrichment_P-value"))

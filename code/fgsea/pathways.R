@@ -22,7 +22,7 @@ get_gset_names_by_category = function(cat, gsets){
   gset = (gsets[gset])
   return(gset)
 }
-
+ 
 # Get gene sets:
 bp <- read.geneset(url("https://maayanlab.cloud/Enrichr/geneSetLibrary?mode=text&libraryName=GO_Biological_Process_2021"))
 saveRDS(bp, file = "results/rds/pathways/pathways-all-bioprocess.rds")
