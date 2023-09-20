@@ -8,13 +8,13 @@ expressed <- read.csv("/Users/effieklimi/Documents/novel-mirna/results/tables/vs
 
 # get all DE genes 
 vsmcDe <- 
-  readRDS("results/rds/vsmc-deseq2.rds") %>% 
+  readRDS("results/rds/vsmc-deseq2-mimics.rds") %>% 
   lapply(as_tibble) %>%
   lapply(distinct, name, .keep_all = TRUE) %>% # remove duplicates
   lapply(filter, name %in% expressed$name)
 
 endosDe <- 
-  readRDS("results/rds/endos-deseq2.rds") %>% 
+  readRDS("results/rds/endos-deseq2-mimics.rds") %>% 
   lapply(as_tibble) %>%
   lapply(distinct, name, .keep_all = TRUE) %>% # remove duplicates
   lapply(filter, name %in% expressed$name)
@@ -54,8 +54,6 @@ endos50Top2 <-
   readRDS("results/rds/endos-multimir.rds") %>%
   lapply("[", , c(3, 2)) %>%
   lapply(as_tibble)
-
-
 
 
 

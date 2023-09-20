@@ -4,7 +4,33 @@ library("tibble")
 library("purrr")
 library(foreach)
 
+#
 setwd("/Users/effieklimi/Documents/novel-mirna/")
+theme_1 <- function(){
+    theme_bw() +
+    theme(
+        axis.text = element_text(size = 12),
+        axis.title = element_text(size = 12),
+        axis.line.x = element_line(color="black"),
+        axis.line.y = element_line(color="black"),
+        axis.title.y = element_text(vjust = +3),
+        axis.title.x = element_text(vjust = -3),
+        panel.background = element_rect(fill = "transparent", colour = NA),
+        #panel.border = element_blank(),
+        panel.grid.major = element_line(colour="grey100", size=0.1),
+        panel.grid.minor = element_blank(),
+        plot.margin = unit(c(1, 1, 1, 1), units = , "cm"),
+        plot.title = element_text(size = 15, vjust = 1, hjust = 0),
+        legend.text = element_text(size = 12),
+        legend.position = "right",
+        legend.key = element_blank(),
+        legend.background = element_rect(
+            color = "black",
+            fill = "transparent",
+            size = 3, linetype = "blank")
+    ) 
+}
+#
 
 gencodeV26 <- read.delim(
   "gencode_v26_gtf_table.txt",
@@ -79,11 +105,11 @@ pcaData$condition <- factor(
 
 pdf(file = "results/figures/endos-pca.pdf")
 ggplot(pcaData, aes(PC1, PC2, color = condition, shape = patient)) +
-  geom_point(size=4) +
-  xlab(paste0("PC1: ",percentVar[1],"% variance")) +
-  ylab(paste0("PC2: ",percentVar[2],"% variance")) +
+  geom_point(size=1) +
+  xlab(paste0("PC1: ",percentVar[1], "% variance")) +
+  ylab(paste0("PC2: ",percentVar[2], "% variance")) +
   scale_color_manual(values = c("grey", "#B81059", "#EA70A6","#224F9F","#426BB6","#678DD1","#81A8EF","#A4C3FB","#C7DAFC","#E0E8F8"))+
-  ylim(-43,39) +
+  #ylim(-43, 39) +
   coord_fixed() +
   theme_1()
 dev.off()
@@ -105,27 +131,3 @@ distPheatmap <- pheatmap(sampleDistMatrix, #
 )
 dev.off()
 
-theme_1 <- function(){
-    theme_bw() +
-    theme(
-        axis.text = element_text(size = 12),
-        axis.title = element_text(size = 12),
-        axis.line.x = element_line(color="black"),
-        axis.line.y = element_line(color="black"),
-        axis.title.y = element_text(vjust = +3),
-        axis.title.x = element_text(vjust = -3),
-        panel.background = element_rect(fill = "transparent", colour = NA),
-        #panel.border = element_blank(),
-        panel.grid.major = element_line(colour="grey100", size=0.1),
-        panel.grid.minor = element_blank(),
-        plot.margin = unit(c(1, 1, 1, 1), units = , "cm"),
-        plot.title = element_text(size = 15, vjust = 1, hjust = 0),
-        legend.text = element_text(size = 12),
-        legend.position = "right",
-        legend.key = element_blank(),
-        legend.background = element_rect(
-            color = "black",
-            fill = "transparent",
-            size = 3, linetype = "blank")
-    ) 
-}

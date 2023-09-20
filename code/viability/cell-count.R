@@ -10,7 +10,7 @@ viability <- read.csv(
 ) %>% as_tibble() %>% na.omit
 
 
-toxic <- filter(viability, Z_scimage.pngore < -1.65)
+toxic <- filter(viability, Z_score < -1.65)
 
 toxicZscore <- toxic[, c("ID", "Z_score")] %>%
     arrange(Z_score) %>%

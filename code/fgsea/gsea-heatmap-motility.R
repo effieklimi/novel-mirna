@@ -30,7 +30,7 @@ ke <- readRDS("results/rds/pathways/pathways-all-kegg.rds")
 re <- readRDS("results/rds/pathways/pathways-all-reactome.rds")
 
 fgseaResMotility <- read.csv(
-  "results/tables/fgsea-vsmc-motility-sigNES.csv",
+  "results/tables/fgsea-vsmc-motility-sigNES-mimics.csv",
   header = TRUE,
   row.names = 1
 )
@@ -55,14 +55,13 @@ fgseaMatrixMotility <- fgseaMatrixMotility %>%
 assignInNamespace(x = "draw_colnames", value = "draw_colnames_45", ns = asNamespace("pheatmap"))
 anot <- data.frame(row.names = rownames(fgseaMatrixMotility), Database = fgseaMatrixMotility[,8])
 ann_colors <- list(Database = c("KEGG" = "#636362", "Reactome" = "grey70", "Gene Ontology BP" = "grey90"))
-#ha <- rowAnnotation(foo = anno_mark(at = matchesCellCycle, labels = rownames(fgseaMatrixCellCycle)[matches]))
-pdf(file = "results/figures/fgsea-vsmc-heatmap-motility.pdf", width = 9, height = 2)
-ComplexHeatmap::pheatmap(fgseaMatrixMotility[,c(2,3,5,7,1,4,6)],
+pdf(file = "results/figures/fgsea-vsmc-heatmap-motility.pdf", width = 8, height = 2)
+ComplexHeatmap::pheatmap(as.matrix(fgseaMatrixMotility[,c(2,3,5,7,1,4,6)]),
     border_color = FALSE,
     cluster_cols = FALSE,
     cluster_rows = FALSE,
-    fontsize_row = 12,
-    fontsize_col = 12,
+    fontsize_row = 9,
+    fontsize_col = 8,
     show_rownames = TRUE,
     show_colnames = TRUE,
     legend = TRUE,
@@ -74,4 +73,4 @@ ComplexHeatmap::pheatmap(fgseaMatrixMotility[,c(2,3,5,7,1,4,6)],
     border_gp = gpar(col = "black", lwd = 2),
     display_numbers = matrix(ifelse(fgseaMatrixMotility[,c(2,3,5,7,1,4,6)] == 0, "·", ""), nrow(fgseaMatrixMotility[,c(2,3,5,7,1,4,6)]))
   )
-  dev.off()
+dev.off()

@@ -6,7 +6,33 @@ library("foreach")
 library("RColorBrewer")
 library("pheatmap")
 
+#
 setwd("/Users/effieklimi/Documents/novel-mirna/")
+theme_1 <- function(){
+    theme_bw() +
+    theme(
+        axis.text = element_text(size = 12),
+        axis.title = element_text(size = 12),
+        axis.line.x = element_line(color="black"),
+        axis.line.y = element_line(color="black"),
+        axis.title.y = element_text(vjust = +3),
+        axis.title.x = element_text(vjust = -3),
+        panel.background = element_rect(fill = "transparent", colour = NA),
+        #panel.border = element_blank(),
+        panel.grid.major = element_line(colour="grey100", size=0.1),
+        panel.grid.minor = element_blank(),
+        plot.margin = unit(c(1, 1, 1, 1), units = , "cm"),
+        plot.title = element_text(size = 15, vjust = 1, hjust = 0),
+        legend.text = element_text(size = 12),
+        legend.position = "right",
+        legend.key = element_blank(),
+        legend.background = element_rect(
+            color = "black",
+            fill = "transparent",
+            size = 3, linetype = "blank")
+    ) 
+}
+#
 
 gencodeV26 <- read.delim(
   "gencode_v26_gtf_table.txt",
@@ -82,37 +108,6 @@ pcaData$condition <- factor(
         "miR-5681b"
     )
 );
-
-
-
-
-theme_1 <- function(){
-    theme_bw() +
-    theme(
-        axis.text = element_text(size = 12),
-        axis.title = element_text(size = 12),
-        axis.line.x = element_line(color="black"),
-        axis.line.y = element_line(color="black"),
-        axis.title.y = element_text(vjust = +3),
-        axis.title.x = element_text(vjust = -3),
-        panel.background = element_rect(fill = "transparent", colour = NA),
-        #panel.border = element_blank(),
-        panel.grid.major = element_line(colour="grey100", size=0.1),
-        panel.grid.minor = element_blank(),
-        plot.margin = unit(c(1, 1, 1, 1), units = , "cm"),
-        plot.title = element_text(size = 15, vjust = 1, hjust = 0),
-        legend.text = element_text(size = 12),
-        legend.position = "right",
-        legend.key = element_blank(),
-        legend.background = element_rect(
-            color = "black",
-            fill = "transparent",
-            size = 3, linetype = "blank")
-    ) 
-}
-
-
-
 
 
 pdf(file = "results/figures/vsmc-pca.pdf")

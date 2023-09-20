@@ -26,12 +26,12 @@ draw_colnames_45 <- function(coln, gaps, ...) {
 miRNAnames <- c("hsa-miR-1827", "hsa-miR-323a-3p", "hsa-miR-449b-5p", "hsa-miR-4774-3p", "hsa-miR-491-3p", "hsa-miR-5681b", "hsa-miR-892b")
 
 bp <- readRDS("results/rds/pathways/pathways-all-bioprocess.rds")
-#ke <- readRDS("results/rds/pathways/pathways-all-kegg.rds")
+ke <- readRDS("results/rds/pathways/pathways-all-kegg.rds")
 re <- readRDS("results/rds/pathways/pathways-all-reactome.rds")
 names(bp) %>% lapply(str_to_sentence) %>% lapply(gsub, pattern = "Dna", replacement = "DNA", fixed = TRUE) -> names(bp)
 
 fgseaResCellCycle <- read.csv(
-  "results/tables/fgsea-vsmc-cellcycle-sigNES.csv",
+  "results/tables/fgsea-vsmc-cellcycle-sigNES-mimics.csv",
   header = TRUE,
   row.names = 1
 )
@@ -58,14 +58,13 @@ fgseaMatrixCellCycle <- fgseaMatrixCellCycle %>%
 assignInNamespace(x = "draw_colnames", value = "draw_colnames_45", ns = asNamespace("pheatmap"))
 anot <- data.frame(row.names = rownames(fgseaResCellCycle), Database = fgseaMatrixCellCycle[,8])
 ann_colors <- list(Database = c("KEGG" = "#636362", "Reactome" = "grey70", "Gene Ontology BP" = "grey90"))
-#ha <- rowAnnotation(foo = anno_mark(at = matchesCellCycle, labels = rownames(fgseaMatrixCellCycle)[matches]))
-pdf(file = "results/figures/fgsea-vsmc-heatmap-cellcycle.pdf", width = 11, height = 8)
-ComplexHeatmap::pheatmap(fgseaMatrixCellCycle[,c(2,3,5,7,1,4,6)],
+pdf(file = "results/figures/fgsea-vsmc-heatmap-cellcycle.pdf", width = 8, height = 5)
+ComplexHeatmap::pheatmap(as.matrix(fgseaMatrixCellCycle[,c(2,3,5,7,1,4,6)]),
     border_color = FALSE,
     cluster_cols = FALSE,
     cluster_rows = FALSE,
-    fontsize_row = 12,
-    fontsize_col = 12,
+    fontsize_row = 7,
+    fontsize_col = 8,
     show_rownames = TRUE,
     show_colnames = TRUE,
     legend = TRUE,
@@ -77,4 +76,4 @@ ComplexHeatmap::pheatmap(fgseaMatrixCellCycle[,c(2,3,5,7,1,4,6)],
     border_gp = gpar(col = "black", lwd = 2),
     display_numbers = matrix(ifelse(fgseaMatrixCellCycle[,c(2,3,5,7,1,4,6)] == 0, "·", ""), nrow(fgseaMatrixCellCycle[,c(2,3,5,7,1,4,6)]))
   )
-  dev.off()
+dev.off()

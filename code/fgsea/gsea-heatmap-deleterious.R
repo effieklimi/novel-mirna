@@ -19,7 +19,7 @@ ke <- readRDS("results/rds/pathways/pathways-all-kegg.rds")
 re <- readRDS("results/rds/pathways/pathways-all-reactome.rds")
 
 fgseaResDelet <- read.csv(
-  "results/tables/fgsea-vsmc-deleterious-sigNES.csv",
+  "results/tables/fgsea-vsmc-deleterious-sigNES-mimics.csv",
   header = TRUE,
   row.names = 1
 )
@@ -46,13 +46,13 @@ anot <- data.frame(row.names = rownames(fgseaMatrixDelet), Database = fgseaMatri
 ann_colors <- list(Database = c("KEGG" = "#636362", "Reactome" = "grey70", "Gene Ontology BP" = "grey90"))
 #ha <- rowAnnotation(foo = anno_mark(at = matches, labels = rownames(fgseaMatrix)[matches]))
 
-pdf(file = "results/figures/fgsea-vsmc-heatmap-deleterious.pdf", width = 6, height = 1.5)
-ComplexHeatmap::pheatmap(fgseaMatrixDelet[,c(2,3,5,7,1,4,6)],
+pdf(file = "results/figures/fgsea-vsmc-heatmap-deleterious.pdf", width = 6, height = 2)
+ComplexHeatmap::pheatmap(as.matrix(fgseaMatrixDelet[,c(2,3,5,7,1,4,6)]),
     border_color = FALSE,
     cluster_cols = FALSE,
     cluster_rows = FALSE,
-    fontsize_row = 12,
-    fontsize_col = 11,
+    fontsize_row = 15,
+    fontsize_col = 14,
     show_rownames = TRUE,
     show_colnames = TRUE,
     legend = TRUE,
@@ -65,4 +65,4 @@ ComplexHeatmap::pheatmap(fgseaMatrixDelet[,c(2,3,5,7,1,4,6)],
     border_gp = gpar(col = "black", lwd = 2),
     display_numbers = matrix(ifelse(fgseaMatrixDelet[,c(2,3,5,7,1,4,6)] == 0, "·", ""), nrow(fgseaMatrixDelet[,c(2,3,5,7,1,4,6)]))
   )
-  dev.off()
+dev.off()

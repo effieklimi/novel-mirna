@@ -1,0 +1,47 @@
+"","hsa.miR.1827","hsa.miR.323a.3p","hsa.miR.449b.5p","hsa.miR.4774.3p","hsa.miR.491.3p","hsa.miR.5681b","hsa.miR.892b"
+"cellular response to interferon-gamma (go:0071346)",2.7986719507177,2.25658756399913,2.63086985152228,NA,NA,2.83659783890409,NA
+"cellular response to type i interferon (go:0071357)",3.63143418014723,NA,2.66041500466067,NA,NA,3.58710655809356,NA
+"type i interferon signaling pathway (go:0060337)",3.63143418014723,NA,2.66041500466067,NA,NA,3.58710655809356,NA
+"interferon alpha/beta signaling r-hsa-909733",3.61567511491605,NA,2.5750284635636,NA,NA,3.44652110894244,NA
+"interferon gamma signaling r-hsa-877300",2.5623807828015,2.09421724051266,2.10844221721024,NA,NA,2.61497475130114,NA
+"defense response to symbiont (go:0140546)",3.21936350288656,NA,2.27561418842843,NA,NA,3.36898224408399,NA
+"negative regulation of viral process (go:0048525)",3.11112610575393,NA,2.28288674971194,NA,NA,3.33893893484148,NA
+"defense response to virus (go:0051607)",3.19545799408237,NA,2.20198713324347,NA,NA,3.19966561338079,NA
+"regulation of viral genome replication (go:0045069)",2.8788204612821,NA,2.32218848541671,NA,NA,3.25546413340003,NA
+"cytokine-mediated signaling pathway (go:0019221)",2.91960820022436,NA,NA,NA,2.17284968898122,2.17257841239588,NA
+"coronavirus disease",2.619426327341,NA,NA,NA,2.19444509466346,2.39900186034672,NA
+"il-17 signaling pathway",2.14031030460167,NA,NA,2.03164295353187,2.89232320631119,NA,NA
+"interferon-gamma-mediated signaling pathway (go:0060333)",2.38786849299918,NA,2.12769558559881,NA,NA,2.48793323413337,NA
+"response to cytokine (go:0034097)",2.25456332683923,NA,NA,NA,2.01306768401288,2.43078087568438,NA
+"biological oxidations r-hsa-211859",2.02941304607482,2.3680236837034,2.15459350095051,NA,NA,NA,NA
+"interferon signaling r-hsa-913531",3.04470070915843,NA,NA,NA,NA,3.13378652980542,NA
+"cytokine signaling in immune system r-hsa-1280215",2.45351579702556,NA,NA,NA,1.82803771536784,1.88291180936645,NA
+"nod-like receptor signaling pathway",2.78199196873226,NA,NA,NA,NA,2.74883717351909,NA
+"cytokine-cytokine receptor interaction",2.1797171465725,NA,NA,NA,3.10325071970189,NA,NA
+"innate immune response (go:0045087)",2.89892253150276,NA,NA,NA,NA,2.34930260507502,NA
+"inflammatory response (go:0006954)",2.34440346334376,NA,NA,NA,2.83042629137377,NA,NA
+"rheumatoid arthritis",2.1570669172937,NA,NA,NA,2.66433958423634,NA,NA
+"influenza a",2.09772564992932,NA,NA,NA,NA,2.58164747164156,NA
+"positive regulation of type i interferon production (go:0032481)",2.58236802993552,NA,NA,NA,NA,2.04824570129699,NA
+"antiviral mechanism by ifn-stimulated genes r-hsa-1169410",2.20632037671522,NA,NA,NA,NA,2.29026187181783,NA
+"regulation of type i interferon production (go:0032479)",2.23953964427118,NA,NA,NA,NA,2.14458945431689,NA
+"measles",2.16878082079906,NA,NA,NA,NA,2.20045192398711,NA
+"hepatitis c",1.87776369324891,NA,NA,NA,NA,2.38846719399883,NA
+"cellular response to cytokine stimulus (go:0071345)",1.91504497525555,NA,NA,NA,2.09128118072777,NA,NA
+"herpes simplex virus 1 infection",2.00075293309552,NA,NA,NA,NA,1.83809967333077,NA
+"response to interferon-gamma (go:0034341)",3.0443188375205,NA,NA,NA,NA,NA,NA
+"negative regulation of viral genome replication (go:0045071)",2.8026524261947,NA,NA,NA,NA,NA,NA
+"cellular response to tumor necrosis factor (go:0071356)",2.459328999597,NA,NA,NA,NA,NA,NA
+"nf-kappa b signaling pathway",2.38694950662479,NA,NA,NA,NA,NA,NA
+"defense response to bacterium (go:0042742)",2.3785316644444,NA,NA,NA,NA,NA,NA
+"pertussis",2.32665379888128,NA,NA,NA,NA,NA,NA
+"tumor necrosis factor-mediated signaling pathway (go:0033209)",2.27494769585753,NA,NA,NA,NA,NA,NA
+"cellular response to interleukin-1 (go:0071347)",2.2333922385493,NA,NA,NA,NA,NA,NA
+"ddx58/ifih1-mediated induction of interferon-alpha/beta r-hsa-168928",2.21840625219165,NA,NA,NA,NA,NA,NA
+"response to interleukin-1 (go:0070555)",2.16210007692048,NA,NA,NA,NA,NA,NA
+"legionellosis",2.11889977639196,NA,NA,NA,NA,NA,NA
+"response to tumor necrosis factor (go:0034612)",2.08515563665242,NA,NA,NA,NA,NA,NA
+"toll-like receptor signaling pathway",2.02139400770483,NA,NA,NA,NA,NA,NA
+"regulation of immune response (go:0050776)",1.98182086881184,NA,NA,NA,NA,NA,NA
+"chemokine signaling pathway",1.91121964604842,NA,NA,NA,NA,NA,NA
+"cilium assembly r-hsa-5617833",-1.85738654996681,NA,1.88606233455191,NA,NA,NA,NA

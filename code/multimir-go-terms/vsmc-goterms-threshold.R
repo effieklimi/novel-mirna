@@ -27,10 +27,9 @@ geneLists50Top2BP <-
       pAdjustMethod = "BH",
       pvalueCutoff  = 1,
       qvalueCutoff = 1,
-      minGSSize = 10) %>%
-  lapply(function(x) x@result)
+      minGSSize = 10)
 
-bpEnrichTable <- lapply(bpEnrichment, function(x) x@result)
+bpEnrichTable <- lapply(geneLists50Top2BP, function(x) x@result)
 saveRDS(geneLists50Top2BP, file = "results/rds/vsmc-multimir-gobp-unclustered-filtered-deseq2.rds")
 
 bpSimplify <- lapply(bpEnrichment, simplify, cutoff = 0.7, by = "p.adjust", select_fun = min, measure = "Wang")

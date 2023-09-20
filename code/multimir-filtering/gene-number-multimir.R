@@ -8,13 +8,13 @@ expressed <- read.csv("/Users/effieklimi/Documents/novel-mirna/results/tables/vs
 
 # get all DE genes 
 vsmcDe <- 
-  readRDS("results/rds/vsmc-deseq2.rds") %>% 
+  readRDS("results/rds/vsmc-deseq2-mimics.rds") %>% 
   lapply(as_tibble) %>%
   lapply(distinct, name, .keep_all = TRUE) %>% # remove duplicates
   lapply(filter, name %in% expressed$name)
 
 endosDe <- 
-  readRDS("results/rds/endos-deseq2.rds") %>% 
+  readRDS("results/rds/endos-deseq2-mimics.rds") %>% 
   lapply(as_tibble) %>%
   lapply(distinct, name, .keep_all = TRUE) %>% # remove duplicates
   lapply(filter, name %in% expressed$name)
@@ -157,7 +157,7 @@ rownames_to_column("sample") %>%
 mutate(sample = factor(sample, levels = sample)) %>% # This trick update the factor levels
 melt()
 
-pdf(file = "results/figures/endos-multimir-genenumber.pdf", width = 10, height = 6)
+pdf(file = "results/figures/endos-multimir-genenumber.pdf", width = 11, height = 6)
 ggplot(endosMelt, aes(y = value, x = sample, fill = variable)) +
   geom_bar(position = "stack", stat = "identity", width = .8) +
   scale_fill_manual(labels = c("Predicted as targets", "Non-predicted as targets"), values = c("#325791", "#7797d1")) +

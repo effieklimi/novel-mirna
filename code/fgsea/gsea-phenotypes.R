@@ -12,7 +12,7 @@ miGs <- readRDS("results/rds/pathways/pathways-motility.rds")
 delGs <- readRDS("results/rds/pathways/pathway-deleterious.rds") 
 
 shrinkResults <-
-  readRDS("results/rds/vsmc-deseq2.rds") %>%
+  readRDS("results/rds/vsmc-deseq2-mimics.rds") %>%
   lapply(distinct, name, .keep_all = TRUE) %>% # remove duplicates
   lapply(filter, name %in% expressed$name) # remove genes not expressed
 
@@ -23,15 +23,15 @@ geneLists <-
 
 ccFgsea <-
   map(geneLists, fgsea, pathways = ccGs, minSize = 20, maxSize = 1000, eps = 0)
-saveRDS(fgseaResults, file = "results/rds/fgsea/vsmc-fgsea-cellcycle.rds")
+saveRDS(fgseaResults, file = "results/rds/fgsea/vsmc-fgsea-cellcycle-mimics.rds")
 
 miFgsea <-
   map(geneLists, fgsea, pathways = miGs, minSize = 20, maxSize = 1000, eps = 0)
-saveRDS(fgseaResults, file = "results/rds/fgsea/vsmc-fgsea-motility.rds")
+saveRDS(fgseaResults, file = "results/rds/fgsea/vsmc-fgsea-motility-mimics.rds")
 
 delFgsea <-
   map(geneLists, fgsea, pathways = delGs, minSize = 20, maxSize = 1000, eps = 0)
-saveRDS(fgseaResults, file = "results/rds/fgsea/vsmc-fgsea-deleterious.rds")
+saveRDS(fgseaResults, file = "results/rds/fgsea/vsmc-fgsea-deleterious-mimics.rds")
 
 
 # Filter for p value, keep the Normalised Enrichment Scores and format table for the heatmap:
@@ -42,7 +42,7 @@ ccFgseaSig <-
   join_all(by = "pathway", type = "left") %>%
   column_to_rownames(var = "pathway") %>%
   `colnames<-`(c(miRNAnames))
- 
+
 miFgseaSig <-
   #lapply(fgseaResults, arrange, -pval) %>%
   lapply(miFgsea, filter, padj < 0.01) %>%
@@ -60,7 +60,7 @@ delFgseaSig <-
   `colnames<-`(c(miRNAnames))
 
 #### Save table of results for heatmap: ####
-write.csv(ccFgseaSig, file = "results/tables/fgsea-vsmc-cellcycle-sigNES.csv")
-write.csv(miFgseaSig, file = "results/tables/fgsea-vsmc-motility-sigNES.csv")
-write.csv(delFgseaSig, file = "results/tables/fgsea-vsmc-deleterious-sigNES.csv")
+write.csv(ccFgseaSig, file = "results/tables/fgsea-vsmc-cellcycle-sigNES-mimics.csv")
+write.csv(miFgseaSig, file = "results/tables/fgsea-vsmc-motility-sigNES-mimics.csv")
+write.csv(delFgseaSig, file = "results/tables/fgsea-vsmc-deleterious-sigNES-mimics.csv")
 ############################################

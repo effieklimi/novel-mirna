@@ -30,7 +30,7 @@ fpkm <- filter(
 
 write.csv(fpkm, file = "/Users/effieklimi/Documents/novel-mirna/results/tables/vsmcExpressed.csv")
 
-deseq <- readRDS("results/rds/vsmc-deseq2.rds")
+deseq <- readRDS("results/rds/vsmc-deseq2-mimics.rds")
 genes <- 
   lapply(deseq, "[", , c(1, 3, 7)) %>%
   map(~ mutate(.x, EnsID = ensIdSplit(EnsID))) %>%
@@ -40,16 +40,16 @@ names(genes) <- mirNames
 
 # MultimiR for all 7 miRNAs, top 50% of at least 2 tools
 multimirPredicted50Freq2 <- map(
-  mirNames, 
+  mirNames,
   ~ get_multimir(
     org = "hsa",
     table = "predicted",
-    mirna = ., 
-    predicted.cutoff.type = "p", 
-    predicted.cutoff = 50, 
+    mirna = .,
+    predicted.cutoff.type = "p",
+    predicted.cutoff = 50,
     predicted.site = "all"
   )
-) %>% 
+) %>%
   lapply(function(x) x@data) %>%
   lapply("[", , 4) %>%
   lapply(unlist) %>%
@@ -57,10 +57,9 @@ multimirPredicted50Freq2 <- map(
   lapply(as.data.frame) %>%
   lapply(filter, Freq >= 2)
 
-targets50Top2 <- 
+targets50Top2 <-
   mapply(function(x, y) x[which(as.list(x$name) %in% y$Var1), ], genes, multimirPredicted50Freq2, SIMPLIFY = FALSE) %>%
   lapply(filter, log2FoldChange < 0)
 
-names(targets50Top2) <- names(deseq)
-
 saveRDS(targets50Top2, file = "/Users/effieklimi/Documents/novel-mirna/results/rds/vsmc-multimir.rds")
+saveRDS(multimirPredicted50Freq2, file = "/Users/effieklimi/Documents/novel-mirna/results/rds/vsmc-multimir-frequency.rds")
