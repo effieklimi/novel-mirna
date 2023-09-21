@@ -56,7 +56,7 @@ assignInNamespace(x = "draw_colnames", value = "draw_colnames_45", ns = asNamesp
 anot <- data.frame(row.names = rownames(fgseaMatrixMotility), Database = fgseaMatrixMotility[,8])
 ann_colors <- list(Database = c("KEGG" = "#636362", "Reactome" = "grey70", "Gene Ontology BP" = "grey90"))
 pdf(file = "results/figures/fgsea-vsmc-heatmap-motility.pdf", width = 8, height = 2)
-ComplexHeatmap::pheatmap(as.matrix(fgseaMatrixMotility[,c(2,3,5,7,1,4,6)]),
+ComplexHeatmap::pheatmap(as.matrix(fgseaMatrixMotility[,c(2, 3, 5, 7, 1, 4, 6)]),
     border_color = FALSE,
     cluster_cols = FALSE,
     cluster_rows = FALSE,

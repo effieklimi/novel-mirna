@@ -25,7 +25,7 @@ names(bp) %>% lapply(str_to_sentence) %>% lapply(gsub, pattern = "Dna", replacem
 fgseaResultsSig <- read.csv(
     "results/tables/fgsea-vsmc-sigNES-mimics.csv",
     header = TRUE,
-    row.names = 1
+    row.names = 1 
   )
 
 
@@ -104,7 +104,7 @@ ComplexHeatmap::pheatmap(as.matrix(fgseaHeatmapNesNeg[, c(2, 3, 5, 7, 1, 4, 6)])
     annotation_row = anotNesNeg,
     row_names_max_width = unit(18, "cm"),
     annotation_colors = ann_colors,
-    color = colorRampPalette(c("#002f80", "white", "#87003f"))(500),
+    color = colorRampPalette(c("#002f80", "white", "#C20C61"))(500),
     border_gp = gpar(col = "black", lwd = 2),
     breaks = myBreaks,
     display_numbers = matrix(ifelse(fgseaHeatmapNesNeg[,c(2,3,5,7,1,4,6)] == 0, "·", ""), nrow(fgseaHeatmapNesNeg[,c(2,3,5,7,1,4,6)]))
